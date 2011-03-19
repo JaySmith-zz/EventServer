@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Deploy" ToolsVersion="3.5" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+    <PropertyGroup>
+        <SolutionFileName>..\EventServer.sln</SolutionFileName>
+        <WebProjectDir>..\EventServer.UI</WebProjectDir>
+        <WebProjectFileName>..\EventServer.UI\EventServer.UI.csproj</WebProjectFileName>
+        <DestinationDir>C:\temp\stage\eventserver</DestinationDir>
+        <MSBuildCommunityTasksPath>.</MSBuildCommunityTasksPath>
+    </PropertyGroup>
+
+    <Import Project="$(MSBuildCommunityTasksPath)\dependancies\msbuild\MSBuild.Community.Tasks.Targets" />
+
+
+    <Target Name="Test">
+        <Message Text="MSBuildExtensionsPath32 = $(MSBuildExtensionsPath32)" />
+    </Target>
+
+
+    <Target Name="Deploy" DependsOnTargets="BuildSolution;CopyToLocalStage;CleanSolution;OpenExplorer" />
+
+
+    <Target Name="BuildSolution">
+
+        <MSBuild Projects="$(SolutionFileName)" Targets="clean;build" Properties="Configuration=Release" />
+        <Exec Command="c:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_compiler -v / -p $(WebProjectDir)" />
+
+    </Target>
+
+
+    <Target Name="CopyToLocalStage" DependsOnTargets="UpdateDestinationDirectory">
+
+        <MSBuild
+           Projects="$(WebProjectFileName)"
+           Targets="ResolveReferences;_CopyWebApplication"
+           Properties="Configuration=Release;ReferenceCopyLocalPaths=$(DestinationDir);WebProjectOutputDir=$(DestinationDir);OutDir=$(DestinationDir)\bin\" />
+
+        <Copy SourceFiles="$(WebProjectDir)\Web-TEMPLATE.config" DestinationFiles="$(DestinationDir)\Web.config" />
+
+        <XmlUpdate XmlFileName="$(DestinationDir)\Web.config" Xpath="//configuration/system.net/mailSettings/smtp/network/@host" Value="mail.tysondevcon.com" />
+        <XmlUpdate XmlFileName="$(DestinationDir)\Web.config" Xpath="//configuration/system.net/mailSettings/smtp/network/@port" Value="25" />
+        <XmlUpdate XmlFileName="$(DestinationDir)\Web.config" Xpath="//configuration/system.net/mailSettings/smtp/network/@userName" Value="admin@tysondevcon.com" />
+        <XmlUpdate XmlFileName="$(DestinationDir)\Web.config" Xpath="//configuration/system.net/mailSettings/smtp/network/@password" Value="admin.pass" />
+
+        <XmlUpdate XmlFileName="$(DestinationDir)\Web.config" Xpath="//configuration/appSettings/add[@key='changeset']/@value" Value="$(Changeset)" />
+
+    </Target>
+
+
+    <Target Name="UpdateDestinationDirectory">
+
+        <GetAssemblyIdentity AssemblyFiles="$(WebProjectDir)\bin\EventServer.Core.dll">
+            <Output TaskParameter="Assemblies" ItemName="GetVersionAssemblyInfo"/>
+        </GetAssemblyIdentity>
+
+        <TfsVersion LocalPath="..\" TfsLibraryLocation="$(MSBuildExtensionsPath32)\..\Microsoft Visual Studio 10.0\Common7\IDE\ReferenceAssemblies\v2.0">
+            <Output TaskParameter="Changeset" PropertyName="Changeset" />
+        </TfsVersion>
+
+        <CreateProperty Value="$(DestinationDir)\$(Changeset)-%(GetVersionAssemblyInfo.Version)">
+            <Output TaskParameter="Value" PropertyName="DestinationDir" />
+        </CreateProperty>
+
+    </Target>
+
+
+    <Target Name="CleanSolution">
+
+        <MSBuild Projects="$(SolutionFileName)" Targets="clean" Properties="Configuration=Release;TrickTheCache=1;" />
+
+    </Target>
+
+
+    <Target Name="OpenExplorer">
+
+        <Exec Command='explorer.exe "$(DestinationDir)"' IgnoreExitCode="true" />
+
+    </Target>
+
+
+</Project>

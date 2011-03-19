@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<Page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Id>1</Id>
+  <Title>Home Message</Title>
+  <Content>&lt;h2&gt;Home Message&lt;/h2&gt;&lt;p&gt;To edit this content, edit the blog page titled "Home Message"&lt;/p&gt;</Content>
+  <Description />
+  <Parent>00000000-0000-0000-0000-000000000000</Parent>
+  <HasParentPage>false</HasParentPage>
+  <HasChildPages>false</HasChildPages>
+  <Slug />
+  <IsAuthenticated>false</IsAuthenticated>
+  <IsPublished>true</IsPublished>
+  <IsFrontPage>false</IsFrontPage>
+  <ShowInList>false</ShowInList>
+  <DateCreated>2011-03-18T11:12:18.2458904-05:00</DateCreated>
+</Page>

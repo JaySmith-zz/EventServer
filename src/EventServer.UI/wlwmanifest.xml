@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest xmlns="http://schemas.microsoft.com/wlw/manifest/weblog">
+  <options>
+    <clientType>Metaweblog</clientType>
+    <supportsEmbeds>Yes</supportsEmbeds>
+    <supportsFileUpload>Yes</supportsFileUpload>
+    <supportsKeywords>Yes</supportsKeywords>
+    <supportsNewCategories>Yes</supportsNewCategories>
+    <supportsNewCategoriesInline>Yes</supportsNewCategoriesInline>
+    <supportsCommentPolicy>No</supportsCommentPolicy>
+    <supportsSlug>Yes</supportsSlug>
+    <supportsExcerpt>Yes</supportsExcerpt>
+    <supportsPages>Yes</supportsPages>
+    <supportsPageParent>No</supportsPageParent>
+    <supportsAuthor>Yes</supportsAuthor>
+    <supportsGetTags>Yes</supportsGetTags>
+    <requiresHtmlTitles>No</requiresHtmlTitles>
+    <fileUploadNameFormat>{FileName}</fileUploadNameFormat>
+  </options>
+  <weblog>
+    <ServiceName>EventServer</ServiceName>
+    <imageUrl>Content/Images/wlw_icon.png</imageUrl>
+    <watermarkImageUrl>Content/Images/wlw_watermark.png</watermarkImageUrl>
+    <homepageLinkText>View your blog</homepageLinkText>
+    <adminUrl><![CDATA[{blog-homepage-url}/Account/login]]></adminUrl>
+  </weblog>
+</manifest>

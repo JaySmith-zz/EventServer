@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{13816E05-D438-4007-8657-930F6D76188B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EventServer.Core</RootNamespace>
+    <AssemblyName>EventServer.Core</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>http://localhost/EventServer.Core/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Web.Mvc, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\EventServer.Build\Dependancies\mvc\Microsoft.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.ServiceModel.Web">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Routing">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\AssemblyInfo.cs">
+      <Link>Properties\AssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="Domain\Comment.cs" />
+    <Compile Include="Domain\CommentAdded.cs" />
+    <Compile Include="Domain\DomainEventHandlers\EmailHandler.cs" />
+    <Compile Include="Domain\DomainEvents.cs" />
+    <Compile Include="Domain\AppSettings.cs" />
+    <Compile Include="Domain\Category.cs" />
+    <Compile Include="Domain\Entity.cs" />
+    <Compile Include="Domain\Page.cs" />
+    <Compile Include="Domain\Post.cs" />
+    <Compile Include="Domain\Presentation.cs" />
+    <Compile Include="Domain\PresentationAccepted.cs" />
+    <Compile Include="Domain\PresentationCategory.cs" />
+    <Compile Include="Domain\PresentationChanged.cs" />
+    <Compile Include="Domain\PresentationCreated.cs" />
+    <Compile Include="Domain\PresentationLevel.cs" />
+    <Compile Include="Domain\PresentationRejected.cs" />
+    <Compile Include="Domain\PresentationStatus.cs" />
+    <Compile Include="Domain\SpeakerAccolade.cs" />
+    <Compile Include="Domain\SpeakerCreated.cs" />
+    <Compile Include="Domain\SpeakerProfile.cs" />
+    <Compile Include="Domain\SpecialPage.cs" />
+    <Compile Include="Domain\Sponsor.cs" />
+    <Compile Include="Domain\TravelAssistanceRequested.cs" />
+    <Compile Include="Domain\Tweet.cs" />
+    <Compile Include="Domain\UserProfile.cs" />
+    <Compile Include="Domain\UserRegistered.cs" />
+    <Compile Include="ExtensionMethods.cs" />
+    <Compile Include="HtmlHelperExtensions.cs" />
+    <Compile Include="HttpHandlers\FileHandler.cs" />
+    <Compile Include="HttpHandlers\ImageHandler.cs" />
+    <Compile Include="IdGenerator.cs" />
+    <Compile Include="HttpHandlers\RsdHandler.cs" />
+    <Compile Include="IMailGateway.cs" />
+    <Compile Include="Ioc.cs" />
+    <Compile Include="IRepository.cs" />
+    <Compile Include="Log.cs" />
+    <Compile Include="HttpHandlers\SyndicationHandler.cs" />
+    <Compile Include="HttpHandlers\XMLRPCRequest.cs" />
+    <Compile Include="HttpHandlers\MetaWeblogHandler.cs" />
+    <Compile Include="ModelBinders.cs" />
+    <Compile Include="Services\ICurrentUserService.cs" />
+    <Compile Include="Services\IFormsAuthenticationService.cs" />
+    <Compile Include="Services\IMembershipService.cs" />
+    <Compile Include="HttpHandlers\XMLRPCResponse.cs" />
+    <Compile Include="Services\ISyndicationService.cs" />
+    <Compile Include="Services\ITwitterService.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="SystemPath.cs" />
+    <Compile Include="ValidationUtil.cs" />
+    <Compile Include="ValueObject.cs" />
+    <Compile Include="ViewModels\AccountModels.cs" />
+    <Compile Include="ViewModels\AdminModels.cs" />
+    <Compile Include="ViewModels\CustomValidatorAttribute.cs" />
+    <Compile Include="ViewModels\HomeModels.cs" />
+    <Compile Include="ViewModels\PropertiesMustMatchAttribute.cs" />
+    <Compile Include="ViewModels\SessionsModels.cs" />
+    <Compile Include="ViewModels\SpeakersModels.cs" />
+    <Compile Include="ViewModels\SponsorModels.cs" />
+    <Compile Include="ViewModels\ValidatePasswordLengthAttribute.cs" />
+    <Compile Include="ViewModels\ValidateUrlAttribute.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
