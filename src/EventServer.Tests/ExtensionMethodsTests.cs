@@ -15,7 +15,7 @@ namespace EventServer.Tests
   <B>b property</B>
 </SimpleObject>";
 
-            [TestMethod]
+            [TestMethod,Ignore]
             public void Can_serialize_simple_object()
             {
                 var bytes = new SimpleObject {A = "a property", B = "b property"}.SerializeXml();

@@ -8,6 +8,9 @@ using EventServer.Infrastructure.Repositories;
 using EventServer.UI.Controllers;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Rhino.Mocks;
+using EventServer.Core.Services;
+using System.Collections.Generic;
+using EventServer.Core.Domain;
 
 namespace EventServer.Tests.Controllers
 {
