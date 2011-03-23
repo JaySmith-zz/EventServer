@@ -375,6 +375,33 @@
     <Content Include="Scripts\tiny_mce\utils\form_utils.js" />
     <Content Include="Scripts\tiny_mce\utils\mctabs.js" />
     <Content Include="Scripts\tiny_mce\utils\validate.js" />
+    <Content Include="Themes\Default\default.css" />
+    <Content Include="Themes\Default\images\bg01.jpg" />
+    <Content Include="Themes\Default\images\bg02.jpg" />
+    <Content Include="Themes\Default\images\bg03.jpg" />
+    <Content Include="Themes\Default\images\bg04.jpg" />
+    <Content Include="Themes\Default\images\error.gif" />
+    <Content Include="Themes\Default\images\img01.jpg" />
+    <Content Include="Themes\Default\images\img02.gif" />
+    <Content Include="Themes\Default\images\img03.gif" />
+    <Content Include="Themes\Default\images\img04.gif" />
+    <Content Include="Themes\Default\images\img05.gif" />
+    <Content Include="Themes\Default\images\img06.jpg" />
+    <Content Include="Themes\Default\images\info.gif" />
+    <Content Include="Themes\Default\images\logo.jpg" />
+    <Content Include="Themes\Default\images\no_image.gif" />
+    <Content Include="Themes\Default\images\rss16.png" />
+    <Content Include="Themes\Default\images\spacer.gif" />
+    <Content Include="Themes\Default\images\tdc_footer.jpg" />
+    <Content Include="Themes\Default\images\tdc_header.jpg" />
+    <Content Include="Themes\Default\images\wlw_icon.png" />
+    <Content Include="Themes\Default\images\wlw_watermark.png" />
+    <Content Include="Themes\Solution\images\img01.gif" />
+    <Content Include="Themes\Solution\images\img02.gif" />
+    <Content Include="Themes\Solution\images\img03.gif" />
+    <Content Include="Themes\Solution\images\img05.jpg" />
+    <Content Include="Themes\Solution\images\logo.png" />
+    <Content Include="Themes\Solution\theme.css" />
     <Content Include="Views\Account\ChangeName.aspx" />
     <Content Include="Views\Account\Show.aspx" />
     <Content Include="Views\Admin\AdminMenuWidget.ascx" />
@@ -474,7 +501,7 @@
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>16680</DevelopmentServerPort>
-          <DevelopmentServerVPath>/tdc10</DevelopmentServerVPath>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>

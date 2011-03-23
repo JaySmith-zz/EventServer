@@ -35,6 +35,19 @@ namespace EventServer.Core.Domain
             set { siteSlogan = value; }
         }
 
+        private string siteTheme;
+        public string SiteTheme
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(siteTheme))
+                    siteTheme = "Default";
+
+                return siteTheme;
+            }
+            set { siteTheme = value; }
+        }
+
         private string description;
         public string Description
         {

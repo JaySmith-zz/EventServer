@@ -27,6 +27,15 @@
             <%= Html.TextBoxFor(model => model.SiteSlogan) %>
             <%= Html.ValidationMessageFor(model => model.SiteSlogan) %>
         </div>
+
+        <div class="editor-label">
+            <%= Html.LabelFor(model => model.SiteTheme) %>
+        </div>
+        <div class="editor-field">
+            <%= Html.TextBoxFor(model => model.SiteTheme)%>
+            <%= Html.ValidationMessageFor(model => model.SiteTheme)%>
+        </div>
+
         <div class="editor-label">
             <%= Html.LabelFor(model => model.Description) %>
         </div>

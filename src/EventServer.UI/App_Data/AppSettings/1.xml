@@ -1,13 +1,14 @@
 <?xml version="1.0"?>
 <AppSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Id>1</Id>
-  <SiteName>Event Server</SiteName>
-  <SiteSlogan>Making events easy!</SiteSlogan>
+  <SiteName>EventServer</SiteName>
+  <SiteSlogan>Making Events Easy!</SiteSlogan>
+  <SiteTheme>Solution</SiteTheme>
   <Description>Event Server was created to make setting up sites for conference easy.</Description>
-  <StartDateTime>2011-05-17T11:12:24.4570129-05:00</StartDateTime>
+  <StartDateTime>2011-05-17T11:12:24</StartDateTime>
   <EndDateTime>0001-01-01T00:00:00</EndDateTime>
-  <RegistrationEndDateTime>2011-06-15T11:12:24.458013-05:00</RegistrationEndDateTime>
-  <SessionSubmissionEndDateTime>2011-05-07T11:12:24.458013-05:00</SessionSubmissionEndDateTime>
+  <RegistrationEndDateTime>2011-06-15T11:12:24</RegistrationEndDateTime>
+  <SessionSubmissionEndDateTime>2011-05-07T11:12:24</SessionSubmissionEndDateTime>
   <VenueName>Event Venue</VenueName>
   <VenuePhone>555 555-5555</VenuePhone>
   <VenueStreet>Anywhere St.</VenueStreet>
@@ -15,8 +16,9 @@
   <VenueState>AR</VenueState>
   <VenueZip>12345</VenueZip>
   <ContactName>Event Contact</ContactName>
+  <ContactEmail>contact@emai.com</ContactEmail>
   <TwitterId>EventServer</TwitterId>
-  <TwitterFilterDate>2011-02-16T11:12:24.4600132-06:00</TwitterFilterDate>
+  <TwitterFilterDate>2011-02-21T17:13:39.0615791-06:00</TwitterFilterDate>
   <TwitterDisplayCount>5</TwitterDisplayCount>
   <SiteLogoUri>http://eventserver.codeplex.com/images/logo.png</SiteLogoUri>
   <DataStorePath>~/App_Data</DataStorePath>

@@ -3,20 +3,15 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-
     <title>
         <asp:ContentPlaceHolder ID="TitleContent" runat="server" />
     </title>
-
     <%= Html.Link("application/rsd+xml", "RSD", HttpContext.Current.Request.Url.Authority + VirtualPathUtility.ToAbsolute("~/") + "rsd.axd") %>
-
-    <%= Html.Css("~/Content/theme.css") %>
+    <%= Html.Css("~/Themes/" + EventServer.Core.Settings.Instance.SiteTheme +  "/theme.css") %>
     <%= Html.Css("~/Content/jqueryui/smoothness/jquery-ui-1.8.2.css") %>
-
     <script type="text/javascript">
         var webRoot = '<%= ResolveUrl("~/") %>';
     </script>
-
     <%= Html.Script("~/Scripts/jquery-1.4.1.min.js") %>
     <%= Html.Script("~/Scripts/jquery-ui-1.8.2.min.js") %>
     <%= Html.Script("~/Scripts/jquery.growl.js") %>
@@ -26,57 +21,49 @@
     <%= Html.Script("~/Scripts/MicrosoftMvcAjax.js") %>
     <%= Html.Script("~/Scripts/MicrosoftMvcValidation.js") %>
     <%= Html.Script("~/Scripts/site.js") %>
-
     <asp:ContentPlaceHolder ID="HeadContent" runat="server" />
-
 </head>
 <body>
-
-    <div id="header">
-
-        <div id="logo">
-            <h1>
-                <a href="<%= Html.BuildUrlFromExpression<HomeController>(c => c.Index()) %>">
-                    <%= Html.Image("~/Content/Images/logo.jpg", "logo") %>
-                </a>
-            </h1>
-        </div>
-
+    <div id="logo">
+        <h1>
+            <a href="#"><%= EventServer.Core.Settings.Instance.SiteName %></a></h1>
+        <p>
+            <em><%= EventServer.Core.Settings.Instance.SiteSlogan %></em></p>
         <div id="logindisplay">
             <% Html.RenderAction<HomeController>(c => c.GetLogonWidget()); %>
         </div>
-
+    </div>
+    <hr />
+    <!-- end #logo -->
+    <div id="header">
         <div id="menu">
             <ul>
-                <li id="navHome"><%= Html.ActionLink<HomeController>(c => c.Index(), "Home") %></li>
-                <li id="navSpeakers"><%= Html.ActionLink<SpeakersController>(c => c.Index(), "Speakers") %></li>
-                <li id="navSessions"><%= Html.ActionLink<SessionsController>(c => c.Index(null), "Sessions") %></li>
-                <li id="navSponsors"><%= Html.ActionLink<SponsorsController>(c => c.Index(), "Sponsors") %></li>
-                <li id="navAbout"><%= Html.ActionLink<HomeController>(c => c.About(), "About") %></li>
+                <li id="navHome">
+                    <%= Html.ActionLink<HomeController>(c => c.Index(), "Home") %></li>
+                <li id="navSpeakers">
+                    <%= Html.ActionLink<SpeakersController>(c => c.Index(), "Speakers") %></li>
+                <li id="navSessions">
+                    <%= Html.ActionLink<SessionsController>(c => c.Index(null), "Sessions") %></li>
+                <li id="navSponsors">
+                    <%= Html.ActionLink<SponsorsController>(c => c.Index(), "Sponsors") %></li>
+                <li id="navAbout">
+                    <%= Html.ActionLink<HomeController>(c => c.About(), "About") %></li>
             </ul>
         </div>
-
     </div>
-
     <div id="page">
-        <div id="content">
-
-            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
-
-        </div>
+        <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+        <div style="clear: both;">
+            &nbsp;</div>
     </div>
-
+    <!-- end #page -->
     <div id="footer">
         <p>
-            &copy;2010 All Rights Reserved. &nbsp;&bull;&nbsp;
-            Tyson Foods, Inc. &nbsp;&bull;&nbsp;
-            r<%= Application["revision"] %> &nbsp;&bull;&nbsp;
-            v<%= Application["version"] %>
-        </p>
+            Copyright (c) 2010 <a href="<%= ResolveUrl("~/") %>"><%= EventServer.Core.Settings.Instance.SiteName %></a>. All rights reserved. Design by <a href="http://www.freecsstemplates.org/">Free
+                    CSS Templates</a>. Event Server v<%= Application["version"] %></p>
     </div>
-
+    <!-- end #footer -->
     <asp:ContentPlaceHolder ID="ScriptContent" runat="server" />
-
     <script type="text/javascript">
 
         $(function() {
@@ -87,6 +74,5 @@
         });
 
     </script>
-
 </body>
 </html>
