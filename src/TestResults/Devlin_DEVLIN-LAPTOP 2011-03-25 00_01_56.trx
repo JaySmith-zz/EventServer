@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="a91e0ff5-8164-4564-bbbc-3b3733ad6b28" name="Devlin@DEVLIN-LAPTOP 2011-03-25 00:01:56" runUser="Devlin-Laptop\Devlin" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Default Test Settings" id="bf1b4deb-43d6-4f3c-aa4f-a9635f02ecfc">
+    <Deployment runDeploymentRoot="Devlin_DEVLIN-LAPTOP 2011-03-25 00_01_56">
+      <DeploymentItem filename="D:\Code\Fun\EventServer\EventServer.git\src\EventServer.Core\bin\Debug\EventServer.Core.dll" />
+      <DeploymentItem filename="D:\Code\Fun\EventServer\EventServer.git\src\EventServer.Infrastructure\bin\Debug\EventServer.Infrastructure.dll" />
+      <DeploymentItem filename="D:\Code\Fun\EventServer\EventServer.git\src\EventServer.Build\Dependancies\RhinoMocks\Rhino.Mocks.dll" />
+      <DeploymentItem filename="D:\Code\Fun\EventServer\EventServer.git\src\EventServer.UI\bin\EventServer.UI.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2011-03-25T00:01:56.0263588-05:00" queuing="2011-03-25T00:01:56.3883795-05:00" start="2011-03-25T00:01:56.4003802-05:00" finish="2011-03-25T00:01:57.6104494-05:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="23" executed="23" passed="22" error="0" failed="1" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="Should_get_next_hi_on_first_pull" storage="d:\code\fun\eventserver\eventserver.git\src\eventserver.tests\bin\debug\eventserver.tests.dll" id="00bb40d4-4eae-f4bd-6457-e2e20288c636">
+      <Execution id="42179b45-e27e-480d-a502-b51ff8366d1b" />
+      <TestMethod codeBase="D:\Code\Fun\EventServer\EventServer.git\src\EventServer.Tests\bin\Debug\EventServer.Tests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EventServer.Tests.Core.IdGeneratorTests.When_getting_new_ids, EventServer.Tests" name="Should_get_next_hi_on_first_pull" />
+    </UnitTest>
+    <UnitTest name="LogOn_Post_ReturnsViewIfModelStateIsInvalid" storage="d:\code\fun\eventserver\eventserver.git\src\eventserver.tests\bin\debug\eventserver.tests.dll" id="6b0b77b8-93b2-557e-c9c9-adb3fc24f2dd">
+      <Execution id="d9807893-e402-42c5-89c9-d00cf770473d" />
+      <TestMethod codeBase="D:\Code\Fun\EventServer\EventServer.git\src\EventServer.Tests\bin\Debug\EventServer.Tests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EventServer.Tests.Controllers.AccountControllerTest, EventServer.Tests" name="LogOn_Post_ReturnsViewIfModelStateIsInvalid" />
+    </UnitTest>
+    <UnitTest name="Register_Post_ReturnsRedirectOnSuccess" storage="d:\code\fun\eventserver\eventserver.git\src\eventserver.tests\bin\debug\eventserver.tests.dll" id="87c4c742-10dd-164c-7627-63c27963fbe0">
+      <Execution id="3dbce9be-2a90-4727-87c7-fc073012f22a" />
+      <TestMethod codeBase="D:\Code\Fun\EventServer\EventServer.git\src\EventServer.Tests\bin\Debug\EventServer.Tests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EventServer.Tests.Controllers.AccountControllerTest, EventServer.Tests" name="Register_Post_ReturnsRedirectOnSuccess" />
+    </UnitTest>
+    <UnitTest name="ChangePassword_Get_ReturnsView" storage="d:\code\fun\eventserver\eventserver.git\src\eventserver.tests\bin\debug\eventserver.tests.dll" id="71a06554-1be1-78da-36c6-15ae22f77bf8">
+      <Execution id="4ec994b4-ee49-4c20-b1f1-4876a81a37f2" />
+      <TestMethod codeBase="D:\Code\Fun\EventServer\EventServer.git\src\EventServer.Tests\bin\Debug\EventServer.Tests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EventServer.Tests.Controllers.AccountControllerTest, EventServer.Tests" name="ChangePassword_Get_ReturnsView" />
+    </UnitTest>
+    <UnitTest name="Can_deserialize_into_object_with_new_properties" storage="d:\code\fun\eventserver\eventserver.git\src\eventserver.tests\bin\debug\eventserver.tests.dll" id="98968efc-863c-8111-be46-b43a76bccbfe">
+      <Execution id="d079c410-f895-474e-ac42-881345c3c6f4" />
+      <TestMethod codeBase="D:\Code\Fun\EventServer\EventServer.git\src\EventServer.Tests\bin\Debug\EventServer.Tests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EventServer.Tests.ExtensionMethodsTests.SerializationTests, EventServer.Tests" name="Can_deserialize_into_object_with_new_properties" />
+    </UnitTest>
+    <UnitTest name="ChangePassword_Post_ReturnsViewIfModelStateIsInvalid" storage="d:\code\fun\eventserver\eventserver.git\src\eventserver.tests\bin\debug\eventserver.tests.dll" id="f7c995b3-edd6-e63c-f3ee-411e16612ce1">
+      <Execution id="c85a9b4b-ce42-418a-8514-57305cb7e8c5" />
+      <TestMethod codeBase="D:\Code\Fun\EventServer\EventServer.git\src\EventServer.Tests\bin\Debug\EventServer.Tests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EventServer.Tests.Controllers.AccountControllerTest, EventServer.Tests" name="ChangePassword_Post_ReturnsViewIfModelStateIsInvalid" />
+    </UnitTest>
+    <UnitTest name="Register_Post_ReturnsViewIfModelStateIsInvalid" storage="d:\code\fun\eventserver\eventserver.git\src\eventserver.tests\bin\debug\eventserver.tests.dll" id="fb367bb1-a3b9-0d11-5961-23f8b263f8f5">
+      <Execution id="b51c6de2-56aa-43bf-94b0-ef76c3916089" />
+      <TestMethod codeBase="D:\Code\Fun\EventServer\EventServer.git\src\EventServer.Tests\bin\Debug\EventServer.Tests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EventServer.Tests.Controllers.AccountControllerTest, EventServer.Tests" name="Register_Post_ReturnsViewIfModelStateIsInvalid" />
+    </UnitTest>
+    <UnitTest name="Can_deserialize_into_object_with_missing_properties" storage="d:\code\fun\eventserver\eventserver.git\src\eventserver.tests\bin\debug\eventserver.tests.dll" id="976c72ea-0f0f-4e52-a80d-f2e6b66b69d0">
+      <Execution id="9662f779-f070-4494-828f-8878c2b66adc" />
+      <TestMethod codeBase="D:\Code\Fun\EventServer\EventServer.git\src\EventServer.Tests\bin\Debug\EventServer.Tests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EventServer.Tests.ExtensionMethodsTests.SerializationTests, EventServer.Tests" name="Can_deserialize_into_object_with_missing_properties" />
+    </UnitTest>
+    <UnitTest name="LogOn_Post_ReturnsViewIfValidateUserFails" storage="d:\code\fun\eventserver\eventserver.git\src\eventserver.tests\bin\debug\eventserver.tests.dll" id="f669633c-9f3a-cb5e-f8f9-0366a2880d68">
+      <Execution id="c8fcdb3f-33dc-4d31-b260-2b677ae0e40f" />
+      <TestMethod codeBase="D:\Code\Fun\EventServer\EventServer.git\src\EventServer.Tests\bin\Debug\EventServer.Tests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EventServer.Tests.Controllers.AccountControllerTest, EventServer.Tests" name="LogOn_Post_ReturnsViewIfValidateUserFails" />
+    </UnitTest>
+    <UnitTest name="About" storage="d:\code\fun\eventserver\eventserver.git\src\eventserver.tests\bin\debug\eventserver.tests.dll" id="3c2ad0e0-98f5-ca2a-69e9-6e02853b9490">
+      <Execution id="d16ac4c7-88cf-47c0-9d87-29ee15b4184a" />
+      <TestMethod codeBase="D:\Code\Fun\EventServer\EventServer.git\src\EventServer.Tests\bin\Debug\EventServer.Tests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EventServer.Tests.Controllers.HomeControllerTest, EventServer.Tests" name="About" />
+    </UnitTest>
+    <UnitTest name="Index" storage="d:\code\fun\eventserver\eventserver.git\src\eventserver.tests\bin\debug\eventserver.tests.dll" id="e9429a48-4fda-6c3f-e3e0-c45cb0402376">
+      <Execution id="7f38946e-c9fb-474d-8a17-82bd8a2eb0b2" />
+      <TestMethod codeBase="D:\Code\Fun\EventServer\EventServer.git\src\EventServer.Tests\bin\Debug\EventServer.Tests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EventServer.Tests.Controllers.HomeControllerTest, EventServer.Tests" name="Index" />
+    </UnitTest>
+    <UnitTest name="ChangePassword_Post_ReturnsRedirectOnSuccess" storage="d:\code\fun\eventserver\eventserver.git\src\eventserver.tests\bin\debug\eventserver.tests.dll" id="45e03c47-4619-cccc-95f8-b692d7473630">
+      <Execution id="06d48c17-8ef6-45b2-901c-74ff09bcc3eb" />
+      <TestMethod codeBase="D:\Code\Fun\EventServer\EventServer.git\src\EventServer.Tests\bin\Debug\EventServer.Tests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EventServer.Tests.Controllers.AccountControllerTest, EventServer.Tests" name="ChangePassword_Post_ReturnsRedirectOnSuccess" />
+    </UnitTest>
+    <UnitTest name="ChangePasswordSuccess_ReturnsView" storage="d:\code\fun\eventserver\eventserver.git\src\eventserver.tests\bin\debug\eventserver.tests.dll" id="535c2d41-2db5-f950-9001-5a3179010fc6">
+      <Execution id="16ebdd15-1adc-4128-9b78-dfa16b9b1ff5" />
+      <TestMethod codeBase="D:\Code\Fun\EventServer\EventServer.git\src\EventServer.Tests\bin\Debug\EventServer.Tests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EventServer.Tests.Controllers.AccountControllerTest, EventServer.Tests" name="ChangePasswordSuccess_ReturnsView" />
+    </UnitTest>
+    <UnitTest name="LogOn_Post_ReturnsRedirectOnSuccess_WithoutReturnUrl" storage="d:\code\fun\eventserver\eventserver.git\src\eventserver.tests\bin\debug\eventserver.tests.dll" id="a92e2087-2298-f241-499b-52563de17c37">
+      <Execution id="8df2398a-6fdc-4135-9bac-a5398b54462f" />
+      <TestMethod codeBase="D:\Code\Fun\EventServer\EventServer.git\src\EventServer.Tests\bin\Debug\EventServer.Tests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EventServer.Tests.Controllers.AccountControllerTest, EventServer.Tests" name="LogOn_Post_ReturnsRedirectOnSuccess_WithoutReturnUrl" />
+    </UnitTest>
+    <UnitTest name="LogOn_Post_ReturnsRedirectOnSuccess_WithReturnUrl" storage="d:\code\fun\eventserver\eventserver.git\src\eventserver.tests\bin\debug\eventserver.tests.dll" id="ad24878c-5426-fcb5-24b9-55e28fae16a9">
+      <Execution id="d5046f57-ab63-4235-924a-67291ebaabcf" />
+      <TestMethod codeBase="D:\Code\Fun\EventServer\EventServer.git\src\EventServer.Tests\bin\Debug\EventServer.Tests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EventServer.Tests.Controllers.AccountControllerTest, EventServer.Tests" name="LogOn_Post_ReturnsRedirectOnSuccess_WithReturnUrl" />
+    </UnitTest>
+    <UnitTest name="LogOn_Get_ReturnsView" storage="d:\code\fun\eventserver\eventserver.git\src\eventserver.tests\bin\debug\eventserver.tests.dll" id="39d83ac1-4842-46bd-97f1-f635e6fc8658">
+      <Execution id="347c52e9-9b8a-4658-8ba6-786d36bef098" />
+      <TestMethod codeBase="D:\Code\Fun\EventServer\EventServer.git\src\EventServer.Tests\bin\Debug\EventServer.Tests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EventServer.Tests.Controllers.AccountControllerTest, EventServer.Tests" name="LogOn_Get_ReturnsView" />
+    </UnitTest>
+    <UnitTest name="Should_not_get_next_hi_until_out_of_low" storage="d:\code\fun\eventserver\eventserver.git\src\eventserver.tests\bin\debug\eventserver.tests.dll" id="971ce027-2ea5-2350-eb6c-256a8a27e42b">
+      <Execution id="32ea5844-cc99-4f4a-997c-8af10f5e2403" />
+      <TestMethod codeBase="D:\Code\Fun\EventServer\EventServer.git\src\EventServer.Tests\bin\Debug\EventServer.Tests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EventServer.Tests.Core.IdGeneratorTests.When_getting_new_ids, EventServer.Tests" name="Should_not_get_next_hi_until_out_of_low" />
+    </UnitTest>
+    <UnitTest name="Can_deserialzie_simple_object" storage="d:\code\fun\eventserver\eventserver.git\src\eventserver.tests\bin\debug\eventserver.tests.dll" id="435e5a1a-cc19-9b6f-4846-139591fe8353">
+      <Execution id="eb3f5d33-0875-4456-9fb2-09eb1480de44" />
+      <TestMethod codeBase="D:\Code\Fun\EventServer\EventServer.git\src\EventServer.Tests\bin\Debug\EventServer.Tests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EventServer.Tests.ExtensionMethodsTests.SerializationTests, EventServer.Tests" name="Can_deserialzie_simple_object" />
+    </UnitTest>
+    <UnitTest name="Can_serialize_simple_object" storage="d:\code\fun\eventserver\eventserver.git\src\eventserver.tests\bin\debug\eventserver.tests.dll" id="63ff5f45-b3df-2233-825b-bd457966a577">
+      <Execution id="5495c50a-e343-4d67-ac9a-84aab24d067a" />
+      <TestMethod codeBase="D:\Code\Fun\EventServer\EventServer.git\src\EventServer.Tests\bin\Debug\EventServer.Tests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EventServer.Tests.ExtensionMethodsTests.SerializationTests, EventServer.Tests" name="Can_serialize_simple_object" />
+    </UnitTest>
+    <UnitTest name="Register_Get_ReturnsView" storage="d:\code\fun\eventserver\eventserver.git\src\eventserver.tests\bin\debug\eventserver.tests.dll" id="e417ecdc-d15c-9934-8e27-d55a69b70ab1">
+      <Execution id="9f962321-ec63-4356-b7f0-2642ddd935cd" />
+      <TestMethod codeBase="D:\Code\Fun\EventServer\EventServer.git\src\EventServer.Tests\bin\Debug\EventServer.Tests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EventServer.Tests.Controllers.AccountControllerTest, EventServer.Tests" name="Register_Get_ReturnsView" />
+    </UnitTest>
+    <UnitTest name="LogOff_LogsOutAndRedirects" storage="d:\code\fun\eventserver\eventserver.git\src\eventserver.tests\bin\debug\eventserver.tests.dll" id="1ca7ec9c-36ea-77ab-5232-7b59ac6deaec">
+      <Execution id="9e1f2d78-c94f-41cf-9c27-ede00611fd20" />
+      <TestMethod codeBase="D:\Code\Fun\EventServer\EventServer.git\src\EventServer.Tests\bin\Debug\EventServer.Tests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EventServer.Tests.Controllers.AccountControllerTest, EventServer.Tests" name="LogOff_LogsOutAndRedirects" />
+    </UnitTest>
+    <UnitTest name="Register_Post_ReturnsViewIfRegistrationFails" storage="d:\code\fun\eventserver\eventserver.git\src\eventserver.tests\bin\debug\eventserver.tests.dll" id="74031738-0d9a-2d0b-b06e-b5bd8be1f17a">
+      <Execution id="6b7dc520-b1b7-43da-b3e9-831f6d78fafa" />
+      <TestMethod codeBase="D:\Code\Fun\EventServer\EventServer.git\src\EventServer.Tests\bin\Debug\EventServer.Tests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EventServer.Tests.Controllers.AccountControllerTest, EventServer.Tests" name="Register_Post_ReturnsViewIfRegistrationFails" />
+    </UnitTest>
+    <UnitTest name="ChangePassword_Post_ReturnsViewIfChangePasswordFails" storage="d:\code\fun\eventserver\eventserver.git\src\eventserver.tests\bin\debug\eventserver.tests.dll" id="8ac4f8d6-391b-2c81-158f-92cdfa632e1c">
+      <Execution id="9d2c6628-1ae6-4515-b7e3-55eb440e32a6" />
+      <TestMethod codeBase="D:\Code\Fun\EventServer\EventServer.git\src\EventServer.Tests\bin\Debug\EventServer.Tests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EventServer.Tests.Controllers.AccountControllerTest, EventServer.Tests" name="ChangePassword_Post_ReturnsViewIfChangePasswordFails" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="00bb40d4-4eae-f4bd-6457-e2e20288c636" executionId="42179b45-e27e-480d-a502-b51ff8366d1b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1ca7ec9c-36ea-77ab-5232-7b59ac6deaec" executionId="9e1f2d78-c94f-41cf-9c27-ede00611fd20" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="39d83ac1-4842-46bd-97f1-f635e6fc8658" executionId="347c52e9-9b8a-4658-8ba6-786d36bef098" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3c2ad0e0-98f5-ca2a-69e9-6e02853b9490" executionId="d16ac4c7-88cf-47c0-9d87-29ee15b4184a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="435e5a1a-cc19-9b6f-4846-139591fe8353" executionId="eb3f5d33-0875-4456-9fb2-09eb1480de44" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="45e03c47-4619-cccc-95f8-b692d7473630" executionId="06d48c17-8ef6-45b2-901c-74ff09bcc3eb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="535c2d41-2db5-f950-9001-5a3179010fc6" executionId="16ebdd15-1adc-4128-9b78-dfa16b9b1ff5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="63ff5f45-b3df-2233-825b-bd457966a577" executionId="5495c50a-e343-4d67-ac9a-84aab24d067a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6b0b77b8-93b2-557e-c9c9-adb3fc24f2dd" executionId="d9807893-e402-42c5-89c9-d00cf770473d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="71a06554-1be1-78da-36c6-15ae22f77bf8" executionId="4ec994b4-ee49-4c20-b1f1-4876a81a37f2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="74031738-0d9a-2d0b-b06e-b5bd8be1f17a" executionId="6b7dc520-b1b7-43da-b3e9-831f6d78fafa" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="87c4c742-10dd-164c-7627-63c27963fbe0" executionId="3dbce9be-2a90-4727-87c7-fc073012f22a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8ac4f8d6-391b-2c81-158f-92cdfa632e1c" executionId="9d2c6628-1ae6-4515-b7e3-55eb440e32a6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="971ce027-2ea5-2350-eb6c-256a8a27e42b" executionId="32ea5844-cc99-4f4a-997c-8af10f5e2403" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="976c72ea-0f0f-4e52-a80d-f2e6b66b69d0" executionId="9662f779-f070-4494-828f-8878c2b66adc" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="98968efc-863c-8111-be46-b43a76bccbfe" executionId="d079c410-f895-474e-ac42-881345c3c6f4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a92e2087-2298-f241-499b-52563de17c37" executionId="8df2398a-6fdc-4135-9bac-a5398b54462f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ad24878c-5426-fcb5-24b9-55e28fae16a9" executionId="d5046f57-ab63-4235-924a-67291ebaabcf" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e417ecdc-d15c-9934-8e27-d55a69b70ab1" executionId="9f962321-ec63-4356-b7f0-2642ddd935cd" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e9429a48-4fda-6c3f-e3e0-c45cb0402376" executionId="7f38946e-c9fb-474d-8a17-82bd8a2eb0b2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f669633c-9f3a-cb5e-f8f9-0366a2880d68" executionId="c8fcdb3f-33dc-4d31-b260-2b677ae0e40f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f7c995b3-edd6-e63c-f3ee-411e16612ce1" executionId="c85a9b4b-ce42-418a-8514-57305cb7e8c5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fb367bb1-a3b9-0d11-5961-23f8b263f8f5" executionId="b51c6de2-56aa-43bf-94b0-ef76c3916089" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="42179b45-e27e-480d-a502-b51ff8366d1b" testId="00bb40d4-4eae-f4bd-6457-e2e20288c636" testName="Should_get_next_hi_on_first_pull" computerName="DEVLIN-LAPTOP" duration="00:00:00.0132053" startTime="2011-03-25T00:01:56.4023803-05:00" endTime="2011-03-25T00:01:56.6413940-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="42179b45-e27e-480d-a502-b51ff8366d1b">
+    </UnitTestResult>
+    <UnitTestResult executionId="9e1f2d78-c94f-41cf-9c27-ede00611fd20" testId="1ca7ec9c-36ea-77ab-5232-7b59ac6deaec" testName="LogOff_LogsOutAndRedirects" computerName="DEVLIN-LAPTOP" duration="00:00:00.0627649" startTime="2011-03-25T00:01:56.6433941-05:00" endTime="2011-03-25T00:01:56.7093979-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9e1f2d78-c94f-41cf-9c27-ede00611fd20">
+    </UnitTestResult>
+    <UnitTestResult executionId="347c52e9-9b8a-4658-8ba6-786d36bef098" testId="39d83ac1-4842-46bd-97f1-f635e6fc8658" testName="LogOn_Get_ReturnsView" computerName="DEVLIN-LAPTOP" duration="00:00:00.0005809" startTime="2011-03-25T00:01:56.7123981-05:00" endTime="2011-03-25T00:01:56.7153982-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="347c52e9-9b8a-4658-8ba6-786d36bef098">
+    </UnitTestResult>
+    <UnitTestResult executionId="d16ac4c7-88cf-47c0-9d87-29ee15b4184a" testId="3c2ad0e0-98f5-ca2a-69e9-6e02853b9490" testName="About" computerName="DEVLIN-LAPTOP" duration="00:00:00.1878850" startTime="2011-03-25T00:01:56.7183984-05:00" endTime="2011-03-25T00:01:56.9094093-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d16ac4c7-88cf-47c0-9d87-29ee15b4184a">
+    </UnitTestResult>
+    <UnitTestResult executionId="eb3f5d33-0875-4456-9fb2-09eb1480de44" testId="435e5a1a-cc19-9b6f-4846-139591fe8353" testName="Can_deserialzie_simple_object" computerName="DEVLIN-LAPTOP" duration="00:00:00.1613303" startTime="2011-03-25T00:01:56.9104094-05:00" endTime="2011-03-25T00:01:57.0744188-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="eb3f5d33-0875-4456-9fb2-09eb1480de44">
+    </UnitTestResult>
+    <UnitTestResult executionId="06d48c17-8ef6-45b2-901c-74ff09bcc3eb" testId="45e03c47-4619-cccc-95f8-b692d7473630" testName="ChangePassword_Post_ReturnsRedirectOnSuccess" computerName="DEVLIN-LAPTOP" duration="00:00:00.0016890" startTime="2011-03-25T00:01:57.0774189-05:00" endTime="2011-03-25T00:01:57.0814192-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="06d48c17-8ef6-45b2-901c-74ff09bcc3eb">
+    </UnitTestResult>
+    <UnitTestResult executionId="16ebdd15-1adc-4128-9b78-dfa16b9b1ff5" testId="535c2d41-2db5-f950-9001-5a3179010fc6" testName="ChangePasswordSuccess_ReturnsView" computerName="DEVLIN-LAPTOP" duration="00:00:00.0003482" startTime="2011-03-25T00:01:57.0834193-05:00" endTime="2011-03-25T00:01:57.0874195-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="16ebdd15-1adc-4128-9b78-dfa16b9b1ff5">
+    </UnitTestResult>
+    <UnitTestResult executionId="5495c50a-e343-4d67-ac9a-84aab24d067a" testId="63ff5f45-b3df-2233-825b-bd457966a577" testName="Can_serialize_simple_object" computerName="DEVLIN-LAPTOP" duration="00:00:00.0017387" startTime="2011-03-25T00:01:57.0894196-05:00" endTime="2011-03-25T00:01:57.0944199-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5495c50a-e343-4d67-ac9a-84aab24d067a">
+    </UnitTestResult>
+    <UnitTestResult executionId="d9807893-e402-42c5-89c9-d00cf770473d" testId="6b0b77b8-93b2-557e-c9c9-adb3fc24f2dd" testName="LogOn_Post_ReturnsViewIfModelStateIsInvalid" computerName="DEVLIN-LAPTOP" duration="00:00:00.0009813" startTime="2011-03-25T00:01:57.0964200-05:00" endTime="2011-03-25T00:01:57.1004203-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d9807893-e402-42c5-89c9-d00cf770473d">
+    </UnitTestResult>
+    <UnitTestResult executionId="4ec994b4-ee49-4c20-b1f1-4876a81a37f2" testId="71a06554-1be1-78da-36c6-15ae22f77bf8" testName="ChangePassword_Get_ReturnsView" computerName="DEVLIN-LAPTOP" duration="00:00:00.0068289" startTime="2011-03-25T00:01:57.1014203-05:00" endTime="2011-03-25T00:01:57.1114209-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4ec994b4-ee49-4c20-b1f1-4876a81a37f2">
+    </UnitTestResult>
+    <UnitTestResult executionId="6b7dc520-b1b7-43da-b3e9-831f6d78fafa" testId="74031738-0d9a-2d0b-b06e-b5bd8be1f17a" testName="Register_Post_ReturnsViewIfRegistrationFails" computerName="DEVLIN-LAPTOP" duration="00:00:00.0024109" startTime="2011-03-25T00:01:57.1134210-05:00" endTime="2011-03-25T00:01:57.1194214-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6b7dc520-b1b7-43da-b3e9-831f6d78fafa">
+    </UnitTestResult>
+    <UnitTestResult executionId="3dbce9be-2a90-4727-87c7-fc073012f22a" testId="87c4c742-10dd-164c-7627-63c27963fbe0" testName="Register_Post_ReturnsRedirectOnSuccess" computerName="DEVLIN-LAPTOP" duration="00:00:00.0234295" startTime="2011-03-25T00:01:57.1204214-05:00" endTime="2011-03-25T00:01:57.1464229-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3dbce9be-2a90-4727-87c7-fc073012f22a">
+    </UnitTestResult>
+    <UnitTestResult executionId="9d2c6628-1ae6-4515-b7e3-55eb440e32a6" testId="8ac4f8d6-391b-2c81-158f-92cdfa632e1c" testName="ChangePassword_Post_ReturnsViewIfChangePasswordFails" computerName="DEVLIN-LAPTOP" duration="00:00:00.0004471" startTime="2011-03-25T00:01:57.1484230-05:00" endTime="2011-03-25T00:01:57.1514232-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9d2c6628-1ae6-4515-b7e3-55eb440e32a6">
+    </UnitTestResult>
+    <UnitTestResult executionId="32ea5844-cc99-4f4a-997c-8af10f5e2403" testId="971ce027-2ea5-2350-eb6c-256a8a27e42b" testName="Should_not_get_next_hi_until_out_of_low" computerName="DEVLIN-LAPTOP" duration="00:00:00.0006016" startTime="2011-03-25T00:01:57.1544234-05:00" endTime="2011-03-25T00:01:57.1574235-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="32ea5844-cc99-4f4a-997c-8af10f5e2403">
+    </UnitTestResult>
+    <UnitTestResult executionId="9662f779-f070-4494-828f-8878c2b66adc" testId="976c72ea-0f0f-4e52-a80d-f2e6b66b69d0" testName="Can_deserialize_into_object_with_missing_properties" computerName="DEVLIN-LAPTOP" duration="00:00:00.1621333" startTime="2011-03-25T00:01:57.1594236-05:00" endTime="2011-03-25T00:01:57.3234330-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9662f779-f070-4494-828f-8878c2b66adc">
+    </UnitTestResult>
+    <UnitTestResult executionId="d079c410-f895-474e-ac42-881345c3c6f4" testId="98968efc-863c-8111-be46-b43a76bccbfe" testName="Can_deserialize_into_object_with_new_properties" computerName="DEVLIN-LAPTOP" duration="00:00:00.1663701" startTime="2011-03-25T00:01:57.3254331-05:00" endTime="2011-03-25T00:01:57.4954429-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d079c410-f895-474e-ac42-881345c3c6f4">
+    </UnitTestResult>
+    <UnitTestResult executionId="8df2398a-6fdc-4135-9bac-a5398b54462f" testId="a92e2087-2298-f241-499b-52563de17c37" testName="LogOn_Post_ReturnsRedirectOnSuccess_WithoutReturnUrl" computerName="DEVLIN-LAPTOP" duration="00:00:00.0009540" startTime="2011-03-25T00:01:57.4984430-05:00" endTime="2011-03-25T00:01:57.5014432-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8df2398a-6fdc-4135-9bac-a5398b54462f">
+    </UnitTestResult>
+    <UnitTestResult executionId="d5046f57-ab63-4235-924a-67291ebaabcf" testId="ad24878c-5426-fcb5-24b9-55e28fae16a9" testName="LogOn_Post_ReturnsRedirectOnSuccess_WithReturnUrl" computerName="DEVLIN-LAPTOP" duration="00:00:00.0003813" startTime="2011-03-25T00:01:57.5044434-05:00" endTime="2011-03-25T00:01:57.5074435-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d5046f57-ab63-4235-924a-67291ebaabcf">
+    </UnitTestResult>
+    <UnitTestResult executionId="9f962321-ec63-4356-b7f0-2642ddd935cd" testId="e417ecdc-d15c-9934-8e27-d55a69b70ab1" testName="Register_Get_ReturnsView" computerName="DEVLIN-LAPTOP" duration="00:00:00.0003109" startTime="2011-03-25T00:01:57.5094437-05:00" endTime="2011-03-25T00:01:57.5124438-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9f962321-ec63-4356-b7f0-2642ddd935cd">
+    </UnitTestResult>
+    <UnitTestResult executionId="7f38946e-c9fb-474d-8a17-82bd8a2eb0b2" testId="e9429a48-4fda-6c3f-e3e0-c45cb0402376" testName="Index" computerName="DEVLIN-LAPTOP" duration="00:00:00.0628425" startTime="2011-03-25T00:01:57.5134439-05:00" endTime="2011-03-25T00:01:57.5804477-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7f38946e-c9fb-474d-8a17-82bd8a2eb0b2">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method EventServer.Tests.Controllers.HomeControllerTest.Index threw exception: 
+System.ArgumentNullException: Value cannot be null.
+Parameter name: source</Message>
+          <StackTrace>    at System.Linq.Enumerable.ToArray[TSource](IEnumerable`1 source)
+   at EventServer.UI.Controllers.HomeController.Index() in D:\Code\Fun\EventServer\EventServer.git\src\EventServer.UI\Controllers\HomeController.cs:line 28
+   at EventServer.Tests.Controllers.HomeControllerTest.Index() in D:\Code\Fun\EventServer\EventServer.git\src\EventServer.Tests\Controllers\HomeControllerTest.cs:line 25
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="c8fcdb3f-33dc-4d31-b260-2b677ae0e40f" testId="f669633c-9f3a-cb5e-f8f9-0366a2880d68" testName="LogOn_Post_ReturnsViewIfValidateUserFails" computerName="DEVLIN-LAPTOP" duration="00:00:00.0004548" startTime="2011-03-25T00:01:57.5824478-05:00" endTime="2011-03-25T00:01:57.5854480-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c8fcdb3f-33dc-4d31-b260-2b677ae0e40f">
+    </UnitTestResult>
+    <UnitTestResult executionId="c85a9b4b-ce42-418a-8514-57305cb7e8c5" testId="f7c995b3-edd6-e63c-f3ee-411e16612ce1" testName="ChangePassword_Post_ReturnsViewIfModelStateIsInvalid" computerName="DEVLIN-LAPTOP" duration="00:00:00.0003428" startTime="2011-03-25T00:01:57.5864481-05:00" endTime="2011-03-25T00:01:57.5894482-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c85a9b4b-ce42-418a-8514-57305cb7e8c5">
+    </UnitTestResult>
+    <UnitTestResult executionId="b51c6de2-56aa-43bf-94b0-ef76c3916089" testId="fb367bb1-a3b9-0d11-5961-23f8b263f8f5" testName="Register_Post_ReturnsViewIfModelStateIsInvalid" computerName="DEVLIN-LAPTOP" duration="00:00:00.0003464" startTime="2011-03-25T00:01:57.5914483-05:00" endTime="2011-03-25T00:01:57.5944485-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b51c6de2-56aa-43bf-94b0-ef76c3916089">
+    </UnitTestResult>
+  </Results>
+</TestRun>

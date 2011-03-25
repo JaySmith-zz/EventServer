@@ -91,6 +91,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Dependancies\mvc\Microsoft.Web.Mvc.pdb" />
+    <Content Include="Dependancies\RhinoMocks\Castle.Core.dll" />
+    <Content Include="Dependancies\RhinoMocks\Castle.DynamicProxy2.dll" />
+    <Content Include="Dependancies\RhinoMocks\license.txt" />
+    <Content Include="Dependancies\RhinoMocks\Rhino.Mocks.dll" />
+    <Content Include="Dependancies\RhinoMocks\Rhino.Mocks.xml" />
     <Content Include="Dependancies\TweetSharp24a\Newtonsoft.Json.dll" />
     <Content Include="Dependancies\TweetSharp24a\TweetSharp.dll" />
     <Content Include="Dependancies\TweetSharp24a\TweetSharp.xml" />

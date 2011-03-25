@@ -12,8 +12,11 @@ namespace EventServer.UI.Controllers
     [HandleError]
     public class HomeController : AppController
     {
-        public HomeController(IRepository repository, ICurrentUserService currentUser) : base(repository, currentUser)
+        private readonly ITwitterService _twitterService;
+
+        public HomeController(IRepository repository, ICurrentUserService currentUser, ITwitterService twitterService) : base(repository, currentUser)
         {
+            _twitterService = twitterService;
         }
 
         public ActionResult Index()
@@ -22,7 +25,7 @@ namespace EventServer.UI.Controllers
 
             homeIndexModel.Posts = _repository.Find<Post>().Published();
             
-            homeIndexModel.Tweets = Ioc.Resolve<ITwitterService>().GetaRecentTweets().ToArray();
+            homeIndexModel.Tweets = _twitterService.GetaRecentTweets().ToArray();
             
             homeIndexModel.Sponsors = _repository.Find<Sponsor>()
                 .Where(s => s.IsActive == true)
