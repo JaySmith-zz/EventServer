@@ -8,7 +8,7 @@ namespace EventServer.Core
     {
         public object BindModel(ControllerContext controllerContext, ModelBindingContext bindingContext)
         {
-            PresentationCategory category = bindingContext.ValueProvider.GetValue(bindingContext.ModelName).AttemptedValue;
+            SessionCategory category = bindingContext.ValueProvider.GetValue(bindingContext.ModelName).AttemptedValue;
             return category;
         }
     }

@@ -14,7 +14,7 @@ namespace EventServer.Core.ViewModels
     {
         public bool CanAddSession { get; set; }
         public UserProfile User { get; set; }
-        public Presentation[] Sessions { get; set; }
+        public Session[] Sessions { get; set; }
     }
 
     [CustomValidator("IsMvpProfileUrlValid", "The MVP Profile Url field is required if Microsoft MVP is checked")]

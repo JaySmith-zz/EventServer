@@ -20,8 +20,8 @@ namespace EventServer.UI.Controllers
 
         public ActionResult Index()
         {
-           var speakersWithSessions = _repository.Find<Presentation>()
-              .Where(x => x.Status == PresentationStatus.Accepted)
+           var speakersWithSessions = _repository.Find<Session>()
+              .Where(x => x.Status == SessionStatus.Accepted)
               .Select(x => x.UserId)
               .Distinct()
               .OrderBy(x => x)
@@ -48,7 +48,7 @@ namespace EventServer.UI.Controllers
         {
             var user = GetUser(id, false);
 
-            var sessions = _repository.Find<Presentation>()
+            var sessions = _repository.Find<Session>()
                 .Where(x => x.UserId == user.Id)
                 .OrderBy(x => x.Status)
                 .ThenBy(x => x.Title);
@@ -62,7 +62,7 @@ namespace EventServer.UI.Controllers
             if (_currentUser.Is(user) || _currentUser.IsAdmin)
                 model.Sessions = sessions.ToArray();
             else
-                model.Sessions = sessions.Where(x => x.Status == PresentationStatus.Accepted).ToArray();
+                model.Sessions = sessions.Where(x => x.Status == SessionStatus.Accepted).ToArray();
 
             return View(model);
         }

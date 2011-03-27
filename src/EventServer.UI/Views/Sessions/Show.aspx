@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="ViewPage<Presentation>" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="ViewPage<Session>" %>
 
 <asp:Content ContentPlaceHolderID="TitleContent" runat="server">
 	<%= Model.Title %>

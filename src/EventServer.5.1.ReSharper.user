@@ -7,8 +7,14 @@
     </boolean>
   </SettingsComponent>
   <RecentFiles>
-    <RecentFiles />
-    <RecentEdits />
+    <RecentFiles>
+      <File id="13E2AF64-E4CE-48AA-8216-86BC4FE5D101/d:Controllers/f:HomeController.cs" caret="627" fromTop="21" />
+      <File id="FCB02A4F-60DA-45E9-A9FA-782E71192D77/d:Controllers/f:HomeControllerTest.cs" caret="1176" fromTop="25" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="FCB02A4F-60DA-45E9-A9FA-782E71192D77/d:Controllers/f:HomeControllerTest.cs" caret="1248" fromTop="15" />
+      <File id="FCB02A4F-60DA-45E9-A9FA-782E71192D77/d:Controllers/f:HomeControllerTest.cs" caret="606" fromTop="8" />
+    </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
     <NAntPath value="" />
@@ -21,4 +27,24 @@
     </NUnitInstallDir>
     <UseAddins>Never</UseAddins>
   </UnitTestRunnerNUnit>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="mockTwitterService" priority="0" />
+      <Item value="x" priority="0" />
+      <Item value="new" priority="1" />
+      <Item value="MultiSelectList`0" priority="0" />
+      <Item value="Tweet`0" priority="0" />
+      <Item value="MockRepository`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:EventServer.Core.Services.ITwitterService">
+      <Item value="Stub`2" priority="0" />
+      <Item value="GetaRecentTweets`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Rhino.Mocks.Interfaces.IMethodOptions`1">
+      <Item value="Return`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Rhino.Mocks.MockRepository">
+      <Item value="GenerateMock`1" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
 </Configuration>

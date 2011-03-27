@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="Email.Master" Inherits="ViewPage<Presentation>" %>
+﻿<%@ Page Language="C#" MasterPageFile="Email.Master" Inherits="ViewPage<Session>" %>
 
 <asp:Content ContentPlaceHolderID="EmailBody" runat="server">
 

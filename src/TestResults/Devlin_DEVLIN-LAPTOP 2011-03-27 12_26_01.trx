@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="c5afa6d3-9d51-4542-ac59-8ae49ebcec22" name="Devlin@DEVLIN-LAPTOP 2011-03-27 12:26:01" runUser="Devlin-Laptop\Devlin" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Default Test Settings" id="3f1d91a9-c388-42fa-9e3b-ffef432f9539">
+    <Deployment runDeploymentRoot="Devlin_DEVLIN-LAPTOP 2011-03-27 12_26_01">
+      <DeploymentItem filename="D:\Code\Fun\RoundTable\EventServer\EventServer.git\src\EventServer.Build\Dependancies\RhinoMocks\Rhino.Mocks.dll" />
+      <DeploymentItem filename="D:\Code\Fun\RoundTable\EventServer\EventServer.git\src\EventServer.Build\Dependancies\MvcContrib\MvcContrib.TestHelper.dll" />
+      <DeploymentItem filename="D:\Code\Fun\RoundTable\EventServer\EventServer.git\src\EventServer.Core\bin\Debug\EventServer.Core.dll" />
+      <DeploymentItem filename="D:\Code\Fun\RoundTable\EventServer\EventServer.git\src\EventServer.Infrastructure\bin\Debug\EventServer.Infrastructure.dll" />
+      <DeploymentItem filename="D:\Code\Fun\RoundTable\EventServer\EventServer.git\src\EventServer.UI\bin\EventServer.UI.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2011-03-27T12:26:01.5055739-05:00" queuing="2011-03-27T12:26:01.8465934-05:00" start="2011-03-27T12:26:01.8675946-05:00" finish="2011-03-27T12:26:02.5186318-05:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="1" executed="1" error="0" failed="1" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="Sessions_Return_With_A_Day_property_from_Model" storage="d:\code\fun\roundtable\eventserver\eventserver.git\src\eventserver.tests\bin\debug\eventserver.tests.dll" id="9ee52c2a-877f-d7b2-7b8f-e3db41930e3a">
+      <Execution id="31cffdbf-9083-490e-a9e2-0000053ab3be" />
+      <TestMethod codeBase="D:\Code\Fun\RoundTable\EventServer\EventServer.git\src\EventServer.Tests\bin\Debug\EventServer.Tests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EventServer.Tests.Controllers.AdminControllerTests, EventServer.Tests" name="Sessions_Return_With_A_Day_property_from_Model" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="9ee52c2a-877f-d7b2-7b8f-e3db41930e3a" executionId="31cffdbf-9083-490e-a9e2-0000053ab3be" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="31cffdbf-9083-490e-a9e2-0000053ab3be" testId="9ee52c2a-877f-d7b2-7b8f-e3db41930e3a" testName="Sessions_Return_With_A_Day_property_from_Model" computerName="DEVLIN-LAPTOP" duration="00:00:00.3386330" startTime="2011-03-27T12:26:01.8705947-05:00" endTime="2011-03-27T12:26:02.4976306-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="31cffdbf-9083-490e-a9e2-0000053ab3be">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method EventServer.Tests.Controllers.AdminControllerTests.Sessions_Return_With_A_Day_property_from_Model threw exception: 
+System.ArgumentNullException: Value cannot be null.
+Parameter name: path</Message>
+          <StackTrace>    at System.IO.File.WriteAllText(String path, String contents)
+   at EventServer.Core.IdGenerator.GetNextHiDefaultImpl() in D:\Code\Fun\RoundTable\EventServer\EventServer.git\src\EventServer.Core\IdGenerator.cs:line 59
+   at EventServer.Core.IdGenerator.NextId() in D:\Code\Fun\RoundTable\EventServer\EventServer.git\src\EventServer.Core\IdGenerator.cs:line 44
+   at EventServer.Core.Domain.Entity.get_Id() in D:\Code\Fun\RoundTable\EventServer\EventServer.git\src\EventServer.Core\Domain\Entity.cs:line 12
+   at EventServer.Core.Domain.Session..ctor(UserProfile user, String title, String description, SessionLevel level, SessionCategory category) in D:\Code\Fun\RoundTable\EventServer\EventServer.git\src\EventServer.Core\Domain\Session.cs:line 31
+   at EventServer.Tests.Controllers.AdminControllerTests.Sessions_Return_With_A_Day_property_from_Model() in D:\Code\Fun\RoundTable\EventServer\EventServer.git\src\EventServer.Tests\Controllers\AdminControllerTests.cs:line 29
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

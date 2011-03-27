@@ -58,9 +58,9 @@
         <div style="padding: 15px 0;">
 
             <h3 class="totals_panel">
-                <%= group.Count(x => x.Status == PresentationStatus.Accepted) %> accepted,
-                <%= group.Count(x => x.Status == PresentationStatus.Rejected) %> rejected,
-                <%= group.Count(x => x.Status == PresentationStatus.Pending) %> pending,
+                <%= group.Count(x => x.Status == SessionStatus.Accepted) %> accepted,
+                <%= group.Count(x => x.Status == SessionStatus.Rejected) %> rejected,
+                <%= group.Count(x => x.Status == SessionStatus.Pending) %> pending,
                 <%= group.Count() %> total
             </h3>
 
@@ -83,6 +83,7 @@
                         <th>Level</th>
                         <th>Track</th>
                         <th>Slot</th>
+                        <th>Day</th>
                     </tr>
                 </thead>
 
@@ -95,6 +96,7 @@
                             <td><%= session.Level %></td>
                             <td><%= session.Track %></td>
                             <td><%= session.Slot %></td>
+                            <td><%= session.Day %></td>
                         </tr>
                     <% } %>
                 </tbody>

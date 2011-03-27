@@ -51,7 +51,7 @@ namespace EventServer.UI.Controllers
         {
             var speakers = _repository.Find<UserProfile>().ToDictionary(x => x.Id);
 
-            var sessions = _repository.Find<Presentation>()
+            var sessions = _repository.Find<Session>()
                 .Each(x => x.User = speakers.TryGet(x.UserId))
                 .OrderBy(x => x.Category)
                 .ThenBy(x => x.User != null ? x.User.Name : x.UserId.ToString())
@@ -92,11 +92,11 @@ namespace EventServer.UI.Controllers
 
         public ActionResult Cleanup()
         {
-            _repository.Find<Presentation>()
+            _repository.Find<Session>()
                 .Where(x => x.Category.Value == ".NET")
                 .Each(x =>
                 {
-                    x.Category = PresentationCategory.Developers;
+                    x.Category = SessionCategory.Developers;
                     _repository.Save(x);
                 });
 

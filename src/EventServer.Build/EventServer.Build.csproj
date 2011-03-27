@@ -90,6 +90,8 @@
     <None Include="Dependancies\msbuild\NUnitReport.xsl" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Dependancies\MvcContrib\MvcContrib.TestHelper.dll" />
+    <Content Include="Dependancies\MvcContrib\Rhino.Mocks.dll" />
     <Content Include="Dependancies\mvc\Microsoft.Web.Mvc.pdb" />
     <Content Include="Dependancies\RhinoMocks\Castle.Core.dll" />
     <Content Include="Dependancies\RhinoMocks\Castle.DynamicProxy2.dll" />

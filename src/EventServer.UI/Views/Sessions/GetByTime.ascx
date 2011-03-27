@@ -22,7 +22,7 @@
     <p>Admin view</p>
 <% } %>
 
-<% foreach (var group in Model.Presentations.GroupBy(x => x.TimeSlot)) { %>
+<% foreach (var group in Model.Sessions.GroupBy(x => x.TimeSlot)) { %>
 
     <h3><%= group.Key %></h3>
 

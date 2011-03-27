@@ -1,6 +1,6 @@
 ﻿<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl<SessionsGetByTrackModel>" %>
 
-<% if (Model.Presentations.Length == 0) { %>
+<% if (Model.Sessions.Length == 0) { %>
 
     <p>Tracks not yet defined</p>
     <p>Please try again closer to the conference</p>
@@ -31,7 +31,7 @@
     <p>Admin view</p>
 <% } %>
 
-<% foreach (var group in Model.Presentations.GroupBy(x => x.Track)) { %>
+<% foreach (var group in Model.Sessions.GroupBy(x => x.Track)) { %>
 
     <h3><%= group.Key %></h3>
 

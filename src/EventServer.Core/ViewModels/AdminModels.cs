@@ -22,6 +22,6 @@ namespace EventServer.Core.ViewModels
 
     public class AdminSessionsModel
     {
-        public Presentation[] Sessions { get; set; }
+        public Session[] Sessions { get; set; }
     }
 }

@@ -387,7 +387,7 @@ namespace EventServer.Tests.Controllers
                 return Is(user.Email);
             }
 
-            public bool Owns(Presentation presentation)
+            public bool Owns(Session session)
             {
                 return false;
             }

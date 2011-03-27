@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="4e826ffb-8047-4cb3-a500-cad43a76a633" name="Devlin@DEVLIN-LAPTOP 2011-03-27 12:10:32" runUser="Devlin-Laptop\Devlin" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Default Test Settings" id="ca6e172f-92f4-40a3-a3e2-26421e6cdb98">
+    <Deployment runDeploymentRoot="Devlin_DEVLIN-LAPTOP 2011-03-27 12_10_32">
+      <DeploymentItem filename="D:\Code\Fun\RoundTable\EventServer\EventServer.git\src\EventServer.Build\Dependancies\RhinoMocks\Rhino.Mocks.dll" />
+      <DeploymentItem filename="D:\Code\Fun\RoundTable\EventServer\EventServer.git\src\EventServer.Build\Dependancies\MvcContrib\MvcContrib.TestHelper.dll" />
+      <DeploymentItem filename="D:\Code\Fun\RoundTable\EventServer\EventServer.git\src\EventServer.Core\bin\Debug\EventServer.Core.dll" />
+      <DeploymentItem filename="D:\Code\Fun\RoundTable\EventServer\EventServer.git\src\EventServer.Infrastructure\bin\Debug\EventServer.Infrastructure.dll" />
+      <DeploymentItem filename="D:\Code\Fun\RoundTable\EventServer\EventServer.git\src\EventServer.UI\bin\EventServer.UI.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2011-03-27T12:10:32.3934317-05:00" queuing="2011-03-27T12:10:34.1605327-05:00" start="2011-03-27T12:10:34.2405373-05:00" finish="2011-03-27T12:10:34.7545667-05:00" />
+  <ResultSummary outcome="Error">
+    <Counters total="1" executed="1" error="1" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+    <RunInfos>
+      <RunInfo computerName="DEVLIN-LAPTOP" outcome="Warning" timestamp="2011-03-27T12:10:34.0765279-05:00">
+        <Text>Warning: conflict during test run deployment: deployment item 'd:\code\fun\roundtable\eventserver\eventserver.git\src\eventserver.tests\bin\debug\EventServer.Core.dll' directly or indirectly referenced by the test container 'd:\code\fun\roundtable\eventserver\eventserver.git\src\eventserver.tests\bin\debug\eventserver.tests.dll' cannot be deployed to 'EventServer.Core.dll' because otherwise the file 'd:\code\fun\roundtable\eventserver\eventserver.git\src\eventserver.tests\bin\debug\EventServer.Core.dll' would overwrite deployment item 'D:\Code\Fun\RoundTable\EventServer\EventServer.git\src\EventServer.Core\bin\Debug\EventServer.Core.dll' directly or indirectly referenced by D:\Code\Fun\RoundTable\EventServer\EventServer.git\src\EventServer.Tests\bin\Debug\EventServer.Tests.dll.</Text>
+      </RunInfo>
+      <RunInfo computerName="DEVLIN-LAPTOP" outcome="Warning" timestamp="2011-03-27T12:10:34.1105299-05:00">
+        <Text>Warning: conflict during test run deployment: deployment item 'd:\code\fun\roundtable\eventserver\eventserver.git\src\eventserver.tests\bin\debug\EventServer.UI.dll' directly or indirectly referenced by the test container 'd:\code\fun\roundtable\eventserver\eventserver.git\src\eventserver.tests\bin\debug\eventserver.tests.dll' cannot be deployed to 'EventServer.UI.dll' because otherwise the file 'd:\code\fun\roundtable\eventserver\eventserver.git\src\eventserver.tests\bin\debug\EventServer.UI.dll' would overwrite deployment item 'D:\Code\Fun\RoundTable\EventServer\EventServer.git\src\EventServer.UI\bin\EventServer.UI.dll' directly or indirectly referenced by D:\Code\Fun\RoundTable\EventServer\EventServer.git\src\EventServer.Tests\bin\Debug\EventServer.Tests.dll.</Text>
+      </RunInfo>
+      <RunInfo computerName="DEVLIN-LAPTOP" outcome="Warning" timestamp="2011-03-27T12:10:34.1105299-05:00">
+        <Text>Warning: conflict during test run deployment: deployment item 'd:\code\fun\roundtable\eventserver\eventserver.git\src\eventserver.tests\bin\debug\EventServer.Infrastructure.dll' directly or indirectly referenced by the test container 'd:\code\fun\roundtable\eventserver\eventserver.git\src\eventserver.tests\bin\debug\eventserver.tests.dll' cannot be deployed to 'EventServer.Infrastructure.dll' because otherwise the file 'd:\code\fun\roundtable\eventserver\eventserver.git\src\eventserver.tests\bin\debug\EventServer.Infrastructure.dll' would overwrite deployment item 'D:\Code\Fun\RoundTable\EventServer\EventServer.git\src\EventServer.Infrastructure\bin\Debug\EventServer.Infrastructure.dll' directly or indirectly referenced by D:\Code\Fun\RoundTable\EventServer\EventServer.git\src\EventServer.Tests\bin\Debug\EventServer.Tests.dll.</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="Sessions_Return_With_A_Day_property_from_Model" storage="d:\code\fun\roundtable\eventserver\eventserver.git\src\eventserver.tests\bin\debug\eventserver.tests.dll" id="9ee52c2a-877f-d7b2-7b8f-e3db41930e3a">
+      <Execution id="7493ea07-d05c-4bde-a26d-c9cb95e2698f" />
+      <TestMethod codeBase="D:\Code\Fun\RoundTable\EventServer\EventServer.git\src\EventServer.Tests\bin\Debug\EventServer.Tests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EventServer.Tests.Controllers.AdminControllerTests, EventServer.Tests" name="Sessions_Return_With_A_Day_property_from_Model" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="9ee52c2a-877f-d7b2-7b8f-e3db41930e3a" executionId="7493ea07-d05c-4bde-a26d-c9cb95e2698f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="7493ea07-d05c-4bde-a26d-c9cb95e2698f" testId="9ee52c2a-877f-d7b2-7b8f-e3db41930e3a" testName="Sessions_Return_With_A_Day_property_from_Model" computerName="DEVLIN-LAPTOP" startTime="2011-03-27T12:10:34.2515380-05:00" endTime="2011-03-27T12:10:34.7275652-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7493ea07-d05c-4bde-a26d-c9cb95e2698f">
+      <Output>
+        <ErrorInfo>
+          <Message>Unable to get type EventServer.Tests.Controllers.AdminControllerTests, EventServer.Tests. Error: System.TypeLoadException: Could not load type 'EventServer.Tests.Controllers.AdminControllerTests' from assembly 'EventServer.Tests, Version=1.0.4102.13642, Culture=neutral, PublicKeyToken=null'.
+   at System.Reflection.RuntimeAssembly.GetType(RuntimeAssembly assembly, String name, Boolean throwOnError, Boolean ignoreCase, ObjectHandleOnStack type)
+   at System.Reflection.RuntimeAssembly.GetType(String name, Boolean throwOnError, Boolean ignoreCase)
+   at System.Reflection.Assembly.GetType(String name, Boolean throwOnError)
+   at Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.GetType(UnitTestElement unitTest, String type)
+   at Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestExecuter.ResolveMethods().</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

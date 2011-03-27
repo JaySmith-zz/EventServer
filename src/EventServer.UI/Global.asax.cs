@@ -33,7 +33,7 @@ namespace EventServer.UI
             Ioc.Initialize(new StructureMapContainer());
 
             ControllerBuilder.Current.SetControllerFactory(new AppControllerFactory());
-            ModelBinders.Binders[typeof(PresentationCategory)] = new PresentationCategoryBinder();
+            ModelBinders.Binders[typeof(SessionCategory)] = new PresentationCategoryBinder();
 
             AreaRegistration.RegisterAllAreas();
             RegisterRoutes(RouteTable.Routes);
