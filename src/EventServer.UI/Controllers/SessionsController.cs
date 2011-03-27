@@ -117,6 +117,7 @@ namespace EventServer.UI.Controllers
                     Category = session.Category,
                     Track = session.Track,
                     TimeSlot = session.Slot,
+                    Day = session.Day
                 };
 
             ViewData["TimeSlot"] = new SelectList(Core.Domain.Session.TimeSlots, "Key", "Value", model.TimeSlot);

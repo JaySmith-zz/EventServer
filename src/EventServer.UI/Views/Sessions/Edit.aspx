@@ -63,7 +63,13 @@
                 <%= Html.DropDownList("TimeSlot") %>
                 <%= Html.ValidationMessageFor(m => m.TimeSlot) %>
             </div>
-
+             <div class="editor-label">
+                <%= Html.LabelFor(m => m.Day) %>
+            </div>
+            <div class="editor-field">
+                <%= Html.TextBoxFor(m => m.Day) %>
+                <%= Html.ValidationMessageFor(m => m.Day) %>
+            </div>
             <% } %>
 
             <p><input type="submit" value="Save" /></p>

@@ -38,6 +38,9 @@ namespace EventServer.Core.ViewModels
 
         [DisplayName("Time Slot")]
         public string TimeSlot { get; set; }
+
+        [DisplayName("Event Day")]
+        public int Day { get; set; }
     }
 
     public class SessionsAdminBoxModel
