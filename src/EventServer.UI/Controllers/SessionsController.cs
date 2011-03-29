@@ -45,7 +45,7 @@ namespace EventServer.UI.Controllers
 
         public ActionResult GetByTrack()
         {
-            IEnumerable<Presentation> presentations = _repository
+            IEnumerable<Session> presentations = _repository
                 .FindAcceptedPresentations()
                 .OrderBy(x => x.Track)
                 .ThenBy(x => x.Slot);
@@ -60,7 +60,7 @@ namespace EventServer.UI.Controllers
 
         public ActionResult GetByTime()
         {
-            IEnumerable<Presentation> presentations = _repository
+            IEnumerable<Session> presentations = _repository
                 .FindAcceptedPresentations()
                 .OrderBy(x => x.Slot)
                 .ThenBy(x => x.Track);
@@ -91,7 +91,7 @@ namespace EventServer.UI.Controllers
 
             var user = _repository.Find<UserProfile>().GetBy(_currentUser.Email);
 
-            var presentation = new Presentation(user, model.Title, model.Description, model.Level, model.Category);
+            var presentation = new Session(user, model.Title, model.Description, model.Level, model.Category);
 
             _repository.Save(presentation);
 
@@ -117,9 +117,10 @@ namespace EventServer.UI.Controllers
                     Category = session.Category,
                     Track = session.Track,
                     TimeSlot = session.Slot,
+                    Day = session.Day
                 };
 
-            ViewData["TimeSlot"] = new SelectList(Presentation.TimeSlots, "Key", "Value", model.TimeSlot);
+            ViewData["TimeSlot"] = new SelectList(Core.Domain.Session.TimeSlots, "Key", "Value", model.TimeSlot);
             return View(model);
         }
 
@@ -128,7 +129,7 @@ namespace EventServer.UI.Controllers
         {
             if (!ModelState.IsValid)
             {
-                ViewData["TimeSlot"] = new SelectList(Presentation.TimeSlots, "Key", "Value", model.TimeSlot);
+                ViewData["TimeSlot"] = new SelectList(Core.Domain.Session.TimeSlots, "Key", "Value", model.TimeSlot);
                 return View(model);
             }
 
@@ -200,7 +201,7 @@ namespace EventServer.UI.Controllers
             if (!Request.IsAuthenticated)
                 return new EmptyResult();
 
-            var presentation = _repository.Get<Presentation>(id);
+            var presentation = _repository.Get<Session>(id);
             if (presentation == null)
                 return new EmptyResult();
 

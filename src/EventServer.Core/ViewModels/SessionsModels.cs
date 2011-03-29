@@ -27,17 +27,20 @@ namespace EventServer.Core.ViewModels
         [DisplayName("Description")]
         public string Description { get; set; }
 
-        [DisplayName("Presentation Level")]
-        public PresentationLevel Level { get; set; }
+        [DisplayName("Session Level")]
+        public SessionLevel Level { get; set; }
 
-        [DisplayName("Presentation Category")]
-        public PresentationCategory Category { get; set; }
+        [DisplayName("Session Category")]
+        public SessionCategory Category { get; set; }
 
         [DisplayName("Track")]
         public string Track { get; set; }
 
         [DisplayName("Time Slot")]
         public string TimeSlot { get; set; }
+
+        [DisplayName("Event Day")]
+        public int Day { get; set; }
     }
 
     public class SessionsAdminBoxModel
@@ -51,13 +54,13 @@ namespace EventServer.Core.ViewModels
 
     public class SessionsGetByTrackModel
     {
-        public SessionsGetByTrackModel(IEnumerable<Presentation> presentations, bool isAdmin)
+        public SessionsGetByTrackModel(IEnumerable<Session> presentations, bool isAdmin)
         {
-            Presentations = presentations.ToArray();
+            Sessions = presentations.ToArray();
             IsAdmin = isAdmin;
         }
 
-        public Presentation[] Presentations { get; set; }
+        public Session[] Sessions { get; set; }
         public bool IsAdmin { get; set; }
     }
 }

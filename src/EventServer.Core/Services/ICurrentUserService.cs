@@ -14,7 +14,7 @@ namespace EventServer.Core.Services
 
         bool Is(string email);
         bool Is(UserProfile user);
-        bool Owns(Presentation presentation);
+        bool Owns(Session session);
         void AddRedirectMessage(string message);
         string[] GetAndFlushRedirectMessages();
     }
@@ -48,14 +48,14 @@ namespace EventServer.Core.Services
             return user != null && Is(user.Email);
         }
 
-        public bool Owns(Presentation presentation)
+        public bool Owns(Session session)
         {
-            if (presentation == null)
+            if (session == null)
                 return false;
 
             var user = _repository.Find<UserProfile>().GetBy(Email);
 
-            return user != null && user.Id == presentation.UserId;
+            return user != null && user.Id == session.UserId;
         }
 
         public void AddRedirectMessage(string message)

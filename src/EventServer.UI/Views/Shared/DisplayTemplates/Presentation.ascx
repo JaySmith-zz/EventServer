@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" Inherits="ViewUserControl<Presentation>" %>
+﻿<%@ Control Language="C#" Inherits="ViewUserControl<Session>" %>
 
 <div class="post">
 

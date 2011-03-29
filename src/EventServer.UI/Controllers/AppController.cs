@@ -49,9 +49,9 @@ namespace EventServer.UI.Controllers
             return user;
         }
 
-        protected Presentation GetSession(int id, bool performOwnerCheck)
+        protected Session GetSession(int id, bool performOwnerCheck)
         {
-            var session = _repository.Get<Presentation>(id);
+            var session = _repository.Get<Session>(id);
 
             if (session == null)
                 throw new HttpException(404, "Session {0} not found".F(id));

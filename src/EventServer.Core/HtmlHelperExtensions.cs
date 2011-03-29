@@ -70,13 +70,13 @@ public static class MvcExtensionMethods
         return MvcHtmlString.Create(builder.ToString(TagRenderMode.Normal));
     }
 
-    public static bool IsCurrentUserOwnerOrAdmin(this HtmlHelper helper, Presentation presentation)
+    public static bool IsCurrentUserOwnerOrAdmin(this HtmlHelper helper, Session session)
     {
-        if (presentation == null)
+        if (session == null)
             return false;
 
         var currentUser = Ioc.Resolve<ICurrentUserService>();
 
-        return currentUser.IsAdmin || currentUser.Owns(presentation);
+        return currentUser.IsAdmin || currentUser.Owns(session);
     }
 }

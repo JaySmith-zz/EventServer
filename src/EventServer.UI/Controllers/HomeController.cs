@@ -81,7 +81,7 @@ namespace EventServer.UI.Controllers
 
         public ActionResult Test()
         {
-            Ioc.Resolve<IEventAggregator>().Raise(new PresentationCreated {PresentationId = -1});
+            Ioc.Resolve<IEventAggregator>().Raise(new SessionCreated {PresentationId = -1});
             return Content("Success");
         }
     }
