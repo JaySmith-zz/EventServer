@@ -1,6 +1,8 @@
 bin
 obj
 *.suo
+*.user
 TestResults
 *.ReSharper
 *_ReSharper.*/**
+_ReSharper.*
