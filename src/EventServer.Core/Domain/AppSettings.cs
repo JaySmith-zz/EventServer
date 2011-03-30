@@ -41,7 +41,7 @@ namespace EventServer.Core.Domain
             get
             {
                 if (string.IsNullOrEmpty(siteTheme))
-                    siteTheme = "Default";
+                    siteTheme = "Solution";
 
                 return siteTheme;
             }
