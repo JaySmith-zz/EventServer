@@ -401,6 +401,7 @@
     <Content Include="Themes\Solution\images\img03.gif" />
     <Content Include="Themes\Solution\images\img05.jpg" />
     <Content Include="Themes\Solution\images\logo.png" />
+    <Content Include="Themes\Solution\images\logo_large.png" />
     <Content Include="Themes\Solution\theme.css" />
     <Content Include="Views\Account\ChangeName.aspx" />
     <Content Include="Views\Account\Show.aspx" />
