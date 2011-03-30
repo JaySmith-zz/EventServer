@@ -86,6 +86,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\AppSettings\1.xml" />
     <Content Include="Content\Images\bg01.jpg" />
     <Content Include="Content\Images\bg02.jpg" />
     <Content Include="Content\Images\bg03.jpg" />
@@ -481,7 +482,6 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Scripts\tiny_mce\plugins\autosave\images\" />
     <Folder Include="Scripts\tiny_mce\plugins\spellchecker\classes\utils\" />
     <Folder Include="Scripts\tiny_mce\plugins\spellchecker\includes\" />
