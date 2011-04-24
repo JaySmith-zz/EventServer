@@ -1,3 +1,5 @@
+/* Solution */
+
 /*
 Design by Free CSS Templates
 http://www.freecsstemplates.org
@@ -76,7 +78,7 @@ p, ul, ol
 {
     margin-top: 0;
     text-align: left;
-	line-height: 150%;
+    line-height: 150%;
 }
 
 ul, ol
@@ -168,7 +170,7 @@ hr
 
 #menu ul
 {
-	margin: -30px auto;
+    margin: -30px auto;
     padding: 0px 0px 0px 0px;
     list-style: none;
     line-height: normal;
@@ -220,47 +222,52 @@ hr
 {
     width: 940px;
     margin: 0 auto;
-    padding: 50px 0px 0px 0px;
+    padding-top: 150px;
 }
 
 /** LOGO */
-
-#logo {
-	width: 940px;
-	height: 115px;
-	margin: 15px auto;
-	background: url(images/logo.png) no-repeat left top;
+#logo
+{
+    width: 940px;
+    height: 115px;
+    margin: 15px auto;
+    background: url(images/logo.png) no-repeat left top;
 }
 
-#logo h1 {
-	margin-left: 100px;
-	line-height: normal;
-	text-transform: capitalize;
-	font-weight: normal;
-	color: #618C04;
+#logo h1
+{
+    margin-left: 100px;
+    line-height: normal;
+    text-transform: capitalize;
+    font-weight: normal;
+    color: #618C04;
 }
 
-#logo p {
-	margin-top: -4px;
-	margin-left: 100px;
+#logo p
+{
+    margin-top: -4px;
+    margin-left: 100px;
     text-transform: capitalize;
     font-size: 24px;
     color: #A8A8A8;
 }
 
-#logo h1 {
-	padding-top: 10px;
-	font-size: 28px;
+#logo h1
+{
+    padding-top: 10px;
+    font-size: 28px;
 }
 
-#logo a {
-	text-decoration: none;
-	color: #A8A8A8;
+#logo a
+{
+    text-decoration: none;
+    color: #A8A8A8;
 }
 
-#logo h1 a {
-	text-decoration: none;
-	color: #618C04;
+#logo h1 a
+{
+    text-decoration: none;
+    color: #618C04;
 }
 
 #logo h1 a
@@ -291,8 +298,8 @@ hr
 
 .post .title
 {
-	margin-top: 10px;
-	border-bottom: 2px solid #618C04;
+    margin-top: 10px;
+    border-bottom: 2px solid #618C04;
 }
 
 .post .title a

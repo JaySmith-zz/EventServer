@@ -24,18 +24,20 @@
     <asp:ContentPlaceHolder ID="HeadContent" runat="server" />
 </head>
 <body>
-    <div id="logo">
-        <h1>
-            <a href="#"><%= EventServer.Core.Settings.Instance.SiteName %></a></h1>
-        <p>
-            <em><%= EventServer.Core.Settings.Instance.SiteSlogan %></em></p>
+    <div id="header">
+        <div id="logo">
+            <h1>
+                <a href="#">
+                    <%= EventServer.Core.Settings.Instance.SiteName %></a></h1>
+            <p>
+                <em>
+                    <%= EventServer.Core.Settings.Instance.SiteSlogan %></em></p>
+        </div>
+        <!-- end #logo -->
         <div id="logindisplay">
             <% Html.RenderAction<HomeController>(c => c.GetLogonWidget()); %>
         </div>
-    </div>
-    <hr />
-    <!-- end #logo -->
-    <div id="header">
+        <!-- end #loginDisplay -->
         <div id="menu">
             <ul>
                 <li id="navHome">
@@ -51,6 +53,7 @@
             </ul>
         </div>
     </div>
+    <!-- end #header-->
     <div id="page">
         <asp:ContentPlaceHolder ID="MainContent" runat="server" />
         <div style="clear: both;">
@@ -59,8 +62,10 @@
     <!-- end #page -->
     <div id="footer">
         <p>
-            Copyright (c) 2010 <a href="<%= ResolveUrl("~/") %>"><%= EventServer.Core.Settings.Instance.SiteName %></a>. All rights reserved. Design by <a href="http://www.freecsstemplates.org/">Free
-                    CSS Templates</a>. Event Server v<%= Application["version"] %></p>
+            Copyright (c) 2010 <a href="<%= ResolveUrl("~/") %>">
+                <%= EventServer.Core.Settings.Instance.SiteName %></a>. All rights reserved.
+            Design by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>. Event
+            Server v<%= Application["version"] %></p>
     </div>
     <!-- end #footer -->
     <asp:ContentPlaceHolder ID="ScriptContent" runat="server" />
