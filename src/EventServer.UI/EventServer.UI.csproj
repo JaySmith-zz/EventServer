@@ -418,6 +418,8 @@
     <Content Include="Themes\DTF2\theme.css" />
     <Content Include="Themes\DTF3\images\Header-skinny.jpg" />
     <Content Include="Themes\DTF3\images\Header.jpg" />
+    <Content Include="Themes\DTF3\images\img01.jpg" />
+    <Content Include="Themes\DTF3\images\img07.jpg" />
     <Content Include="Themes\DTF3\theme.css" />
     <Content Include="Themes\Solution\images\img01.gif" />
     <Content Include="Themes\Solution\images\img02.gif" />
