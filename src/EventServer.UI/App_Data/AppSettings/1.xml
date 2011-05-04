@@ -3,7 +3,7 @@
   <Id>1</Id>
   <SiteName>EventServer</SiteName>
   <SiteSlogan>Making Events Easy!</SiteSlogan>
-  <SiteTheme>DTF3</SiteTheme>
+  <SiteTheme>DTF</SiteTheme>
   <Description>Event Server was created to make setting up sites for conference easy.</Description>
   <StartDateTime>2011-05-17T11:12:24</StartDateTime>
   <EndDateTime>0001-01-01T00:00:00</EndDateTime>
