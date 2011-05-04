@@ -49,8 +49,6 @@
             <% } %>
             <% } %>
         </div>
-        <% if (Model.Tweets.Length > 0)
-           { %>
         <ul>
             <li>
                 <h2>
@@ -65,10 +63,14 @@
                         <%= tweet.Message %>
                     </div>
                 </div>
-                <% } %>
+                <% }
+
+                   if (Model.Tweets.Count() == 0)
+                   {%>
+                Configure your Twitter Handle in the Admin Section to see your tweets show up here!</b>
+                <%} %>
             </li>
         </ul>
-        <% } %>
     </div>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="ScriptContent" runat="server">

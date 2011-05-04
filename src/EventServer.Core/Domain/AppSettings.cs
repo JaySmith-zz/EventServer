@@ -6,10 +6,11 @@ namespace EventServer.Core.Domain
     {
         public AppSettings()
         {
-            Id = 1;    
+            Id = 1;
         }
 
         private string siteName;
+
         public string SiteName
         {
             get
@@ -23,6 +24,7 @@ namespace EventServer.Core.Domain
         }
 
         private string siteSlogan;
+
         public string SiteSlogan
         {
             get
@@ -36,6 +38,7 @@ namespace EventServer.Core.Domain
         }
 
         private string siteTheme;
+
         public string SiteTheme
         {
             get
@@ -49,6 +52,7 @@ namespace EventServer.Core.Domain
         }
 
         private string description;
+
         public string Description
         {
             get
@@ -62,6 +66,7 @@ namespace EventServer.Core.Domain
         }
 
         private DateTime startDateTime;
+
         public DateTime StartDateTime
         {
             get
@@ -75,32 +80,35 @@ namespace EventServer.Core.Domain
         }
 
         private DateTime endDateTime;
+
         public DateTime EndDateTime
         {
             get
             {
                 if (endDateTime == DateTime.MinValue)
                     DateTime.Now.AddDays(90);
-                
+
                 return endDateTime;
             }
             set { endDateTime = value; }
         }
 
         private DateTime registrationEndDateTime;
+
         public DateTime RegistrationEndDateTime
         {
             get
             {
                 if (registrationEndDateTime == DateTime.MinValue)
                     registrationEndDateTime = DateTime.Now.AddDays(89);
-                
+
                 return registrationEndDateTime;
             }
             set { registrationEndDateTime = value; }
         }
 
         private DateTime sessionSubmissionEndDateTime;
+
         public DateTime SessionSubmissionEndDateTime
         {
             get
@@ -114,6 +122,7 @@ namespace EventServer.Core.Domain
         }
 
         private string venueName;
+
         public string VenueName
         {
             get
@@ -127,19 +136,21 @@ namespace EventServer.Core.Domain
         }
 
         private string venuePhone;
+
         public string VenuePhone
         {
             get
             {
                 if (string.IsNullOrEmpty(venuePhone))
                     venuePhone = "555 555-5555";
-                
+
                 return venuePhone;
             }
             set { venuePhone = value; }
         }
 
         private string venueStreet;
+
         public string VenueStreet
         {
             get
@@ -153,6 +164,7 @@ namespace EventServer.Core.Domain
         }
 
         private string venueCity;
+
         public string VenueCity
         {
             get
@@ -166,6 +178,7 @@ namespace EventServer.Core.Domain
         }
 
         private string venueState;
+
         public string VenueState
         {
             get
@@ -179,45 +192,49 @@ namespace EventServer.Core.Domain
         }
 
         private string venueZip;
+
         public string VenueZip
         {
             get
             {
                 if (string.IsNullOrEmpty(venueZip))
                     venueZip = "12345";
-                
+
                 return venueZip;
             }
             set { venueZip = value; }
         }
 
         private string contactName;
+
         public string ContactName
         {
             get
             {
                 if (string.IsNullOrEmpty(contactName))
                     contactName = "Event Contact";
-                
+
                 return contactName;
             }
             set { contactName = value; }
         }
 
         private string contactEmail;
+
         public string ContactEmail
         {
             get
             {
                 if (string.IsNullOrEmpty(contactName))
                     contactEmail = "event@example.com";
-                
+
                 return contactEmail;
             }
             set { contactEmail = value; }
         }
 
         private string twitterId;
+
         public string TwitterId
         {
             get
@@ -231,19 +248,21 @@ namespace EventServer.Core.Domain
         }
 
         private DateTime twitterFilterDate;
+
         public DateTime TwitterFilterDate
         {
-            get 
+            get
             {
                 if (twitterFilterDate == DateTime.MinValue)
                     return DateTime.Now.AddDays(-30);
 
-                return twitterFilterDate; 
+                return twitterFilterDate;
             }
             set { twitterFilterDate = value; }
         }
 
         private int twitterDisplayCount;
+
         public int TwitterDisplayCount
         {
             get
@@ -257,27 +276,29 @@ namespace EventServer.Core.Domain
         }
 
         private string siteLogoUri;
+
         public string SiteLogoUri
         {
             get
             {
                 if (string.IsNullOrEmpty(siteLogoUri))
                     siteLogoUri = "http://eventserver.codeplex.com/images/logo.png";
-                
+
                 return siteLogoUri;
             }
             set { siteLogoUri = value; }
         }
 
         private string dataStoreBasePath;
+
         public string DataStorePath
         {
-            get 
+            get
             {
                 if (string.IsNullOrEmpty(dataStoreBasePath))
                     dataStoreBasePath = "~/App_Data";
 
-                return dataStoreBasePath; 
+                return dataStoreBasePath;
             }
             set { dataStoreBasePath = value; }
         }

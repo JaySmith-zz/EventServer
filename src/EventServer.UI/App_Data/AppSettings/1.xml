@@ -3,7 +3,7 @@
   <Id>1</Id>
   <SiteName>EventServer</SiteName>
   <SiteSlogan>Making Events Easy!</SiteSlogan>
-  <SiteTheme>Solution</SiteTheme>
+  <SiteTheme>DTF</SiteTheme>
   <Description>Event Server was created to make setting up sites for conference easy.</Description>
   <StartDateTime>2011-05-17T11:12:24</StartDateTime>
   <EndDateTime>0001-01-01T00:00:00</EndDateTime>
@@ -16,7 +16,7 @@
   <VenueState>AR</VenueState>
   <VenueZip>12345</VenueZip>
   <ContactName>Event Contact</ContactName>
-  <ContactEmail>contact@emai.com</ContactEmail>
+  <ContactEmail>contact@email.com</ContactEmail>
   <TwitterId>EventServer</TwitterId>
   <TwitterFilterDate>2011-02-21T17:13:39.0615791-06:00</TwitterFilterDate>
   <TwitterDisplayCount>5</TwitterDisplayCount>
