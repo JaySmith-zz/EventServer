@@ -582,7 +582,7 @@ fieldset input[type="password"]
 fieldset textarea, fieldset textarea.input-validation-error
 {
     width: 40em;
-    height: 20em;
+    height: 10em;
     border: 1px solid #ccc;
 }
 

@@ -2,7 +2,7 @@
 <Page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Id>3</Id>
   <Title>Sidebar</Title>
-  <Content>&lt;ul&gt;&lt;li&gt;&lt;h2&gt;Sidebar&lt;/h2&gt;To edit this content, edit the blog page titled "Sidebar"&lt;/li&gt;&lt;/ul&gt;</Content>
+  <Content>To edit this content, edit the blog page titled "Sidebar"&lt;/li&gt;&lt;/ul&gt;</Content>
   <Description />
   <Parent>00000000-0000-0000-0000-000000000000</Parent>
   <HasParentPage>false</HasParentPage>

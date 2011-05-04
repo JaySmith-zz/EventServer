@@ -1,18 +1,22 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<AppSettings>" %>
-<%@ Import Namespace="System.Web.UI.MobileControls" %>
 
+<%@ Import Namespace="System.Web.UI.MobileControls" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Index
+    Event Server Settings
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <h2>
-        Settings</h2>
+        Event Server Settings</h2>
+    <br />
+
+    <%= Html.ActionLink<SettingsController>(c => c.Twitter(), "Twitter") %>
+
     <% using (Html.BeginForm())
        {%>
     <%= Html.ValidationSummary(true) %>
+    <h3>
+        General Settings</h3>
     <fieldset>
-        <legend>Site</legend>
-
         <div class="editor-label">
             <%= Html.LabelFor(model => model.SiteName)%>
         </div>
@@ -20,7 +24,6 @@
             <%= Html.TextBoxFor(model => model.SiteName) %>
             <%= Html.ValidationMessageFor(model => model.SiteName) %>
         </div>
-        
         <div class="editor-label">
             <%= Html.LabelFor(model => model.SiteSlogan) %>
         </div>
@@ -28,7 +31,6 @@
             <%= Html.TextBoxFor(model => model.SiteSlogan) %>
             <%= Html.ValidationMessageFor(model => model.SiteSlogan) %>
         </div>
-
         <div class="editor-label">
             <%= Html.LabelFor(model => model.SiteTheme) %>
         </div>
@@ -36,14 +38,22 @@
             <%= Html.DropDownListFor(model => model.SiteTheme, (List<SelectListItem>) ViewData["AvailableThemes"])%>
             <%= Html.ValidationMessageFor(model => model.AvailableThemes)%>
         </div>
-
         <div class="editor-label">
             <%= Html.LabelFor(model => model.Description) %>
         </div>
         <div class="editor-field">
-            <%= Html.TextAreaFor(model => model.Description, 10, 60, new { @rows = "10", @cols = "60" }) %>
+            <%= Html.TextAreaFor(model => model.Description) %>
             <%= Html.ValidationMessageFor(model => model.Description) %>
         </div>
+
+        <div class="editor-label">
+            <%= Html.LabelFor(model => model.NumberOfDaysForEvent) %>
+        </div>
+        <div class="editor-field">
+            <%= Html.DropDownListFor(model => model.NumberOfDaysForEvent, (List<SelectListItem>)ViewData["NumberOfDays"])%>
+            <%= Html.ValidationMessageFor(model => model.NumberOfDaysForEvent)%>
+        </div>
+
         <div class="editor-label">
             <%= Html.LabelFor(model => model.StartDateTime) %>
         </div>
@@ -73,8 +83,9 @@
             <%= Html.ValidationMessageFor(model => model.SessionSubmissionEndDateTime) %>
         </div>
     </fieldset>
+    <h3>
+        Event Location</h3>
     <fieldset>
-        <legend>Venue</legend>
         <div class="editor-label">
             <%= Html.LabelFor(model => model.VenueName) %>
         </div>
@@ -132,30 +143,10 @@
             <%= Html.ValidationMessageFor(model => model.ContactEmail) %>
         </div>
     </fieldset>
-    <fieldset>
-        <legend>Twitter</legend>
-        <div class="editor-label">
-            <%= Html.LabelFor(model => model.TwitterId) %>
-        </div>
-        <div class="editor-field">
-            <%= Html.TextBoxFor(model => model.TwitterId) %>
-            <%= Html.ValidationMessageFor(model => model.TwitterId) %>
-        </div>
-        <div class="editor-label">
-            <%= Html.LabelFor(model => model.SiteLogoUri) %>
-        </div>
-        <div class="editor-field">
-            <%= Html.TextBoxFor(model => model.SiteLogoUri) %>
-            <%= Html.ValidationMessageFor(model => model.SiteLogoUri) %>
-        </div>
-        <p>
-            <input type="submit" value="Save" />
-        </p>
-    </fieldset>
+    <p>
+        <input style="align: right;" type="submit" value="Save" />
+    </p>
     <% } %>
-    <div>
-        <%= Html.ActionLink("Back to List", "Index") %>
-    </div>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="HeadContent" runat="server">
 </asp:Content>

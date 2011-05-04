@@ -86,6 +86,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\Page\1.xml" />
+    <Content Include="App_Data\Page\2.xml" />
+    <Content Include="App_Data\Page\3.xml" />
+    <Content Include="App_Data\Page\4.xml" />
     <Content Include="Content\Images\error.gif" />
     <Content Include="Content\Images\img01.jpg" />
     <Content Include="Content\Images\img02.gif" />
@@ -425,6 +429,7 @@
     <Content Include="Views\Sessions\GetRawList.ascx" />
     <Content Include="Views\Sessions\Index.aspx" />
     <Content Include="Views\Sessions\Show.aspx" />
+    <Content Include="Views\Settings\Twitter.aspx" />
     <Content Include="Views\Shared\ComingSoon.aspx" />
     <Content Include="Views\Shared\DisplayTemplates\Comment.ascx" />
     <Content Include="Views\Shared\DisplayTemplates\Session.ascx" />
@@ -491,7 +496,6 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Scripts\tiny_mce\plugins\autosave\images\" />
     <Folder Include="Scripts\tiny_mce\plugins\spellchecker\classes\utils\" />
     <Folder Include="Scripts\tiny_mce\plugins\spellchecker\includes\" />

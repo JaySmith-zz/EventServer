@@ -18,8 +18,9 @@
   <ContactName>Event Contact</ContactName>
   <ContactEmail>contact@emai.com</ContactEmail>
   <TwitterId>EventServer</TwitterId>
-  <TwitterFilterDate>2011-04-03T16:53:22.3799706-05:00</TwitterFilterDate>
+  <TwitterFilterDate>2011-04-03T22:13:32</TwitterFilterDate>
   <TwitterDisplayCount>5</TwitterDisplayCount>
   <SiteLogoUri>http://eventserver.codeplex.com/images/logo.png</SiteLogoUri>
   <DataStorePath>~/App_Data</DataStorePath>
+  <NumberOfDaysForEvent>2</NumberOfDaysForEvent>
 </AppSettings>
