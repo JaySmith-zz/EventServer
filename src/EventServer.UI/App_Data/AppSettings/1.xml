@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <AppSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Id>1</Id>
-  <SiteName>EventServer</SiteName>
-  <SiteSlogan>Making Events Easy!</SiteSlogan>
-  <SiteTheme>Solution</SiteTheme>
+  <SiteName>Tyson Development Conference 2011</SiteName>
+  <SiteSlogan>The future of getting things done...</SiteSlogan>
+  <SiteTheme>TysonDevCon</SiteTheme>
   <Description>Event Server was created to make setting up sites for conference easy.</Description>
   <StartDateTime>2011-05-17T11:12:24</StartDateTime>
   <EndDateTime>0001-01-01T00:00:00</EndDateTime>
@@ -18,7 +18,7 @@
   <ContactName>Event Contact</ContactName>
   <ContactEmail>contact@emai.com</ContactEmail>
   <TwitterId>EventServer</TwitterId>
-  <TwitterFilterDate>2011-02-21T17:13:39.0615791-06:00</TwitterFilterDate>
+  <TwitterFilterDate>2011-04-03T16:53:22.3799706-05:00</TwitterFilterDate>
   <TwitterDisplayCount>5</TwitterDisplayCount>
   <SiteLogoUri>http://eventserver.codeplex.com/images/logo.png</SiteLogoUri>
   <DataStorePath>~/App_Data</DataStorePath>

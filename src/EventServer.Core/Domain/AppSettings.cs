@@ -2,6 +2,10 @@
 
 namespace EventServer.Core.Domain
 {
+    using System.Collections.Generic;
+    using System.IO;
+    using System.Web.Hosting;
+
     public class AppSettings : Entity
     {
         public AppSettings()
@@ -285,6 +289,24 @@ namespace EventServer.Core.Domain
         public string FileDataStorePath
         {
             get { return DataStorePath + "/Files"; }
+        }
+
+        public string[] AvailableThemes
+        {
+            get
+            {
+                var themes = new List<string>();
+
+                var directories = Directory.GetDirectories(HostingEnvironment.MapPath("~/Themes"));
+
+                foreach (var directory in directories)
+                {
+                    var directoryInfo = new DirectoryInfo(directory);
+                    themes.Add(directoryInfo.Name);
+                }
+
+                return themes.ToArray();
+            }
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<AppSettings>" %>
+<%@ Import Namespace="System.Web.UI.MobileControls" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
     Index
@@ -32,8 +33,8 @@
             <%= Html.LabelFor(model => model.SiteTheme) %>
         </div>
         <div class="editor-field">
-            <%= Html.TextBoxFor(model => model.SiteTheme)%>
-            <%= Html.ValidationMessageFor(model => model.SiteTheme)%>
+            <%= Html.DropDownListFor(model => model.SiteTheme, (List<SelectListItem>) ViewData["AvailableThemes"])%>
+            <%= Html.ValidationMessageFor(model => model.AvailableThemes)%>
         </div>
 
         <div class="editor-label">
