@@ -1,3 +1,5 @@
+/* Tyson Developer Conference */
+
 /*
 Design by Free CSS Templates
 http://www.freecsstemplates.org
@@ -223,19 +225,20 @@ hr
 {
     width: 940px;
     margin: 0 auto;
-    padding: 50px 0px 0px 0px;
+    padding-top: 180px;
 }
 
 /** LOGO */
-
-#logo {
+#logo 
+{
 	width: 940px;
 	height: 115px;
 	margin: 15px auto;
 	background: url(images/logo.png) no-repeat left top;
 }
 
-#logo h1 {
+#logo h1 
+{
 	margin-left: -1000px;
 	line-height: normal;
 	text-transform: capitalize;
@@ -243,7 +246,8 @@ hr
 	color: #950120;
 }
 
-#logo p {
+#logo p 
+{
 	margin-top: -1000px;
 	margin-left: 200px;
     text-transform: capitalize;
@@ -251,17 +255,20 @@ hr
     color: #A8A8A8;
 }
 
-#logo h1 {
+#logo h1 
+{
 	padding-top: 10px;
 	font-size: 28px;
 }
 
-#logo a {
+#logo a 
+{
 	text-decoration: none;
 	color: #950120;
 }
 
-#logo h1 a {
+#logo h1 a
+{
 	text-decoration: none;
 	color: #950120;
 }
@@ -395,7 +402,7 @@ hr
 
 #sidebar li ul
 {
-    margin: 0px 5px;
+    margin: 0px 14px;
 }
 
 #sidebar li li
@@ -427,8 +434,9 @@ hr
 #sidebar h2
 {
     height: 25px;
-    margin: 0 0 0 0;
-    padding: 6px 0 2px 5px;
+    margin: 0 0 10px 0;
+    padding: 6px 0 2px 20px;
+    background: url(images/img05.jpg) no-repeat left 8px;
     text-transform: capitalize;
     font-size: 18px;
     font-weight: normal;
