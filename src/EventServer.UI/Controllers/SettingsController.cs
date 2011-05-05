@@ -47,7 +47,7 @@ namespace EventServer.UI.Controllers
         [Authorize(Roles = "Admin")]
         public ActionResult Twitter()
         {
-            var model = new SettingsTwitterViewModel();
+            var model = new TwitterSettingsViewModel();
             model.Id = Settings.Instance.TwitterId;
             model.FilterDate = Settings.Instance.TwitterFilterDate;
             model.DisplayCount = Settings.Instance.TwitterDisplayCount;
@@ -57,14 +57,49 @@ namespace EventServer.UI.Controllers
 
         [HttpPost]
         [Authorize(Roles = "Admin")]
-        public ActionResult Twitter(SettingsTwitterViewModel twitterSettings)
+        public ActionResult Twitter(TwitterSettingsViewModel model)
         {
-            Settings.Instance.TwitterId = twitterSettings.Id;
-            Settings.Instance.TwitterDisplayCount = twitterSettings.DisplayCount;
-            Settings.Instance.TwitterFilterDate = twitterSettings.FilterDate;
+            Settings.Instance.TwitterId = model.Id;
+            Settings.Instance.TwitterDisplayCount = model.DisplayCount;
+            Settings.Instance.TwitterFilterDate = model.FilterDate;
             Settings.SaveSettings(Settings.Instance);
 
-            return this.View(twitterSettings);
+            return this.View(model);
+        }
+
+        [Authorize(Roles = "Admin")]
+        public ActionResult Email()
+        {
+            var model = new EmailSettingsViewModel { 
+                    EmailEnabled = Settings.Instance.EmailEnabled,
+                    EmailFromAddress = Settings.Instance.EmailFromAddress,
+                    EmailHost = Settings.Instance.EmailHost,
+                    EmailHostPort = Settings.Instance.EmailHostPort,
+                    EnableSsl = Settings.Instance.EmailEnableSsl,
+                    UserName = Settings.Instance.EmailUsername,
+                    Password = Settings.Instance.EmailPassword,
+                    SubjectPrefix = Settings.Instance.EmailSubjectPrefix
+                };
+
+            return this.View(model);
+        }
+
+        [HttpPost]
+        [Authorize(Roles = "Admin")]
+        public ActionResult Email(EmailSettingsViewModel model)
+        {
+            Settings.Instance.EmailEnabled = model.EmailEnabled;
+            Settings.Instance.EmailFromAddress = model.EmailFromAddress;
+            Settings.Instance.EmailHost = model.EmailHost;
+            Settings.Instance.EmailHostPort = model.EmailHostPort;
+            Settings.Instance.EmailEnableSsl = model.EnableSsl;
+            Settings.Instance.EmailUsername = model.UserName;
+            Settings.Instance.EmailPassword = model.Password;
+            Settings.Instance.EmailSubjectPrefix = model.SubjectPrefix;
+
+            Settings.SaveSettings(Settings.Instance);
+
+            return this.View(model);
         }
 
         private List<SelectListItem> GetAvailableDays()

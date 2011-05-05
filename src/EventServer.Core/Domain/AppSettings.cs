@@ -300,8 +300,7 @@ namespace EventServer.Core.Domain
         {
             get
             {
-                if (string.IsNullOrEmpty(dataStoreBasePath))
-                    dataStoreBasePath = "~/App_Data";
+                if (string.IsNullOrEmpty(dataStoreBasePath)) dataStoreBasePath = "~/App_Data";
 
                 return dataStoreBasePath;
             }
@@ -345,5 +344,94 @@ namespace EventServer.Core.Domain
             }
             set { this.numberOfDaysForEvent = value; }
         }
+    
+        // Email Server Settings
+
+        private bool emailEnabled = false;
+
+        public bool EmailEnabled
+        {
+            get
+            {
+                return this.emailEnabled;
+            }
+            set
+            {
+                this.emailEnabled = value;
+            }
+        }
+
+        private string emailFromAddress;
+        public string EmailFromAddress
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(this.emailFromAddress)) this.emailFromAddress = "no-reply@example.com";
+                return this.emailFromAddress;
+            }
+            set
+            {
+                this.emailFromAddress = value;
+            }
+        }
+
+        private string emailHost;
+        public string EmailHost
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(this.emailHost)) this.emailHost = "smtp.example.com";
+
+                return this.emailHost;
+            }
+            set
+            {
+                this.emailHost = value;
+            }
+        }
+
+        private int emailHostPort = 25;
+        public int EmailHostPort
+        {
+            get
+            {
+                // Change the port if SSL enabled???
+                return this.emailHostPort;
+            }
+            set
+            {
+                this.emailHostPort = value;
+            }
+        }
+
+        private string emailUsername;
+        public string EmailUsername
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(this.emailUsername)) this.emailUsername = "no-reply@example.com";
+
+                return this.emailUsername;
+            }
+            set
+            {
+                this.emailUsername = value;
+            }
+        }
+
+        public string EmailPassword { get; set; }
+        private bool emailEnableSsl = false;
+        public bool EmailEnableSsl
+        {
+            get
+            {
+                return this.emailEnableSsl;
+            }
+            set
+            {
+                this.emailEnableSsl = value;
+            }
+        }
+        public string EmailSubjectPrefix { get; set; }
     }
 }

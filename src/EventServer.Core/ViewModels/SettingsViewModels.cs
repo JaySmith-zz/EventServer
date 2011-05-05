@@ -3,7 +3,7 @@ namespace EventServer.Core.ViewModels
     using System;
     using System.ComponentModel;
 
-    public class SettingsTwitterViewModel
+    public class TwitterSettingsViewModel
     {
         [DisplayName("Event Twitter Account")]
         public string Id { get; set; }
@@ -13,6 +13,33 @@ namespace EventServer.Core.ViewModels
 
         [DisplayName("Number of tweets to display")]
         public int DisplayCount { get; set; }
+    }
+
+    public class EmailSettingsViewModel
+    {
+        [DisplayName("Enable Email")]
+        public bool EmailEnabled { get; set; }
+
+        [DisplayName("Email address")]
+        public string EmailFromAddress { get; set; }
+
+        [DisplayName("SMTP server")]
+        public string EmailHost { get; set; }
+
+        [DisplayName("Port number")]
+        public int EmailHostPort { get; set; }
+
+        [DisplayName("Username")]
+        public string UserName { get; set; }
+
+        [DisplayName("Password")]
+        public string Password { get; set; }
+
+        [DisplayName("Enable SSL")]
+        public bool EnableSsl { get; set; }
+
+        [DisplayName("Subject prefix")]
+        public string SubjectPrefix { get; set; }
     }
 
     public class SettingsVenueViewModel

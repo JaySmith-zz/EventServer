@@ -7,6 +7,8 @@ using EventServer.Core;
 
 namespace EventServer.Infrastructure
 {
+    using System.Net;
+
     public class MailGateway : IMailGateway
     {
         public MailGateway(string developerEmail)
@@ -30,9 +32,12 @@ namespace EventServer.Infrastructure
             public Mailer(string subject, string body, string developerEmail, bool useRealEmail)
             {
                 _smtpClient = new SmtpClient();
-                _smtpClient.EnableSsl = _smtpClient.Port != 25;
+                _smtpClient.Host = Settings.Instance.EmailHost;
+                _smtpClient.EnableSsl = Settings.Instance.EmailEnableSsl;
+                _smtpClient.Port = Settings.Instance.EmailHostPort;
+                _smtpClient.Credentials = new NetworkCredential(Settings.Instance.EmailUsername, Settings.Instance.EmailPassword);
 
-                _message = new MailMessage {Subject = subject, Body = body, IsBodyHtml = true};
+                _message = new MailMessage { Subject = subject, Body = body, IsBodyHtml = true };
                 _originalBody = body;
 
                 _developerEmail = developerEmail;

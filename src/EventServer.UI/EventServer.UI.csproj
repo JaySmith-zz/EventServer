@@ -439,6 +439,7 @@
     <Content Include="Views\Sessions\GetRawList.ascx" />
     <Content Include="Views\Sessions\Index.aspx" />
     <Content Include="Views\Sessions\Show.aspx" />
+    <Content Include="Views\Settings\Email.aspx" />
     <Content Include="Views\Settings\Twitter.aspx" />
     <Content Include="Views\Shared\ComingSoon.aspx" />
     <Content Include="Views\Shared\DisplayTemplates\Comment.ascx" />

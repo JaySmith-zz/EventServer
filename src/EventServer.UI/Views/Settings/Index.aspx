@@ -9,7 +9,10 @@
         Event Server Settings</h2>
     <br />
 
-    <%= Html.ActionLink<SettingsController>(c => c.Twitter(), "Twitter") %>
+    <%= Html.ActionLink<SettingsController>(c => c.Twitter(), "Twitter Settings") %> <br />
+    <%= Html.ActionLink<SettingsController>(c => c.Email(), "Email Settings") %> <br />
+    
+    <br />
 
     <% using (Html.BeginForm())
        {%>

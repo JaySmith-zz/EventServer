@@ -23,4 +23,12 @@
   <SiteLogoUri>http://eventserver.codeplex.com/images/logo.png</SiteLogoUri>
   <DataStorePath>~/App_Data</DataStorePath>
   <NumberOfDaysForEvent>2</NumberOfDaysForEvent>
+  <EmailEnabled>true</EmailEnabled>
+  <EmailFromAddress>jay.w.smith@tyson.com</EmailFromAddress>
+  <EmailHost>veg.tyson.com</EmailHost>
+  <EmailHostPort>25</EmailHostPort>
+  <EmailUsername>jay.w.smith@tyson.com</EmailUsername>
+  <EmailPassword>Tr1Plx10</EmailPassword>
+  <EmailEnableSsl>false</EmailEnableSsl>
+  <EmailSubjectPrefix>[ES]</EmailSubjectPrefix>
 </AppSettings>
