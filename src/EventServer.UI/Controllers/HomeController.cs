@@ -43,7 +43,8 @@ namespace EventServer.UI.Controllers
 
         public ActionResult HomeMessage()
         {
-            return Content(_repository.GetSpecialPage(SpecialPage.HomeMessage).Content);
+            var content = _repository.GetSpecialPage(SpecialPage.HomeMessage).Content;
+            return Content(content);
         }
 
         public ActionResult AboutMessage()

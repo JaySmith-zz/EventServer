@@ -2,6 +2,11 @@
 
 namespace EventServer.Core.Domain
 {
+    using System.Collections.Generic;
+    using System.ComponentModel;
+    using System.IO;
+    using System.Web.Hosting;
+
     public class AppSettings : Entity
     {
         public AppSettings()
@@ -10,7 +15,7 @@ namespace EventServer.Core.Domain
         }
 
         private string siteName;
-
+        [DisplayName("Name")]
         public string SiteName
         {
             get
@@ -24,7 +29,7 @@ namespace EventServer.Core.Domain
         }
 
         private string siteSlogan;
-
+        [DisplayName("Slogan")]
         public string SiteSlogan
         {
             get
@@ -38,7 +43,7 @@ namespace EventServer.Core.Domain
         }
 
         private string siteTheme;
-
+        [DisplayName("Theme")]
         public string SiteTheme
         {
             get
@@ -52,7 +57,7 @@ namespace EventServer.Core.Domain
         }
 
         private string description;
-
+        [DisplayName("Description")]
         public string Description
         {
             get
@@ -66,7 +71,7 @@ namespace EventServer.Core.Domain
         }
 
         private DateTime startDateTime;
-
+        [DisplayName("Event Start Date")]
         public DateTime StartDateTime
         {
             get
@@ -80,7 +85,7 @@ namespace EventServer.Core.Domain
         }
 
         private DateTime endDateTime;
-
+        [DisplayName("Event End Date")]
         public DateTime EndDateTime
         {
             get
@@ -94,7 +99,7 @@ namespace EventServer.Core.Domain
         }
 
         private DateTime registrationEndDateTime;
-
+        [DisplayName("Registration End Date")]
         public DateTime RegistrationEndDateTime
         {
             get
@@ -108,7 +113,7 @@ namespace EventServer.Core.Domain
         }
 
         private DateTime sessionSubmissionEndDateTime;
-
+        [DisplayName("Session Submission End Date")]
         public DateTime SessionSubmissionEndDateTime
         {
             get
@@ -122,7 +127,7 @@ namespace EventServer.Core.Domain
         }
 
         private string venueName;
-
+        [DisplayName("Location")]
         public string VenueName
         {
             get
@@ -136,7 +141,7 @@ namespace EventServer.Core.Domain
         }
 
         private string venuePhone;
-
+        [DisplayName("Location Phone")]
         public string VenuePhone
         {
             get
@@ -150,7 +155,7 @@ namespace EventServer.Core.Domain
         }
 
         private string venueStreet;
-
+        [DisplayName("Address")]
         public string VenueStreet
         {
             get
@@ -164,7 +169,7 @@ namespace EventServer.Core.Domain
         }
 
         private string venueCity;
-
+        [DisplayName("City")]
         public string VenueCity
         {
             get
@@ -178,7 +183,7 @@ namespace EventServer.Core.Domain
         }
 
         private string venueState;
-
+        [DisplayName("State")]
         public string VenueState
         {
             get
@@ -192,7 +197,7 @@ namespace EventServer.Core.Domain
         }
 
         private string venueZip;
-
+        [DisplayName("Postal Code")]
         public string VenueZip
         {
             get
@@ -206,7 +211,7 @@ namespace EventServer.Core.Domain
         }
 
         private string contactName;
-
+        [DisplayName("Event Contact Name")]
         public string ContactName
         {
             get
@@ -220,7 +225,7 @@ namespace EventServer.Core.Domain
         }
 
         private string contactEmail;
-
+        [DisplayName("Event Contact Email")]
         public string ContactEmail
         {
             get
@@ -234,7 +239,7 @@ namespace EventServer.Core.Domain
         }
 
         private string twitterId;
-
+        [DisplayName("Event Twitter Account")]
         public string TwitterId
         {
             get
@@ -248,7 +253,7 @@ namespace EventServer.Core.Domain
         }
 
         private DateTime twitterFilterDate;
-
+        [DisplayName("Only show tweets since")]
         public DateTime TwitterFilterDate
         {
             get
@@ -262,7 +267,7 @@ namespace EventServer.Core.Domain
         }
 
         private int twitterDisplayCount;
-
+        [DisplayName("Number of tweets to display")]
         public int TwitterDisplayCount
         {
             get
@@ -276,7 +281,7 @@ namespace EventServer.Core.Domain
         }
 
         private string siteLogoUri;
-
+        [DisplayName("Url to site logo")]
         public string SiteLogoUri
         {
             get
@@ -290,7 +295,7 @@ namespace EventServer.Core.Domain
         }
 
         private string dataStoreBasePath;
-
+        [DisplayName("Path to data")]
         public string DataStorePath
         {
             get
@@ -302,10 +307,43 @@ namespace EventServer.Core.Domain
             }
             set { dataStoreBasePath = value; }
         }
-
+        
+        [DisplayName("File Data Store Path")]
         public string FileDataStorePath
         {
             get { return DataStorePath + "/Files"; }
+        }
+
+        public string[] AvailableThemes
+        {
+            get
+            {
+                var themes = new List<string>();
+
+                var directories = Directory.GetDirectories(HostingEnvironment.MapPath("~/Themes"));
+
+                foreach (var directory in directories)
+                {
+                    var directoryInfo = new DirectoryInfo(directory);
+                    themes.Add(directoryInfo.Name);
+                }
+
+                return themes.ToArray();
+            }
+        }
+
+        private int? numberOfDaysForEvent;
+
+        [DisplayName("Number of Days")]
+        public int? NumberOfDaysForEvent
+        {
+            get
+            {
+                if (numberOfDaysForEvent == null) numberOfDaysForEvent = 1;
+
+                return this.numberOfDaysForEvent;
+            }
+            set { this.numberOfDaysForEvent = value; }
         }
     }
 }

@@ -29,18 +29,20 @@ namespace EventServer.UI.Controllers
 
             var actions = new Dictionary<string, string> {{"list", "GetRawList"}, {"tracks", "GetByTrack"}, {"times", "GetByTime"}};
 
-            return View(new SessionsIndexModel
-            {
-                ContentAction = actions[tab],
-                ListLinkCssClass = tab == "list" ? "you-are-here" : "",
-                TracksLinkCssClass = tab == "tracks" ? "you-are-here" : "",
-                TimesLinkCssClass = tab == "times" ? "you-are-here" : "",
-            });
+            var model = new SessionsIndexModel();
+            model.ContentAction = actions[tab];
+            model.ListLinkCssClass = tab == "list" ? "you-are-here" : "";
+            model.TracksLinkCssClass = tab == "tracks" ? "you-are-here" : "";
+            model.TimesLinkCssClass = tab == "times" ? "you-are-here" : "";
+
+            return View(model);
         }
 
         public ActionResult GetRawList()
         {
-            return View(_repository.FindAcceptedPresentations().OrderBy(x => x.Title).ToArray());
+            var model = _repository.FindAcceptedPresentations().OrderBy(x => x.Title).ToArray();
+
+            return View(model);
         }
 
         public ActionResult GetByTrack()

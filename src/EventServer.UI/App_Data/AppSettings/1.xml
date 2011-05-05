@@ -18,8 +18,9 @@
   <ContactName>Event Contact</ContactName>
   <ContactEmail>contact@email.com</ContactEmail>
   <TwitterId>EventServer</TwitterId>
-  <TwitterFilterDate>2011-02-21T17:13:39.0615791-06:00</TwitterFilterDate>
+  <TwitterFilterDate>2011-04-04T23:05:08.949022-05:00</TwitterFilterDate>
   <TwitterDisplayCount>5</TwitterDisplayCount>
   <SiteLogoUri>http://eventserver.codeplex.com/images/logo.png</SiteLogoUri>
   <DataStorePath>~/App_Data</DataStorePath>
+  <NumberOfDaysForEvent>2</NumberOfDaysForEvent>
 </AppSettings>

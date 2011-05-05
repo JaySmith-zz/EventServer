@@ -1,0 +1,684 @@
+/* Tyson Developer Conference */
+
+/*
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+*/
+/* Login */
+#logindisplay
+{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.1em;
+    text-align: right;
+    color: #FFFFFF;
+}
+
+#logindisplay a:link
+{
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+
+#logindisplay a:visited
+{
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+
+#logindisplay a:hover
+{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+html, body
+{
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    height: 100%;
+}
+
+body
+{
+    margin: 0;
+    padding: 0;
+    background: #FFFFFF url(images/img01.gif) repeat-x left top;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #8A8A8A;
+}
+
+h1, h2, h3
+{
+    margin: 0;
+    text-transform: capitalize;
+    font-weight: normal;
+    color: #950120;
+}
+
+h1
+{
+    font-size: 24px;
+}
+
+h2
+{
+    font-size: 18px;
+}
+
+h3
+{
+}
+
+p, ul, ol
+{
+    margin-top: 0;
+    text-align: left;
+	line-height: 150%;
+}
+
+ul, ol
+{
+}
+
+blockquote
+{
+}
+
+a
+{
+    color: #950120;
+}
+
+a:hover
+{
+    text-decoration: none;
+}
+
+a img
+{
+    border: none;
+}
+
+img.left
+{
+    float: left;
+    margin: 7px 30px 0 0;
+}
+
+img.right
+{
+    float: right;
+    margin: 7px 0 0 30px;
+}
+
+hr
+{
+    display: none;
+}
+
+.list1
+{
+}
+
+.list1 li
+{
+    float: left;
+    line-height: normal;
+}
+
+.list1 li img
+{
+    margin: 0 30px 30px 0;
+}
+
+.list1 li.alt img
+{
+    margin-right: 0;
+}
+
+#wrapper
+{
+}
+
+/* Header */
+
+#header-wrapper
+{
+}
+
+#header
+{
+    width: 940px;
+    height: 36px;
+    margin: 0px auto;
+}
+
+/* Menu */
+
+#menu
+{
+    float: left;
+    width: 680px;
+    height: 43px;
+    background: url(images/img02.jpg) no-repeat left top;
+}
+
+#menu ul
+{
+	margin: -30px auto;
+    padding: 0px 0px 0px 0px;
+    list-style: none;
+    line-height: normal;
+}
+
+#menu li
+{
+    display: block;
+    float: left;
+}
+
+#menu a
+{
+    display: block;
+    float: left;
+    height: 30px;
+    margin: 0;
+    padding: 13px 30px 0px 30px;
+    background: url(images/img02.gif) no-repeat left top;
+    text-decoration: none;
+    text-align: center;
+    text-transform: capitalize;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+#menu a:hover
+{
+    text-decoration: none;
+    background-color: #E0E0DE;
+    color: #950120;
+}
+
+#menu .active a
+{
+    background-color: #E0E0DE;
+    color: #950120;
+}
+
+#search form
+{
+    float: right;
+    margin: 0;
+    padding: 11px 0px 0 0;
+}
+
+/* Page */
+
+#page
+{
+    width: 940px;
+    margin: 0 auto;
+    padding-top: 180px;
+}
+
+/** LOGO */
+#logo 
+{
+	width: 940px;
+	height: 115px;
+	margin: 15px auto;
+	background: url(images/logo.png) no-repeat left top;
+}
+
+#logo h1 
+{
+	margin-left: -1000px;
+	line-height: normal;
+	text-transform: capitalize;
+	font-weight: normal;
+	color: #950120;
+}
+
+#logo p 
+{
+	margin-top: -1000px;
+	margin-left: 200px;
+    text-transform: capitalize;
+    font-size: 16px;
+    color: #A8A8A8;
+}
+
+#logo h1 
+{
+	padding-top: 10px;
+	font-size: 28px;
+}
+
+#logo a 
+{
+	text-decoration: none;
+	color: #950120;
+}
+
+#logo h1 a
+{
+	text-decoration: none;
+	color: #950120;
+}
+
+#logo h1 a
+{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+#banner
+{
+    padding-bottom: 20px;
+}
+
+/* Content */
+
+#content
+{
+    float: left;
+    width: 670px;
+}
+
+/* Post */
+
+.post
+{
+    margin-bottom: 45px;
+}
+
+.post .title
+{
+	margin-top: 10px;
+	border-bottom: 2px solid #618C04;
+}
+
+.post .title a
+{
+    text-decoration: none;
+    text-transform: capitalize;
+    color: #618C04;
+}
+
+.post .date
+{
+}
+
+.post .meta
+{
+    margin-top: -8px;
+    margin-left: 2px;
+    padding: 0px 30px 2px 15px;
+    border-bottom: 1px solid #D4D8CB;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 10px;
+    color: #66665E;
+}
+
+.post .meta span
+{
+    display: block;
+    margin-top: -10px;
+}
+
+.post .meta a
+{
+}
+
+.post .entry
+{
+    margin-bottom: 10px;
+    padding: 10px 15px 10px 0px;
+}
+
+.post .links
+{
+    display: block;
+    width: 120px;
+    height: 20px;
+    margin: 0px 0px 0px 0px;
+    padding: 4px 0px 0px 40px;
+    background: url(images/img03.gif) no-repeat left top;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #666666;
+}
+
+.post .comments
+{
+    display: block;
+    width: 120px;
+    height: 18px;
+    margin: 0px;
+    padding: 3px 0px 0px 40px;
+    background: url(images/img07.gif) no-repeat left top;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #961A06;
+}
+
+/* Sidebar */
+
+#sidebar
+{
+    float: right;
+    width: 240px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+#sidebar ul
+{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    line-height: normal;
+}
+
+#sidebar li
+{
+    margin-bottom: 30px;
+    padding: 0 0 10px 0px;
+}
+
+#sidebar li ul
+{
+    margin: 0px 14px;
+}
+
+#sidebar li li
+{
+    margin: 0;
+    padding: 12px 0px;
+    border-bottom: 1px solid #E0E0DE;
+    background: url(images/img08.gif) no-repeat left 18px;
+}
+
+#sidebar li li a
+{
+    padding: 0px 0px 0px 20px;
+    font-weight: normal;
+    color: #E0E0DE;
+}
+
+#sidebar li li a:hover
+{
+    color: #E0E0DE;
+}
+
+#sidebar p
+{
+    margin: 0;
+    padding: 0px 14px;
+}
+
+#sidebar h2
+{
+    height: 25px;
+    margin: 0 0 10px 0;
+    padding: 6px 0 2px 20px;
+    background: url(images/img05.jpg) no-repeat left 8px;
+    text-transform: capitalize;
+    font-size: 18px;
+    font-weight: normal;
+    color: #950120;
+}
+
+#sidebar p
+{
+    line-height: 200%;
+}
+
+#sidebar a
+{
+    text-align: left;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Calendar */
+
+#calendar
+{
+}
+
+#calendar caption
+{
+    padding-bottom: 5px;
+    font-weight: bold;
+}
+
+#calendar table
+{
+    width: 100%;
+    border-collapse: collapse;
+    border-bottom: 1px solid #24130F;
+    border-left: 1px solid #24130F;
+    border-right: 1px solid #24130F;
+}
+
+#calendar thead th
+{
+    padding: 5px 0;
+    text-align: center;
+    border-top: 1px solid #24130F;
+    border-left: 1px solid #24130F;
+    background: #24130F;
+}
+
+#calendar tbody td
+{
+    padding: 5px 0;
+    text-align: center;
+    border-top: 1px solid #24130F;
+    border-left: 1px solid #24130F;
+    border-bottom: 1px solid #24130F;
+}
+
+#calendar tfoot td
+{
+    padding: 5px;
+    border-left: 1px solid #24130F;
+    border-bottom: 1px solid #24130F;
+}
+
+#calendar tfoot #next
+{
+    border-top: 1px solid #24130F;
+    text-align: right;
+}
+
+#calendar tfoot #prev
+{
+    border-top: 1px solid #24130F;
+}
+
+#calendar .pad
+{
+    border-bottom: 1px solid #24130F;
+}
+
+#calendar #today
+{
+    background: #24130F;
+}
+
+/* Footer */
+
+#footer
+{
+    width: 100%;
+    height: 50px;
+    margin: 0 auto;
+    padding: 0;
+    background: #E1E1E1;
+}
+
+#footer-bgcontent
+{
+}
+
+#footer p
+{
+    margin: 0;
+    padding: 20px 0px 0px 0px;
+    text-align: center;
+    line-height: normal;
+    text-transform: capitalize;
+    font-size: 10px;
+}
+
+#footer a
+{
+}
+
+.byline
+{
+    margin: 0px;
+    color: #618C04;
+}
+
+/* FORM LAYOUT ELEMENTS */
+
+fieldset
+{
+    margin: 1em 0;
+    padding: 1em;
+    border-color: #ccc;
+    border-style: solid;
+    border-width: 1px 0 0;
+}
+
+fieldset legend
+{
+    font-size: 1.1em;
+    font-weight: 600;
+    padding: 2px 4px 8px 4px;
+}
+
+fieldset input[type="text"]
+{
+    width: 20em;
+    border: 1px solid #ccc;
+}
+
+fieldset input[type="password"]
+{
+    width: 20em;
+    border: 1px solid #ccc;
+}
+
+fieldset textarea, fieldset textarea.input-validation-error
+{
+    width: 40em;
+    height: 10em;
+    border: 1px solid #ccc;
+}
+
+fieldset hr
+{
+    margin: 1em 0;
+    border-color: #ccc;
+    border-style: solid;
+    border-width: 1px 0 0;
+}
+
+/* Misc */
+
+.clear
+{
+    clear: both;
+}
+
+.noborder
+{
+    border: 0;
+}
+
+.field-validation-error
+{
+    color: #ff0000;
+}
+
+.field-validation-valid
+{
+    display: none;
+}
+
+.input-validation-error
+{
+    border: 1px solid #ff0000;
+    background-color: #ffeeee;
+}
+
+.validation-summary-errors
+{
+    font-weight: bold;
+    color: #ff0000;
+}
+
+.validation-summary-valid
+{
+    display: none;
+}
+
+.display-label, .editor-label, .display-field, .editor-field
+{
+    margin: 0.5em 0;
+}
+
+.editor-field.wide input
+{
+    width: 40em;
+}
+
+fieldset.grid .display-label, fieldset.grid .editor-label
+{
+    clear: both;
+    float: left;
+    width: 10em;
+}
+
+fieldset.grid .display-field, fieldset.grid .editor-field
+{
+    float: left;
+}
+
+fieldset.grid p
+{
+    clear: both;
+}
+
+.session-status-Accepted
+{
+}
+
+.session-status-Pending
+{
+    font-weight: bold;
+}
+
+.session-status-Rejected
+{
+    font-weight: bold;
+    color: #f00;
+}

@@ -86,10 +86,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\Images\bg01.jpg" />
-    <Content Include="Content\Images\bg02.jpg" />
-    <Content Include="Content\Images\bg03.jpg" />
-    <Content Include="Content\Images\bg04.jpg" />
+    <Content Include="App_Data\Page\1.xml" />
+    <Content Include="App_Data\Page\2.xml" />
+    <Content Include="App_Data\Page\3.xml" />
+    <Content Include="App_Data\Page\4.xml" />
     <Content Include="Content\Images\error.gif" />
     <Content Include="Content\Images\img01.jpg" />
     <Content Include="Content\Images\img02.gif" />
@@ -98,7 +98,10 @@
     <Content Include="Content\Images\img05.gif" />
     <Content Include="Content\Images\img06.jpg" />
     <Content Include="Content\Images\info.gif" />
-    <Content Include="Content\Images\logo.jpg" />
+    <Content Include="Themes\TysonDevCon\images\img01.gif" />
+    <Content Include="Themes\TysonDevCon\images\img02.gif" />
+    <Content Include="Themes\TysonDevCon\images\img03.gif" />
+    <Content Include="Themes\TysonDevCon\images\img05.jpg" />
     <Content Include="Content\Images\no_image.gif" />
     <Content Include="Content\Images\PhotoNotAvailable.gif" />
     <Content Include="Content\Images\rss16.png" />
@@ -375,7 +378,7 @@
     <Content Include="Scripts\tiny_mce\utils\form_utils.js" />
     <Content Include="Scripts\tiny_mce\utils\mctabs.js" />
     <Content Include="Scripts\tiny_mce\utils\validate.js" />
-    <Content Include="Themes\Default\default.css" />
+    <Content Include="Themes\Default\theme.css" />
     <Content Include="Themes\Default\images\bg01.jpg" />
     <Content Include="Themes\Default\images\bg02.jpg" />
     <Content Include="Themes\Default\images\bg03.jpg" />
@@ -413,6 +416,16 @@
     <Content Include="Themes\Solution\images\logo.png" />
     <Content Include="Themes\Solution\images\logo_large.png" />
     <Content Include="Themes\Solution\theme.css" />
+    <Content Include="Themes\TysonDevCon\images\logo.png" />
+    <Content Include="Themes\TysonDevCon\theme.css" />
+    <Content Include="Themes\Unqualified\images\bg01.jpg" />
+    <Content Include="Themes\Unqualified\images\bg02.jpg" />
+    <Content Include="Themes\Unqualified\images\bg04.jpg" />
+    <Content Include="Themes\Unqualified\images\img03.gif" />
+    <Content Include="Themes\Unqualified\images\img04.gif" />
+    <Content Include="Themes\Unqualified\images\img06.jpg" />
+    <Content Include="Themes\Unqualified\license.txt" />
+    <Content Include="Themes\Unqualified\theme.css" />
     <Content Include="Views\Account\ChangeName.aspx" />
     <Content Include="Views\Account\Show.aspx" />
     <Content Include="Views\Admin\AdminMenuWidget.ascx" />
@@ -426,8 +439,10 @@
     <Content Include="Views\Sessions\GetRawList.ascx" />
     <Content Include="Views\Sessions\Index.aspx" />
     <Content Include="Views\Sessions\Show.aspx" />
+    <Content Include="Views\Settings\Twitter.aspx" />
     <Content Include="Views\Shared\ComingSoon.aspx" />
     <Content Include="Views\Shared\DisplayTemplates\Comment.ascx" />
+    <Content Include="Views\Shared\DisplayTemplates\Session.ascx" />
     <Content Include="Views\Shared\DisplayTemplates\Presentation.ascx" />
     <Content Include="Views\Shared\DisplayTemplates\Sponsor.ascx" />
     <Content Include="Views\Shared\DisplayTemplates\UserProfile.ascx" />
@@ -469,8 +484,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\Images\tdc_footer.jpg" />
-    <Content Include="Content\Images\tdc_header.jpg" />
+    <Content Include="Themes\TysonDevCon\images\tdc_footer.jpg" />
+    <Content Include="Themes\TysonDevCon\images\tdc_header.jpg" />
     <Content Include="Views\Account\ChangeEmail.aspx" />
     <Content Include="Views\EmailTemplates\CommentAdded.aspx" />
     <Content Include="Views\EmailTemplates\Email.Master" />
@@ -491,7 +506,6 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Scripts\tiny_mce\plugins\autosave\images\" />
     <Folder Include="Scripts\tiny_mce\plugins\spellchecker\classes\utils\" />
     <Folder Include="Scripts\tiny_mce\plugins\spellchecker\includes\" />

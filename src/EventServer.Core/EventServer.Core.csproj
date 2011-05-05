@@ -146,6 +146,7 @@
     <Compile Include="ViewModels\HomeModels.cs" />
     <Compile Include="ViewModels\PropertiesMustMatchAttribute.cs" />
     <Compile Include="ViewModels\SessionsModels.cs" />
+    <Compile Include="ViewModels\SettingsViewModels.cs" />
     <Compile Include="ViewModels\SpeakersModels.cs" />
     <Compile Include="ViewModels\SponsorModels.cs" />
     <Compile Include="ViewModels\ValidatePasswordLengthAttribute.cs" />
