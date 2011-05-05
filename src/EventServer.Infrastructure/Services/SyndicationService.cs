@@ -14,13 +14,10 @@ namespace EventServer.Infrastructure.Services
         {
             var feed = new SyndicationFeed
             {
-                //Title = new TextSyndicationContent(Settings.Instance.SiteName),
-                //Description = new TextSyndicationContent(Settings.Instance.SiteSlogan),
-                //ImageUrl = new Uri(Settings.Instance.SiteLogoUri),
+                Title = new TextSyndicationContent(Settings.Instance.SiteName),
+                Description = new TextSyndicationContent(Settings.Instance.Description),
+                ImageUrl = new Uri(Settings.Instance.SiteLogoUri),
 
-                Title = new TextSyndicationContent("Tyson Development Conference"),
-                ImageUrl = new Uri("http://tysondevcon.com/2010/Content/Images/logo.jpg"),
-                
                 Items = GetSyndicationItems()
             };
 
