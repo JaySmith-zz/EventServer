@@ -399,6 +399,16 @@
     <Content Include="Themes\Default\images\tdc_header.jpg" />
     <Content Include="Themes\Default\images\wlw_icon.png" />
     <Content Include="Themes\Default\images\wlw_watermark.png" />
+    <Content Include="Themes\DTF\images\05-star_37717_lg.png" />
+    <Content Include="Themes\DTF\images\dtflogo.png" />
+    <Content Include="Themes\DTF\images\green calendar.jpg" />
+    <Content Include="Themes\DTF\images\img01.gif" />
+    <Content Include="Themes\DTF\images\img02.gif" />
+    <Content Include="Themes\DTF\images\img03.gif" />
+    <Content Include="Themes\DTF\images\img05.jpg" />
+    <Content Include="Themes\DTF\images\logo.png" />
+    <Content Include="Themes\DTF\images\logo_large.png" />
+    <Content Include="Themes\DTF\theme.css" />
     <Content Include="Themes\Solution\images\img01.gif" />
     <Content Include="Themes\Solution\images\img02.gif" />
     <Content Include="Themes\Solution\images\img03.gif" />

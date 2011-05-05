@@ -11,11 +11,10 @@ namespace EventServer.Core.Domain
     {
         public AppSettings()
         {
-            Id = 1;    
+            Id = 1;
         }
 
         private string siteName;
-        
         [DisplayName("Name")]
         public string SiteName
         {
@@ -93,7 +92,7 @@ namespace EventServer.Core.Domain
             {
                 if (endDateTime == DateTime.MinValue)
                     DateTime.Now.AddDays(90);
-                
+
                 return endDateTime;
             }
             set { endDateTime = value; }
@@ -107,7 +106,7 @@ namespace EventServer.Core.Domain
             {
                 if (registrationEndDateTime == DateTime.MinValue)
                     registrationEndDateTime = DateTime.Now.AddDays(89);
-                
+
                 return registrationEndDateTime;
             }
             set { registrationEndDateTime = value; }
@@ -149,7 +148,7 @@ namespace EventServer.Core.Domain
             {
                 if (string.IsNullOrEmpty(venuePhone))
                     venuePhone = "555 555-5555";
-                
+
                 return venuePhone;
             }
             set { venuePhone = value; }
@@ -205,7 +204,7 @@ namespace EventServer.Core.Domain
             {
                 if (string.IsNullOrEmpty(venueZip))
                     venueZip = "12345";
-                
+
                 return venueZip;
             }
             set { venueZip = value; }
@@ -219,7 +218,7 @@ namespace EventServer.Core.Domain
             {
                 if (string.IsNullOrEmpty(contactName))
                     contactName = "Event Contact";
-                
+
                 return contactName;
             }
             set { contactName = value; }
@@ -233,7 +232,7 @@ namespace EventServer.Core.Domain
             {
                 if (string.IsNullOrEmpty(contactName))
                     contactEmail = "event@example.com";
-                
+
                 return contactEmail;
             }
             set { contactEmail = value; }
@@ -257,12 +256,12 @@ namespace EventServer.Core.Domain
         [DisplayName("Only show tweets since")]
         public DateTime TwitterFilterDate
         {
-            get 
+            get
             {
                 if (twitterFilterDate == DateTime.MinValue)
                     return DateTime.Now.AddDays(-30);
 
-                return twitterFilterDate; 
+                return twitterFilterDate;
             }
             set { twitterFilterDate = value; }
         }
@@ -289,7 +288,7 @@ namespace EventServer.Core.Domain
             {
                 if (string.IsNullOrEmpty(siteLogoUri))
                     siteLogoUri = "http://eventserver.codeplex.com/images/logo.png";
-                
+
                 return siteLogoUri;
             }
             set { siteLogoUri = value; }
@@ -299,12 +298,12 @@ namespace EventServer.Core.Domain
         [DisplayName("Path to data")]
         public string DataStorePath
         {
-            get 
+            get
             {
                 if (string.IsNullOrEmpty(dataStoreBasePath))
                     dataStoreBasePath = "~/App_Data";
 
-                return dataStoreBasePath; 
+                return dataStoreBasePath;
             }
             set { dataStoreBasePath = value; }
         }

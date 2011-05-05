@@ -4,12 +4,19 @@
 Design by Free CSS Templates
 http://www.freecsstemplates.org
 Released for free under a Creative Commons Attribution 2.5 License
+
+13,37,76 - Blue
+138, 144, 160 - Dark Grey
+216,216,216 - Light Grey
+29,83,153 - Light Blue
+
 */
 /* Login */
 #logindisplay
 {
-    position: absolute;
-    top: 10px;
+    position: relative;
+    width: 940px;
+    top: -140px;
     right: 10px;
     font-size: 1.1em;
     text-align: right;
@@ -46,10 +53,9 @@ body
 {
     margin: 0;
     padding: 0;
-    background: #FFFFFF url(images/img01.gif) repeat-x left top;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 12px;
-    color: #8A8A8A;
+    color: rgb(138, 144, 160);
 }
 
 h1, h2, h3
@@ -57,7 +63,7 @@ h1, h2, h3
     margin: 0;
     text-transform: capitalize;
     font-weight: normal;
-    color: #618C04;
+    color: rgb(13,37,76);
 }
 
 h1
@@ -91,7 +97,7 @@ blockquote
 
 a
 {
-    color: #77B003;
+    color: rgb(13,37,76);
 }
 
 a:hover
@@ -154,7 +160,7 @@ hr
 #header
 {
     width: 940px;
-    height: 36px;
+    height: 136px;
     margin: 0px auto;
 }
 
@@ -162,16 +168,17 @@ hr
 
 #menu
 {
-    float: left;
-    width: 680px;
+    float: right;
+    margin-top: -93px;
+    width: 580px;
     height: 43px;
-    background: url(images/img02.jpg) no-repeat left top;
+    background: rgb(13,37,76);
 }
 
 #menu ul
 {
-    margin: -30px auto;
     padding: 0px 0px 0px 0px;
+    float: right;
     list-style: none;
     line-height: normal;
 }
@@ -189,19 +196,23 @@ hr
     height: 30px;
     margin: 0;
     padding: 13px 30px 0px 30px;
-    background: url(images/img02.gif) no-repeat left top;
     text-decoration: none;
     text-align: center;
     text-transform: capitalize;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 12px;
     font-weight: bold;
-    color: #FFFFFF;
+    color: rgb(216,216,216);
 }
 
 #menu a:hover
 {
     text-decoration: none;
+}
+
+#menu .active_page
+{
+    background-color: rgb(43,92,185);
 }
 
 #menu .active_page a
@@ -222,25 +233,20 @@ hr
 {
     width: 940px;
     margin: 0 auto;
-    padding-top: 150px;
 }
 
 /** LOGO */
 #logo
 {
     width: 940px;
-    height: 115px;
+    height: 135px;
     margin: 15px auto;
-    background: url(images/logo.png) no-repeat left top;
+    background: url(images/dtflogo.png) no-repeat left top;
 }
 
 #logo h1
 {
-    margin-left: 100px;
-    line-height: normal;
-    text-transform: capitalize;
-    font-weight: normal;
-    color: #618C04;
+    display: none;
 }
 
 #logo p
@@ -249,15 +255,18 @@ hr
     margin-left: 100px;
     text-transform: capitalize;
     font-size: 24px;
-    color: #A8A8A8;
+    color: rgb(138, 144, 160);
+    display: none;
 }
 
 #logo h1
 {
     padding-top: 10px;
     font-size: 28px;
+    display: none;
 }
 
+/*
 #logo a
 {
     text-decoration: none;
@@ -280,13 +289,14 @@ hr
 {
     padding-bottom: 20px;
 }
+*/
 
 /* Content */
 
 #content
 {
-    float: left;
     width: 670px;
+    float: left;
 }
 
 /* Post */
@@ -299,14 +309,14 @@ hr
 .post .title
 {
     margin-top: 10px;
-    border-bottom: 2px solid #618C04;
+    border-bottom: 2px solid rgb(138, 144, 160);
 }
 
 .post .title a
 {
     text-decoration: none;
     text-transform: capitalize;
-    color: #618C04;
+    color: rgb(138, 144, 160);
 }
 
 .post .date
@@ -385,16 +395,31 @@ hr
 
 #sidebar ul
 {
-    margin: 0;
     padding: 0;
+    margin: 0px 0px 10px 0px;
     list-style: none;
     line-height: normal;
 }
 
 #sidebar li
 {
-    margin-bottom: 30px;
     padding: 0 0 10px 0px;
+}
+
+#sidebar ul li div
+{
+    margin-top: -10px;
+}
+
+#sidebar a
+{
+    line-height: 1.5em;
+    color: rgb(138, 144, 160);
+}
+
+#sidebar a:hover
+{
+    color: rgb(43,92,185);
 }
 
 #sidebar li ul
@@ -406,7 +431,7 @@ hr
 {
     margin: 0;
     padding: 12px 0px;
-    border-bottom: 1px solid #E9E8DD;
+    border-bottom: 1px solid rgb(216,216,216);
     background: url(images/img08.gif) no-repeat left 18px;
 }
 
@@ -414,12 +439,12 @@ hr
 {
     padding: 0px 0px 0px 20px;
     font-weight: normal;
-    color: #808080;
+    color: rgb(216,216,216);
 }
 
 #sidebar li li a:hover
 {
-    color: #77B003;
+    color: rgb(216,216,216);
 }
 
 #sidebar p
@@ -431,13 +456,13 @@ hr
 #sidebar h2
 {
     height: 30px;
-    margin: 0 0 10px 0px;
+    margin-top: 20px;
     padding: 6px 0 2px 20px;
-    background: url(images/img05.jpg) no-repeat left 8px;
+    background: url(images/05-star_37717_lg.png) no-repeat left 8px;
     text-transform: capitalize;
     font-size: 18px;
     font-weight: normal;
-    color: #618C04;
+    color: rgb(13,37,76);
 }
 
 #sidebar p
@@ -527,7 +552,7 @@ hr
     height: 100px;
     margin: 0 auto;
     padding: 0;
-    background: #E1E1E1;
+    position: static;
 }
 
 #footer-bgcontent

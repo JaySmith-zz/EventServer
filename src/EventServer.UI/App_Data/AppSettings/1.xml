@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <AppSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Id>1</Id>
-  <SiteName>Tyson Development Conference 2011</SiteName>
-  <SiteSlogan>The future of getting things done...</SiteSlogan>
-  <SiteTheme>TysonDevCon</SiteTheme>
+  <SiteName>EventServer</SiteName>
+  <SiteSlogan>Making Events Easy!</SiteSlogan>
+  <SiteTheme>DTF</SiteTheme>
   <Description>Event Server was created to make setting up sites for conference easy.</Description>
   <StartDateTime>2011-05-17T11:12:24</StartDateTime>
   <EndDateTime>0001-01-01T00:00:00</EndDateTime>
@@ -16,7 +16,7 @@
   <VenueState>AR</VenueState>
   <VenueZip>12345</VenueZip>
   <ContactName>Event Contact</ContactName>
-  <ContactEmail>contact@emai.com</ContactEmail>
+  <ContactEmail>contact@email.com</ContactEmail>
   <TwitterId>EventServer</TwitterId>
   <TwitterFilterDate>2011-04-04T09:04:49.9489229-05:00</TwitterFilterDate>
   <TwitterDisplayCount>5</TwitterDisplayCount>
