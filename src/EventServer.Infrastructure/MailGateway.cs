@@ -31,6 +31,8 @@ namespace EventServer.Infrastructure
         {
             public Mailer(string subject, string body, string developerEmail, bool useRealEmail)
             {
+                if (!Settings.Instance.EmailEnabled) return;
+
                 _smtpClient = new SmtpClient();
                 _smtpClient.Host = Settings.Instance.EmailHost;
                 _smtpClient.EnableSsl = Settings.Instance.EmailEnableSsl;
