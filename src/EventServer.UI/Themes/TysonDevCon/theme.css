@@ -78,7 +78,7 @@ p, ul, ol
 {
     margin-top: 0;
     text-align: left;
-	line-height: 150%;
+	line-height: 200%;
 }
 
 ul, ol
@@ -302,14 +302,14 @@ hr
 .post .title
 {
 	margin-top: 10px;
-	border-bottom: 2px solid #618C04;
+	border-bottom: 2px solid #950120;
 }
 
 .post .title a
 {
     text-decoration: none;
     text-transform: capitalize;
-    color: #618C04;
+    color: #950120;
 }
 
 .post .date
@@ -398,6 +398,7 @@ hr
 {
     margin-bottom: 30px;
     padding: 0 0 10px 0px;
+    
 }
 
 #sidebar li ul
@@ -554,7 +555,7 @@ hr
 .byline
 {
     margin: 0px;
-    color: #618C04;
+    color: #950120;
 }
 
 /* FORM LAYOUT ELEMENTS */

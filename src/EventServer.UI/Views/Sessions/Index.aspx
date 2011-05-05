@@ -10,7 +10,7 @@
 
         .tab-group {
             margin-bottom: 15px;
-            border-bottom: 1px solid #777;
+            border-bottom: 1px solid #950120;
             height: 30px;
         }
 
@@ -31,7 +31,7 @@
         .tabs a:hover, .tabs a.you-are-here {
             border-style: solid;
             border-width: 1px;
-            border-color: #777 #777 #fff #777;
+            border-color: #950120 #950120 #fff #950120;
             padding-bottom: 6px;
         }
 

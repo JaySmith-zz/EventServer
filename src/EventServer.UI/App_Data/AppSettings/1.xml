@@ -3,7 +3,7 @@
   <Id>1</Id>
   <SiteName>EventServer</SiteName>
   <SiteSlogan>Making Events Easy!</SiteSlogan>
-  <SiteTheme>DTF</SiteTheme>
+  <SiteTheme>TysonDevCon</SiteTheme>
   <Description>Event Server was created to make setting up sites for conference easy.</Description>
   <StartDateTime>2011-05-17T11:12:24</StartDateTime>
   <EndDateTime>0001-01-01T00:00:00</EndDateTime>
@@ -18,17 +18,15 @@
   <ContactName>Event Contact</ContactName>
   <ContactEmail>contact@email.com</ContactEmail>
   <TwitterId>EventServer</TwitterId>
-  <TwitterFilterDate>2011-04-04T23:05:08.949022-05:00</TwitterFilterDate>
+  <TwitterFilterDate>2011-04-05T14:04:58.2801915-05:00</TwitterFilterDate>
   <TwitterDisplayCount>5</TwitterDisplayCount>
   <SiteLogoUri>http://eventserver.codeplex.com/images/logo.png</SiteLogoUri>
   <DataStorePath>~/App_Data</DataStorePath>
   <NumberOfDaysForEvent>2</NumberOfDaysForEvent>
-  <EmailEnabled>true</EmailEnabled>
-  <EmailFromAddress>jay.w.smith@tyson.com</EmailFromAddress>
-  <EmailHost>veg.tyson.com</EmailHost>
+  <EmailEnabled>false</EmailEnabled>
+  <EmailFromAddress>no-reply@example.com</EmailFromAddress>
+  <EmailHost>smtp.example.com</EmailHost>
   <EmailHostPort>25</EmailHostPort>
-  <EmailUsername>jay.w.smith@tyson.com</EmailUsername>
-  <EmailPassword>Tr1Plx10</EmailPassword>
+  <EmailUsername>no-reply@example.com</EmailUsername>
   <EmailEnableSsl>false</EmailEnableSsl>
-  <EmailSubjectPrefix>[ES]</EmailSubjectPrefix>
 </AppSettings>
