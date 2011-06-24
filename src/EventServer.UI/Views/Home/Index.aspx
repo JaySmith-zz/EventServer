@@ -41,8 +41,8 @@
                { %>
             <div>
                 <p align="center">
-                    <a href="<%= sponsor.Url %>" title="<%= sponsor.Description %>">
-                        <img src="<%= sponsor.LogoUri %>" alt="<%= sponsor.Description %>" style="border-style: none;
+                    <a href="<%= sponsor.Url %>" title="<%= sponsor.Description.Substring(0,45) %>">
+                        <img src="<%= sponsor.LogoUri %>" alt="<%= sponsor.Description.Substring(0,45) %>" style="border-style: none;
                             width: 150px" /></a>
                 </p>
             </div>

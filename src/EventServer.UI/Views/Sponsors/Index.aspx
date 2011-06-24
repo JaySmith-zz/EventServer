@@ -11,7 +11,7 @@
     </script>
 
     <p>
-        We are looking for companies and organizations to contribute to the Tyson Developer Conference. 
+        We are looking for companies and organizations to contribute to the Dallas TechFest. 
         If you are interested, please check out the <%= Html.ActionLink<SponsorsController>(c => c.Sponsorship(), "Become a Sponsor") %> 
         page for levels and contact information.
     </p>

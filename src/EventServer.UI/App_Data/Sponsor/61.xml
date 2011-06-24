@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<Sponsor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Id>61</Id>
+  <IsActive>true</IsActive>
+  <Name>Code Smith</Name>
+  <Description>&lt;p&gt;CodeSmith Tools is a privately-held software company specializing in the  creation of software tools that help developers be more productive. Our  goal is to build the best developer tools available to help developers  around the world get their jobs done faster and help them avoid  repetitive work.&lt;br /&gt;&lt;br /&gt;We believe in being open and available to our  customers, and listening to what they have to say. Our highest priority  is the success of our customers, followed by continued innovation with  our products.&lt;/p&gt;</Description>
+  <Url>http://www.codesmithtools.com/</Url>
+  <ContactName>test</ContactName>
+  <ContactEmail>dev@dev.com</ContactEmail>
+  <Level>Platinum</Level>
+  <LogoUri>http://i143.photobucket.com/albums/r140/capscdev/codesmith-tools-large.png</LogoUri>
+</Sponsor>
