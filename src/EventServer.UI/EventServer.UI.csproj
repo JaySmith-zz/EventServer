@@ -468,6 +468,7 @@
     <Content Include="Views\Shared\LogOnUserControl.ascx" />
     <Content Include="Views\Shared\Site.Master" />
     <Content Include="Views\Speakers\SpeakerMenuWidget.ascx" />
+    <Content Include="Views\Sponsors\PastSponsors.aspx" />
     <Content Include="Views\Sponsors\Sponsorship.aspx" />
     <Content Include="Views\Sponsors\Create.aspx" />
     <Content Include="Views\Sponsors\Edit.aspx" />

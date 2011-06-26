@@ -1,9 +1,9 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="ViewPage<SponsorIndexModel>" %>
 
-<asp:Content ContentPlaceHolderID="TitleContent" runat="server">
-    Dallas TechFest 2011 : Sponsors
+<asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
+    Dallas TechFest 2010 : Sponsors
 </asp:Content>
-<asp:Content ContentPlaceHolderID="MainContent" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <script language="javascript" type="text/javascript">
         $(document).ready(function () {
             $("#navSponsors").addClass("active");
@@ -11,17 +11,11 @@
     </script>
 
     <p>
-        We are looking for companies and organizations to contribute to the Dallas TechFest. 
-        If you are interested, please check out the <%= Html.ActionLink<SponsorsController>(c => c.Sponsorship(), "Become a Sponsor") %> 
+        We are very thankful for companies and organizations that have contributed to the Dallas TechFest in the past. 
+        If you are interested in being involved in Dallas TechFest, please check out the <%= Html.ActionLink<SponsorsController>(c => c.Sponsorship(), "Become a Sponsor") %> 
         page for levels and contact information.
     </p>
-    
-    <div align="right">
-        <% if (Roles.IsUserInRole("Admin")) { %>
-        <%= Html.ActionLink("Add Sponsor", "Create") %>
-        <% } %>
-    </div>
-    
+       
     <div class="post">
         <h2 class="title">
             Platinum Sponsors
@@ -55,10 +49,4 @@
     </div>
     <% } %>
 
-     <div class="post">
-        <h2 class="title">Past Sponsors</h2>
-        <div class="entry">
-            <%= Html.ActionLink<SponsorsController>(c => c.PastSponsors(), "View Past Sponsors") %>
-        </div>
-    </div>
 </asp:Content>

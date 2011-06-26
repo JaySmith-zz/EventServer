@@ -182,6 +182,58 @@ namespace EventServer.UI.Controllers
             }
         }
 
+
+        public ActionResult PastSponsors()
+        {
+            var model = new SponsorIndexModel();
+
+            var platinumSponsors = new[]
+                                       {
+                                           new Sponsor()
+                                               {
+                                                   Description = "Microsoft",
+                                                   IsActive = true,
+                                                   LogoUri = @"http://i143.photobucket.com/albums/r140/capscdev/ms-logo_bL.png",
+                                                   Name = "Microsoft",
+                                                   Level = SponsorshipLevel.Platinum
+                                               },
+                                           new Sponsor()
+                                               {
+                                                   Description = "Improving Enterprises",
+                                                   IsActive = true,
+                                                   LogoUri = @"http://i143.photobucket.com/albums/r140/capscdev/improving.jpg",
+                                                   Name = "Improving Enterprises",
+                                                   Level = SponsorshipLevel.Platinum
+                                               }
+                                       };
+
+            model.PlatinumSponsors = platinumSponsors;
+
+            Sponsor[] goldSponsors = new[]
+                                         {
+                                             new Sponsor()
+                                               {
+                                                   Description = "Oracle",
+                                                   IsActive = true,
+                                                   LogoUri = @"http://www.oracleimg.com/us/assets/oralogo-small.gif",
+                                                   Name = "Oracle",
+                                                   Level = SponsorshipLevel.Platinum
+                                               },
+                                           new Sponsor()
+                                               {
+                                                   Description = "Telerik",
+                                                   IsActive = true,
+                                                   LogoUri = @"http://i143.photobucket.com/albums/r140/capscdev/telerikLogo-web-450x180px.png",
+                                                   Name = "Telerik",
+                                                   Level = SponsorshipLevel.Platinum
+                                               }
+                                         };
+            model.GoldSponsors = goldSponsors;
+
+                model.InactiveSponsors = new Sponsor[0];
+
+            return View(model);
+        }
         private string SaveLogo()
         {
             foreach (string inputTagName in Request.Files)
