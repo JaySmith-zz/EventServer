@@ -39,6 +39,9 @@ namespace EventServer.Core.ViewModels
         [DisplayName("Time Slot")]
         public string TimeSlot { get; set; }
 
+        [DisplayName("Room")]
+        public string Room { get; set; }
+
         [DisplayName("Event Day")]
         public int Day { get; set; }
     }

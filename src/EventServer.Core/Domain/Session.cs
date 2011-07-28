@@ -24,6 +24,7 @@ namespace EventServer.Core.Domain
             Category = category;
             Track = "None";
             Slot = "None";
+            Room = "None";
             Day = 1;
 
             Status = SessionStatus.Pending;
@@ -38,6 +39,7 @@ namespace EventServer.Core.Domain
         public string Description { get; set; }
         public string Track { get; set; }
         public string Slot { get; set; }
+        public string Room { get; set; }
         public SessionLevel Level { get; set; }
         public SessionStatus Status { get; set; }
         public SessionCategory Category { get; set; }
@@ -100,7 +102,7 @@ namespace EventServer.Core.Domain
             Raise(new CommentAdded {PresentationId = Id});
         }
 
-        public void Update(string title, string description, SessionLevel level, SessionCategory category, string track, string timeSlot)
+        public void Update(string title, string description, SessionLevel level, SessionCategory category, string track, string timeSlot, string room)
         {
             Title = title;
             Description = description;
@@ -108,6 +110,7 @@ namespace EventServer.Core.Domain
             Category = category;
             Track = string.IsNullOrEmpty(track) ? "None" : track;
             Slot = string.IsNullOrEmpty(timeSlot) ? "None" : timeSlot;
+            Room = string.IsNullOrEmpty(room) ? "None" : room;
 
             Raise(new PresentationChanged {PresentationId = Id});
         }
