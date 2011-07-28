@@ -4,5 +4,10 @@
   <Email>dev@dev.com</Email>
   <Password>7yYOmqPGc68kDReiZgSANhqOCB0f/soqXtDjIZ/BhWc=</Password>
   <Name>Developer</Name>
+  <SpeakerProfile>
+    <Biography>x</Biography>
+    <IsMvp>false</IsMvp>
+    <TravelAssistance>false</TravelAssistance>
+  </SpeakerProfile>
   <CreationDate>2011-03-23T15:22:34.8275751-05:00</CreationDate>
 </UserProfile>

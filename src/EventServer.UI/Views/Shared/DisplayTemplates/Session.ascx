@@ -20,6 +20,7 @@
                 <div class="session-status-<%= Model.Status %>">Status: <%= Model.Status %></div>
                 <div><%= Model.Track %></div>
                 <div><%= Model.TimeSlot %></div>
+                <div><%= Model.Room %></div>
             <% } %>
 
         </div>

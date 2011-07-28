@@ -57,6 +57,14 @@
             </div>
 
             <div class="editor-label">
+                <%= Html.LabelFor(m => m.Room) %>
+            </div>
+            <div class="editor-field">
+                <%= Html.TextBoxFor(m => m.Room) %>
+                <%= Html.ValidationMessageFor(m => m.Room) %>
+            </div>
+
+            <div class="editor-label">
                 <%= Html.LabelFor(m => m.TimeSlot) %>
             </div>
             <div class="editor-field">
