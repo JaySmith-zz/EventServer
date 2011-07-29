@@ -119,6 +119,7 @@ namespace EventServer.UI.Controllers
                     Category = session.Category,
                     Track = session.Track,
                     TimeSlot = session.Slot,
+                    Room = session.Room,
                     Day = session.Day
                 };
 
@@ -142,7 +143,7 @@ namespace EventServer.UI.Controllers
                 return RedirectTo<SessionsController>(c => c.Show(presentation.Id, presentation.Title.MakeUrlFriendly()));
             }
 
-            presentation.Update(model.Title, model.Description, model.Level, model.Category, model.Track, model.TimeSlot);
+            presentation.Update(model.Title, model.Description, model.Level, model.Category, model.Track, model.TimeSlot, model.Room);
             _repository.Save(presentation);
 
             return RedirectTo<SessionsController>(c => c.Show(presentation.Id, presentation.Title.MakeUrlFriendly()));

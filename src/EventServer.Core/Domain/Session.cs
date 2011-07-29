@@ -24,6 +24,7 @@ namespace EventServer.Core.Domain
             Category = category;
             Track = "None";
             Slot = "None";
+            Room = "None";
             Day = 1;
 
             Status = SessionStatus.Pending;
@@ -38,6 +39,7 @@ namespace EventServer.Core.Domain
         public string Description { get; set; }
         public string Track { get; set; }
         public string Slot { get; set; }
+        public string Room { get; set; }
         public SessionLevel Level { get; set; }
         public SessionStatus Status { get; set; }
         public SessionCategory Category { get; set; }
@@ -100,7 +102,7 @@ namespace EventServer.Core.Domain
             Raise(new CommentAdded {PresentationId = Id});
         }
 
-        public void Update(string title, string description, SessionLevel level, SessionCategory category, string track, string timeSlot)
+        public void Update(string title, string description, SessionLevel level, SessionCategory category, string track, string timeSlot, string room)
         {
             Title = title;
             Description = description;
@@ -108,6 +110,7 @@ namespace EventServer.Core.Domain
             Category = category;
             Track = string.IsNullOrEmpty(track) ? "None" : track;
             Slot = string.IsNullOrEmpty(timeSlot) ? "None" : timeSlot;
+            Room = string.IsNullOrEmpty(room) ? "None" : room;
 
             Raise(new PresentationChanged {PresentationId = Id});
         }
@@ -118,12 +121,12 @@ namespace EventServer.Core.Domain
         public static readonly IDictionary<string, string> TimeSlots = new Dictionary<string, string>
             {
                 {"None", "None"},
-                {"1", "08:50 AM - 09:50 AM"},
-                {"2", "10:00 AM - 11:00 AM"},
-                {"3", "11:10 AM - 12:10 PM"},
-                {"4", "01:30 PM - 02:30 PM"},
-                {"5", "02:40 PM - 03:40 PM"},
-                {"6", "03:50 PM - 04:50 PM"},
+                {"1", "09:00 AM - 10:15 AM"},
+                {"2", "10:30 AM - 11:45 AM"},
+                {"3", "12:45 PM - 02:00 PM"},
+                {"4", "02:15 PM - 03:30 PM"},
+                {"5", "03:45 PM - 05:00 PM"},
+                {"6", "05:15 PM - 06:00 PM"},
             };
 
     }
