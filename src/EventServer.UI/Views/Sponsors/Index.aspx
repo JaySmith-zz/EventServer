@@ -1,7 +1,7 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="ViewPage<SponsorIndexModel>" %>
 
 <asp:Content ContentPlaceHolderID="TitleContent" runat="server">
-    Dallas TechFest 2011 : Sponsors
+    Sponsors
 </asp:Content>
 <asp:Content ContentPlaceHolderID="MainContent" runat="server">
     <script language="javascript" type="text/javascript">
@@ -11,7 +11,7 @@
     </script>
 
     <p>
-        We are looking for companies and organizations to contribute to the Dallas TechFest. 
+        We are looking for companies and organizations to contribute to this event. 
         If you are interested, please check out the <%= Html.ActionLink<SponsorsController>(c => c.Sponsorship(), "Become a Sponsor") %> 
         page for levels and contact information.
     </p>

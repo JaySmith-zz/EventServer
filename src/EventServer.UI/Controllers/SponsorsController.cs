@@ -182,7 +182,8 @@ namespace EventServer.UI.Controllers
             }
         }
 
-
+        // TODO: This has to go away
+        // Event Administrators can use the edited About page to add previous sponsors if they want.
         public ActionResult PastSponsors()
         {
             var model = new SponsorIndexModel();

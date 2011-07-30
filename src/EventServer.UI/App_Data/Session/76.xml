@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<Session xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Id>76</Id>
+  <UserId>31</UserId>
+  <Title>A Session</Title>
+  <Description>A cool session</Description>
+  <Track>None</Track>
+  <Slot>None</Slot>
+  <Room>None</Room>
+  <Level>Beginner</Level>
+  <Status>Pending</Status>
+  <Category>Developers</Category>
+  <Day>1</Day>
+  <Comments />
+</Session>
