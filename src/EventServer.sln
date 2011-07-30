@@ -16,6 +16,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventServer.UI", "EventServ
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventServer.Tests", "EventServer.Tests\EventServer.Tests.csproj", "{FCB02A4F-60DA-45E9-A9FA-782E71192D77}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventServer.Mvc3", "EventServer.Mvc3\EventServer.Mvc3.csproj", "{F313AEAA-0EE1-4E31-8C3B-E72B4BB0603C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -40,6 +42,10 @@ Global
 		{FCB02A4F-60DA-45E9-A9FA-782E71192D77}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FCB02A4F-60DA-45E9-A9FA-782E71192D77}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FCB02A4F-60DA-45E9-A9FA-782E71192D77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F313AEAA-0EE1-4E31-8C3B-E72B4BB0603C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F313AEAA-0EE1-4E31-8C3B-E72B4BB0603C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F313AEAA-0EE1-4E31-8C3B-E72B4BB0603C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F313AEAA-0EE1-4E31-8C3B-E72B4BB0603C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
