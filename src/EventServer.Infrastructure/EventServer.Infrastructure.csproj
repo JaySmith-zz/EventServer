@@ -70,14 +70,10 @@
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
-    <Reference Include="System.ServiceModel.Web">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
-    </Reference>
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.Web.Mvc, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
-    <Reference Include="System.Web.Routing">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
-    </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="TweetSharp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c148cfba29ed1a4d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -88,7 +84,6 @@
     <Compile Include="..\AssemblyInfo.cs">
       <Link>Properties\AssemblyInfo.cs</Link>
     </Compile>
-    <Compile Include="AppControllerFactory.cs" />
     <Compile Include="EventAggregator.cs" />
     <Compile Include="MailGateway.cs" />
     <Compile Include="Providers\AppMembershipProvider.cs" />
@@ -98,12 +93,6 @@
     <Compile Include="StructureMapContainer.cs" />
     <Compile Include="Repositories\InMemoryRepository.cs" />
     <Compile Include="Repositories\XmlRepository.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\EventServer.Core\EventServer.Core.csproj">
-      <Project>{13816E05-D438-4007-8657-930F6D76188B}</Project>
-      <Name>EventServer.Core</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">

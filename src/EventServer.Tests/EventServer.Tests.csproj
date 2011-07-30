@@ -99,14 +99,6 @@
     <Content Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\EventServer.Core\EventServer.Core.csproj">
-      <Project>{13816E05-D438-4007-8657-930F6D76188B}</Project>
-      <Name>EventServer.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\EventServer.Infrastructure\EventServer.Infrastructure.csproj">
-      <Project>{4E6FE9DC-1EB6-4681-A7F4-189CB1C8AD1D}</Project>
-      <Name>EventServer.Infrastructure</Name>
-    </ProjectReference>
     <ProjectReference Include="..\EventServer.UI\EventServer.UI.csproj">
       <Project>{13E2AF64-E4CE-48AA-8216-86BC4FE5D101}</Project>
       <Name>EventServer.UI</Name>

@@ -1,14 +1,14 @@
-﻿using System.Web.Mvc;
-using EventServer.Core;
-using EventServer.Core.Domain;
-using EventServer.Core.Services;
-
-namespace EventServer.UI.Controllers
+﻿namespace EventServer.UI.Controllers
 {
-    using System;
     using System.Collections.Generic;
 
     using EventServer.Core.ViewModels;
+
+    using System.Web.Mvc;
+
+    using EventServer.Core;
+    using EventServer.Core.Domain;
+    using EventServer.Core.Services;
 
     public class SettingsController : AppController
     {

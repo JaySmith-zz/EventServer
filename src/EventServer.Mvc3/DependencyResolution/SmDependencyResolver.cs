@@ -1,34 +1,43 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web.Mvc;
-using StructureMap;
-
-namespace EventServer.Mvc3
+namespace EventServer
 {
-    public class SmDependencyResolver : IDependencyResolver {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Web.Mvc;
 
-        private readonly IContainer _container;
+    using StructureMap;
 
-        public SmDependencyResolver(IContainer container) {
-            _container = container;
+    public class SmDependencyResolver : IDependencyResolver 
+    {
+        private readonly IContainer container;
+
+        public SmDependencyResolver(IContainer container) 
+        {
+            this.container = container;
         }
 
-        public object GetService(Type serviceType) {
-            if (serviceType == null) return null;
-            try {
-                  return serviceType.IsAbstract || serviceType.IsInterface
-                           ? _container.TryGetInstance(serviceType)
-                           : _container.GetInstance(serviceType);
+        public object GetService(Type serviceType)
+        {
+            if (serviceType == null)
+            {
+                return null;
             }
-            catch {
 
+            try
+            {
+                return serviceType.IsAbstract || serviceType.IsInterface
+                           ? this.container.TryGetInstance(serviceType)
+                           : this.container.GetInstance(serviceType);
+            }
+            catch 
+            {
                 return null;
             }
         }
 
-        public IEnumerable<object> GetServices(Type serviceType) {
-            return _container.GetAllInstances(serviceType).Cast<object>();
+        public IEnumerable<object> GetServices(Type serviceType) 
+        {
+            return this.container.GetAllInstances(serviceType).Cast<object>();
         }
     }
 }

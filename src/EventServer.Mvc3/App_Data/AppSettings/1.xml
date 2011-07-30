@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<AppSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Id>1</Id>
+  <SiteName>Event Server</SiteName>
+  <SiteSlogan>Making events easy!</SiteSlogan>
+  <SiteTheme>Solution</SiteTheme>
+  <Description>Event Server was created to make setting up sites for conference easy.</Description>
+  <StartDateTime>2011-09-28T11:53:46.7693699-05:00</StartDateTime>
+  <EndDateTime>0001-01-01T00:00:00</EndDateTime>
+  <RegistrationEndDateTime>2011-10-27T11:53:46.7693699-05:00</RegistrationEndDateTime>
+  <SessionSubmissionEndDateTime>2011-09-18T11:53:46.7693699-05:00</SessionSubmissionEndDateTime>
+  <VenueName>Event Venue</VenueName>
+  <VenuePhone>555 555-5555</VenuePhone>
+  <VenueStreet>Anywhere St.</VenueStreet>
+  <VenueCity>Anytown</VenueCity>
+  <VenueState>AR</VenueState>
+  <VenueZip>12345</VenueZip>
+  <ContactName>Event Contact</ContactName>
+  <TwitterId>EventServer</TwitterId>
+  <TwitterFilterDate>2011-06-30T11:53:46.7693699-05:00</TwitterFilterDate>
+  <TwitterDisplayCount>5</TwitterDisplayCount>
+  <SiteLogoUri>http://eventserver.codeplex.com/images/logo.png</SiteLogoUri>
+  <DataStorePath>~/App_Data</DataStorePath>
+  <NumberOfDaysForEvent>1</NumberOfDaysForEvent>
+  <EmailEnabled>false</EmailEnabled>
+  <EmailFromAddress>no-reply@example.com</EmailFromAddress>
+  <EmailHost>smtp.example.com</EmailHost>
+  <EmailHostPort>25</EmailHostPort>
+  <EmailUsername>no-reply@example.com</EmailUsername>
+  <EmailEnableSsl>false</EmailEnableSsl>
+</AppSettings>

@@ -480,16 +480,6 @@
     <Content Include="wlwmanifest.xml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\EventServer.Core\EventServer.Core.csproj">
-      <Project>{13816E05-D438-4007-8657-930F6D76188B}</Project>
-      <Name>EventServer.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\EventServer.Infrastructure\EventServer.Infrastructure.csproj">
-      <Project>{4E6FE9DC-1EB6-4681-A7F4-189CB1C8AD1D}</Project>
-      <Name>EventServer.Infrastructure</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Themes\TysonDevCon\images\tdc_footer.jpg" />
     <Content Include="Themes\TysonDevCon\images\tdc_header.jpg" />
     <Content Include="Views\Account\ChangeEmail.aspx" />

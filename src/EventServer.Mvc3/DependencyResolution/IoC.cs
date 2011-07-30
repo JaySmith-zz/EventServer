@@ -1,19 +1,31 @@
 using StructureMap;
-namespace EventServer.Mvc3 {
+namespace EventServer {
+    using EventServer.Core;
+    using EventServer.Core.Services;
+    using EventServer.Infrastructure;
+    using EventServer.Infrastructure.Repositories;
+    using EventServer.Infrastructure.Services;
+
     public static class IoC {
         public static IContainer Initialize() {
             ObjectFactory.Initialize(x =>
                         {
+                            x.For<IRepository>().Use<XmlRepository>();
+                            x.For<ITwitterService>().Use<TweetSharpTwitterService>();
+                            x.For<ISyndicationService>().Use<SyndicationService>();
+
+                            x.ForSingletonOf<IMailGateway>()
+                                .Use<MailGateway>()
+                                .Ctor<string>()
+                                .EqualToAppSetting("developerEmail");
+
                             x.Scan(scan =>
                                     {
-                                        //scan.TheCallingAssembly();
-                                        scan.Assembly("EventServer.Mvc3");
-                                        scan.Assembly("EventServer.Core");
-                                        //scan.Assembly("EventServer.Infrastructure");
+                                        scan.TheCallingAssembly();
                                         scan.WithDefaultConventions();
                                     });
-            //                x.For<IExample>().Use<Example>();
                         });
+
             return ObjectFactory.Container;
         }
     }

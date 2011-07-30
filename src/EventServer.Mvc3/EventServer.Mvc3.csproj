@@ -10,8 +10,8 @@
     <ProjectTypeGuids>{E53F8FEA-EAE0-44A6-8774-FFD645390401};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>EventServer.Mvc3</RootNamespace>
-    <AssemblyName>EventServer.Mvc3</AssemblyName>
+    <RootNamespace>EventServer</RootNamespace>
+    <AssemblyName>EventServer</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>false</UseIISExpress>
@@ -37,15 +37,26 @@
     <Reference Include="EntityFramework">
       <HintPath>..\packages\EntityFramework.4.1.10331.0\lib\EntityFramework.dll</HintPath>
     </Reference>
+    <Reference Include="Hammock">
+      <HintPath>..\packages\Hammock.1.2.5\lib\net40\Hammock.dll</HintPath>
+    </Reference>
+    <Reference Include="Hammock.ClientProfile">
+      <HintPath>..\packages\TweetSharp.2.0.7\lib\4.0\Hammock.ClientProfile.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Web.Mvc, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Mvc3Futures.3.0.20105.0\lib\Microsoft.Web.Mvc.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\TweetSharp.2.0.7\lib\4.0\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="StructureMap">
       <HintPath>..\packages\structuremap.2.6.2\lib\StructureMap.dll</HintPath>
     </Reference>
     <Reference Include="System.Data.Entity" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
     <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Web.WebPages, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Web.Helpers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
@@ -67,6 +78,9 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="TweetSharp">
+      <HintPath>..\packages\TweetSharp.2.0.7\lib\4.0\TweetSharp.dll</HintPath>
+    </Reference>
     <Reference Include="WebActivator">
       <HintPath>..\packages\WebActivator.1.0.0.0\lib\WebActivator.dll</HintPath>
     </Reference>
@@ -75,53 +89,127 @@
     <Compile Include="App_Start\StructuremapMvc.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Core\Domain\AppSettings.cs" />
+    <Compile Include="Core\Domain\Category.cs" />
+    <Compile Include="Core\Domain\Comment.cs" />
+    <Compile Include="Core\Domain\CommentAdded.cs" />
+    <Compile Include="Core\Domain\DomainEventHandlers\EmailHandler.cs" />
+    <Compile Include="Core\Domain\DomainEvents.cs" />
+    <Compile Include="Core\Domain\Entity.cs" />
+    <Compile Include="Core\Domain\Page.cs" />
+    <Compile Include="Core\Domain\Post.cs" />
+    <Compile Include="Core\Domain\PresentationAccepted.cs" />
+    <Compile Include="Core\Domain\PresentationChanged.cs" />
+    <Compile Include="Core\Domain\PresentationRejected.cs" />
+    <Compile Include="Core\Domain\Session.cs" />
+    <Compile Include="Core\Domain\SessionCategory.cs" />
+    <Compile Include="Core\Domain\SessionCreated.cs" />
+    <Compile Include="Core\Domain\SessionLevel.cs" />
+    <Compile Include="Core\Domain\SessionStatus.cs" />
+    <Compile Include="Core\Domain\SpeakerAccolade.cs" />
+    <Compile Include="Core\Domain\SpeakerCreated.cs" />
+    <Compile Include="Core\Domain\SpeakerProfile.cs" />
+    <Compile Include="Core\Domain\SpecialPage.cs" />
+    <Compile Include="Core\Domain\Sponsor.cs" />
+    <Compile Include="Core\Domain\TravelAssistanceRequested.cs" />
+    <Compile Include="Core\Domain\Tweet.cs" />
+    <Compile Include="Core\Domain\UserProfile.cs" />
+    <Compile Include="Core\Domain\UserRegistered.cs" />
+    <Compile Include="Core\ExtensionMethods.cs" />
+    <Compile Include="Core\HtmlHelperExtensions.cs" />
+    <Compile Include="Core\HttpHandlers\FileHandler.cs" />
+    <Compile Include="Core\HttpHandlers\ImageHandler.cs" />
+    <Compile Include="Core\HttpHandlers\MetaWeblogHandler.cs" />
+    <Compile Include="Core\HttpHandlers\RsdHandler.cs" />
+    <Compile Include="Core\HttpHandlers\SyndicationHandler.cs" />
+    <Compile Include="Core\HttpHandlers\XMLRPCRequest.cs" />
+    <Compile Include="Core\HttpHandlers\XMLRPCResponse.cs" />
+    <Compile Include="Core\IdGenerator.cs" />
+    <Compile Include="Core\IMailGateway.cs" />
+    <Compile Include="Core\IRepository.cs" />
+    <Compile Include="Core\Log.cs" />
+    <Compile Include="Core\ModelBinders.cs" />
+    <Compile Include="Core\Services\ICurrentUserService.cs" />
+    <Compile Include="Core\Services\IFormsAuthenticationService.cs" />
+    <Compile Include="Core\Services\IMembershipService.cs" />
+    <Compile Include="Core\Services\ISyndicationService.cs" />
+    <Compile Include="Core\Services\ITwitterService.cs" />
+    <Compile Include="Core\Settings.cs" />
+    <Compile Include="Core\SystemPath.cs" />
+    <Compile Include="Core\ValidationUtil.cs" />
+    <Compile Include="Core\ValueObject.cs" />
+    <Compile Include="Core\ViewModels\AccountModels.cs" />
+    <Compile Include="Core\ViewModels\AdminModels.cs" />
+    <Compile Include="Core\ViewModels\CustomValidatorAttribute.cs" />
+    <Compile Include="Core\ViewModels\HomeModels.cs" />
+    <Compile Include="Core\ViewModels\PropertiesMustMatchAttribute.cs" />
+    <Compile Include="Core\ViewModels\SessionsModels.cs" />
+    <Compile Include="Core\ViewModels\SettingsViewModels.cs" />
+    <Compile Include="Core\ViewModels\SpeakersModels.cs" />
+    <Compile Include="Core\ViewModels\SponsorModels.cs" />
+    <Compile Include="Core\ViewModels\ValidatePasswordLengthAttribute.cs" />
+    <Compile Include="Core\ViewModels\ValidateUrlAttribute.cs" />
     <Compile Include="DependencyResolution\IoC.cs" />
+    <Compile Include="DependencyResolution\SmControllerFactory .cs" />
     <Compile Include="DependencyResolution\SmDependencyResolver.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Infrastructure\MailGateway.cs" />
+    <Compile Include="Infrastructure\Providers\AppMembershipProvider.cs" />
+    <Compile Include="Infrastructure\Providers\AppRoleProvider.cs" />
+    <Compile Include="Infrastructure\Repositories\InMemoryRepository.cs" />
+    <Compile Include="Infrastructure\Repositories\XmlRepository.cs" />
+    <Compile Include="Infrastructure\Services\SyndicationService.cs" />
+    <Compile Include="Infrastructure\Services\TweetSharpTwitterService.cs" />
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
-    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
-    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
-    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
-    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
-    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
-    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
-    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
-    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
-    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
-    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
-    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
-    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
-    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
-    <Content Include="Content\themes\base\jquery.ui.all.css" />
-    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
-    <Content Include="Content\themes\base\jquery.ui.base.css" />
-    <Content Include="Content\themes\base\jquery.ui.button.css" />
-    <Content Include="Content\themes\base\jquery.ui.core.css" />
-    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
-    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
-    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
-    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
-    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
-    <Content Include="Content\themes\base\jquery.ui.slider.css" />
-    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
-    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Content\Images\error.gif" />
+    <Content Include="Content\Images\img01.jpg" />
+    <Content Include="Content\Images\img02.gif" />
+    <Content Include="Content\Images\img03.gif" />
+    <Content Include="Content\Images\img04.gif" />
+    <Content Include="Content\Images\img05.gif" />
+    <Content Include="Content\Images\img06.jpg" />
+    <Content Include="Content\Images\info.gif" />
+    <Content Include="Content\Images\no_image.gif" />
+    <Content Include="Content\Images\PhotoNotAvailable.gif" />
+    <Content Include="Content\Images\rss16.png" />
+    <Content Include="Content\Images\spacer.gif" />
+    <Content Include="Content\Images\wlw_icon.png" />
+    <Content Include="Content\Images\wlw_watermark.png" />
+    <Content Include="Content\jqueryui\smoothness\images\ui-anim_basic_16x16.gif" />
+    <Content Include="Content\jqueryui\smoothness\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\jqueryui\smoothness\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\jqueryui\smoothness\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\jqueryui\smoothness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\jqueryui\smoothness\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\jqueryui\smoothness\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\jqueryui\smoothness\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\jqueryui\smoothness\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\jqueryui\smoothness\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\jqueryui\smoothness\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\jqueryui\smoothness\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\jqueryui\smoothness\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\jqueryui\smoothness\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\jqueryui\smoothness\jquery-ui-1.8.2.css" />
+    <Content Include="Content\theme.css" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\jquery-1.5.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.5.1.js" />
     <Content Include="Scripts\jquery-1.5.1.min.js" />
     <Content Include="Scripts\jquery-ui-1.8.11.js" />
     <Content Include="Scripts\jquery-ui-1.8.11.min.js" />
+    <Content Include="Scripts\jquery.growl.js" />
+    <Content Include="Scripts\jquery.jeditable.min.js" />
     <Content Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\modernizr-1.7.js" />
     <Content Include="Scripts\modernizr-1.7.min.js" />
+    <Content Include="Scripts\EventServer.js" />
     <Content Include="Themes\Default\images\bg01.jpg" />
     <Content Include="Themes\Default\images\bg02.jpg" />
     <Content Include="Themes\Default\images\bg03.jpg" />
@@ -183,7 +271,6 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="Content\Site.css" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -211,16 +298,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\EventServer.Core\EventServer.Core.csproj">
-      <Project>{13816E05-D438-4007-8657-930F6D76188B}</Project>
-      <Name>EventServer.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\EventServer.Infrastructure\EventServer.Infrastructure.csproj">
-      <Project>{4E6FE9DC-1EB6-4681-A7F4-189CB1C8AD1D}</Project>
-      <Name>EventServer.Infrastructure</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

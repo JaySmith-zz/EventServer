@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-using System.Web.Routing;
-using System.Web.Security;
-using EventServer.Mvc3.Models;
-
-namespace EventServer.Mvc3.Controllers
+﻿namespace EventServer.Controllers
 {
+    using System;
+    using System.Web.Mvc;
+    using System.Web.Security;
+
+    using EventServer.Models;
+
     public class AccountController : Controller
     {
 

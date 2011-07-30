@@ -200,7 +200,14 @@ table td
     margin: 0 auto;
     padding-bottom: 60px; /* Height of the footer */
     overflow: hidden;
+    min-height: 100%;
+    margin-bottom: -80px;
 }
+
+/* for IE not Mac \*/
+* html #wrap {height: 100%;}
+/* end for IE */
+
 
 /* Content */
 

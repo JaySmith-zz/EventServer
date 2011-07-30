@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-using System.Web.Routing;
-
-namespace EventServer.Mvc3
+﻿namespace EventServer
 {
+    using System.Web.Mvc;
+    using System.Web.Routing;
+
     // Note: For instructions on enabling IIS6 or IIS7 classic mode, 
     // visit http://go.microsoft.com/?LinkId=9394801
 
@@ -35,6 +31,8 @@ namespace EventServer.Mvc3
 
             RegisterGlobalFilters(GlobalFilters.Filters);
             RegisterRoutes(RouteTable.Routes);
+
+            ControllerBuilder.Current.SetControllerFactory(new SmControllerFactory());
         }
     }
 }

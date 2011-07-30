@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace EventServer.Mvc3.Controllers
+namespace EventServer.Controllers
 {
     using EventServer.Core;
     using EventServer.Core.Domain;

@@ -5,7 +5,7 @@ using System.Globalization;
 using System.Web.Mvc;
 using System.Web.Security;
 
-namespace EventServer.Mvc3.Models
+namespace EventServer.Models
 {
 
     public class ChangePasswordModel
