@@ -3,7 +3,6 @@
 <head>
     <title>@ViewBag.Title</title>
     <link href="@Url.Content("~/rsd.axd")" rel="edituri" type="application/rsd+xml" title="RSD" />
-@*    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />*@
     <link href="@Url.Content("~/Themes/" + EventServer.Core.Settings.Instance.SiteTheme + "/theme.css")" rel="stylesheet" type="text/css" />
     <link href="@Url.Content("~/Content/jqueryui/smoothness/jquery-ui-1.8.2.css")" rel="Stylesheet" type="text/css" />
     <script type="text/javascript">
@@ -23,7 +22,7 @@
     <div id="header">
         <div id="logo">
             <h1>
-                <a href="#"><@EventServer.Core.Settings.Instance.SiteName</a></h1>
+                <a href="/">@EventServer.Core.Settings.Instance.SiteName</a></h1>
             <p>
                 <em>@EventServer.Core.Settings.Instance.SiteSlogan</em></p>
         </div>
@@ -35,20 +34,30 @@
         <div id="menu">
             <ul>
                 <li id="navHome">@Html.ActionLink("Home", "Index", "Home")</li>
-                <li id="navHome">@Html.ActionLink("About", "About", "Home")</li>
+                <li id="navAbout">@Html.ActionLink("About", "About", "Home")</li>
             </ul>
         </div>
     </div>
     <!-- end #header-->
     <div id="page">
         @RenderBody()
+        <div style="clear: both;">
+            &nbsp;</div>
     </div>
+    <!-- end #page -->
     <div id="footer">
         <p>
             Copyright (c) 2010 <a href="/">
                 @EventServer.Core.Settings.Instance.SiteName;</a>. All rights reserved.
         </p>
     </div>
-    </div>
+    <script type="text/javascript">
+        $(function() {
+
+            var messages = <% Html.RenderAction<HomeController>(c => c.GetRedirectMessages()); %>;
+            $.each(messages, function() { $.growl('Alert', this); });
+
+        });
+    </script>
 </body>
 </html>

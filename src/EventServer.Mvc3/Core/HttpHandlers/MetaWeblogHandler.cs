@@ -12,6 +12,8 @@ namespace EventServer.Core.HttpHandlers
 {
     using System.Web.Mvc;
 
+    using EventServer.Models;
+
     internal class MetaWeblogHandler : IHttpHandler
     {
         public bool IsReusable

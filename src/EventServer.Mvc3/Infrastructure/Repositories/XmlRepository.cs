@@ -8,6 +8,8 @@ using EventServer.Core.Domain;
 
 namespace EventServer.Infrastructure.Repositories
 {
+    using EventServer.Models;
+
     public class XmlRepository : IRepository
     {
         public T Get<T>(int id) where T : Entity

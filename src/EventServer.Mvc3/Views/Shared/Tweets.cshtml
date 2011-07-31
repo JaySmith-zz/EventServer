@@ -1,0 +1,13 @@
+﻿@model IEnumerable<EventServer.Core.Domain.Tweet>
+<h2>
+    Tweets</h2>
+@foreach (var item in Model)
+{
+    <div class="byline">
+        @item.PostDate.ToLongDateString()
+    </div>
+    <div>
+        @Html.Raw(item.Message)
+    </div>
+    <br />
+}

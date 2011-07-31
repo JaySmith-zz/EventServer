@@ -496,7 +496,6 @@
     <Content Include="Views\EmailTemplates\TravelAssistanceRequested.aspx" />
     <Content Include="Views\EmailTemplates\UserRegistered.aspx" />
     <Content Include="Views\EmailTemplates\WelcomeNewUser.aspx" />
-    <Content Include="packages.config" />
     <None Include="Web-TEMPLATE.config" />
     <Content Include="Views\Settings\Index.aspx" />
     <Content Include="Views\Sponsors\Index.aspx" />

@@ -1,8 +1,10 @@
-using System;
-using System.Xml.Serialization;
-
-namespace EventServer.Core
+﻿namespace EventServer.Core
 {
+    using System;
+    using System.Xml.Serialization;
+
+    using EventServer.Models;
+
     public abstract class ValueObject : IEquatable<ValueObject>, IComparable<ValueObject>, IComparable
     {
         protected ValueObject(string value)

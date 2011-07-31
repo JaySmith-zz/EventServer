@@ -7,6 +7,8 @@ using EventServer.Core.Domain;
 
 namespace EventServer.Infrastructure.Repositories
 {
+    using EventServer.Models;
+
     public class InMemoryRepository : IRepository
     {
         public InMemoryRepository()

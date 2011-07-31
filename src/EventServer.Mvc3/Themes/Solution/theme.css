@@ -542,6 +542,7 @@ hr
 
 .byline
 {
+    font-weight: bold;
     margin: 0px;
     color: #618C04;
 }

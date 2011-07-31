@@ -1,9 +1,9 @@
-using System;
-using EventServer.Core.Domain;
-
-namespace EventServer.Core
+﻿namespace EventServer.Core
 {
     using System.Web.Mvc;
+
+    using EventServer.Core.Domain;
+    using EventServer.Models;
 
     public static class Settings
     {
@@ -20,7 +20,7 @@ namespace EventServer.Core
         {
             Instance = settings;
 
-            DependencyResolver.Current.GetService<IRepository>().Save<AppSettings>(settings);
+            DependencyResolver.Current.GetService<IRepository>().Save(settings);
         }
 
         private static AppSettings LoadSettings()

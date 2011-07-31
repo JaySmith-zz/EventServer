@@ -5,6 +5,7 @@ namespace EventServer {
     using EventServer.Infrastructure;
     using EventServer.Infrastructure.Repositories;
     using EventServer.Infrastructure.Services;
+    using EventServer.Models;
 
     public static class IoC {
         public static IContainer Initialize() {

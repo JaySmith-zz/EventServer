@@ -1,7 +1,6 @@
-﻿using System;
-
-namespace EventServer.Core.Domain
+﻿namespace EventServer.Core.Domain
 {
+    using System;
     using System.Collections.Generic;
     using System.ComponentModel;
     using System.IO;

@@ -9,6 +9,8 @@ namespace EventServer.Infrastructure
 {
     using System.Net;
 
+    using EventServer.Models;
+
     public class MailGateway : IMailGateway
     {
         public MailGateway(string developerEmail)

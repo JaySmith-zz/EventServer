@@ -1,9 +1,11 @@
-using System;
-using System.IO;
-using System.Web.Hosting;
-
-namespace EventServer.Core
+﻿namespace EventServer.Core
 {
+    using System;
+    using System.IO;
+    using System.Web.Hosting;
+
+    using EventServer.Models;
+
     public static class IdGenerator
     {
         static IdGenerator()

@@ -8,6 +8,7 @@ namespace EventServer.Infrastructure.Providers
 
     using EventServer.Core;
     using EventServer.Core.Domain;
+    using EventServer.Models;
 
     public class AppMembershipProvider : MembershipProvider
     {

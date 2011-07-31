@@ -3,6 +3,8 @@ using System.Web.Security;
 
 namespace EventServer.Core.Services
 {
+    using EventServer.Models;
+
     public interface IMembershipService
     {
         bool ValidateUser(string email, string password);

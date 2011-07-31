@@ -6,6 +6,8 @@ using EventServer.Core.Domain;
 
 namespace EventServer.Core.Services
 {
+    using EventServer.Models;
+
     public interface ICurrentUserService
     {
         bool IsSignedIn { get; }

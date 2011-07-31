@@ -3,6 +3,8 @@ using System.Web.Security;
 
 namespace EventServer.Core.Services
 {
+    using EventServer.Models;
+
     public interface IFormsAuthenticationService
     {
         void SignIn(string email, bool createPersistentCookie);

@@ -9,6 +9,7 @@ namespace EventServer.Infrastructure.Services
     using EventServer.Core;
     using EventServer.Core.Domain;
     using EventServer.Core.Services;
+    using EventServer.Models;
 
     public class SyndicationService : ISyndicationService
     {

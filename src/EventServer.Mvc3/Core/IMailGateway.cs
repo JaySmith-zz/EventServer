@@ -1,6 +1,4 @@
-using System;
-
-namespace EventServer.Core
+﻿namespace EventServer.Core
 {
     public interface IMailGateway
     {

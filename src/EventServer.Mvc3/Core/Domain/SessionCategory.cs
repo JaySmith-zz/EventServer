@@ -2,6 +2,8 @@ using System;
 
 namespace EventServer.Core.Domain
 {
+    using EventServer.Models;
+
     public class SessionCategory : ValueObject
     {
         public static SessionCategory Developers = new SessionCategory("Developers");

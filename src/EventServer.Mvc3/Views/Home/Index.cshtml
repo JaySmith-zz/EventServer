@@ -1,8 +1,13 @@
-﻿@{
+﻿@model EventServer.Models.HomeIndexModel
+@{
     ViewBag.Title = "Home Page";
 }
-
-<h2>@ViewBag.Message</h2>
-<p>
-    To learn more about ASP.NET MVC visit <a href="http://asp.net/mvc" title="ASP.NET MVC Website">http://asp.net/mvc</a>.
-</p>
+<div id="content">
+    @{ Html.RenderAction("HomeMessage", "Home"); }
+    @Html.Partial("Posts", Model.Posts)
+</div>
+<div id="sidebar">
+    @{ Html.RenderAction("AdminMenuWidget", "Admin"); }
+    @{ Html.RenderAction("Sidebar", "Home"); }
+    @Html.Partial("Tweets", Model.Tweets)
+</div>

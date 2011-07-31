@@ -6,15 +6,17 @@ using System.Web.Routing;
 
 namespace EventServer.Core.Domain.DomainEventHandlers
 {
+    using EventServer.Models;
+
     public class EmailHandler :
         IHandles<UserRegistered>,
         IHandles<SpeakerCreated>,
         IHandles<TravelAssistanceRequested>,
         IHandles<TravelAssistanceCancelled>,
         IHandles<SessionCreated>,
-        IHandles<PresentationChanged>,
-        IHandles<PresentationAccepted>,
-        IHandles<PresentationRejected>,
+        IHandles<SessionChanged>,
+        IHandles<SessionAccepted>,
+        IHandles<SessionRejected>,
         IHandles<CommentAdded>
     {
         public EmailHandler(IRepository repository, IMailGateway mailGateway)
@@ -68,30 +70,30 @@ namespace EventServer.Core.Domain.DomainEventHandlers
                 .SendTo(_repository.Find<UserProfile>().AdminEmails());
         }
 
-        public void Handle(PresentationChanged domainEvent)
+        public void Handle(SessionChanged domainEvent)
         {
             _mailGateway
-                .GetMailerWith("Session changed", GetEmailBody(domainEvent, domainEvent.PresentationId))
+                .GetMailerWith("Session changed", GetEmailBody(domainEvent, domainEvent.SessionId))
                 .SendTo(_repository.Find<UserProfile>().AdminEmails());
         }
 
-        public void Handle(PresentationAccepted domainEvent)
+        public void Handle(SessionAccepted domainEvent)
         {
-            var presentation = _repository.Get<Session>(domainEvent.PresentationId);
+            var presentation = _repository.Get<Session>(domainEvent.SessionId);
 
             _mailGateway
-                .GetMailerWith("Session accepted", GetEmailBody(domainEvent, domainEvent.PresentationId))
+                .GetMailerWith("Session accepted", GetEmailBody(domainEvent, domainEvent.SessionId))
                 .AddRecipients(_repository.Find<UserProfile>().AdminEmails())
                 .AddRecipients(_repository.Get<UserProfile>(presentation.UserId).Email)
                 .Send();
         }
 
-        public void Handle(PresentationRejected domainEvent)
+        public void Handle(SessionRejected domainEvent)
         {
-            var presentation = _repository.Get<Session>(domainEvent.PresentationId);
+            var presentation = _repository.Get<Session>(domainEvent.SessionId);
 
             _mailGateway
-                .GetMailerWith("Session rejected", GetEmailBody(domainEvent, domainEvent.PresentationId))
+                .GetMailerWith("Session rejected", GetEmailBody(domainEvent, domainEvent.SessionId))
                 .AddRecipients(_repository.Find<UserProfile>().AdminEmails())
                 .AddRecipients(_repository.Get<UserProfile>(presentation.UserId).Email)
                 .Send();

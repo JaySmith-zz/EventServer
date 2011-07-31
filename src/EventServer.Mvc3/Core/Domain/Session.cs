@@ -5,9 +5,10 @@ using System.Linq;
 
 namespace EventServer.Core.Domain
 {
+    using EventServer.Models;
+
     public class Session : Entity
     {
-        /// <summary>Do not use</summary>
         public Session()
         {
             Track = "None";
@@ -29,10 +30,10 @@ namespace EventServer.Core.Domain
 
             Status = SessionStatus.Pending;
 
-            Raise(new SessionCreated {PresentationId = Id});
+            Raise(new SessionCreated { PresentationId = Id });
         }
 
-        private List<Comment> _comments;
+        private List<Comment> comments;
 
         public int UserId { get; set; }
         public string Title { get; set; }
@@ -48,8 +49,8 @@ namespace EventServer.Core.Domain
 
         public List<Comment> Comments
         {
-            get { return _comments ?? (_comments = new List<Comment>()); }
-            set { _comments = value; }
+            get { return this.comments ?? (this.comments = new List<Comment>()); }
+            set { this.comments = value; }
         }
 
         [XmlIgnore]
@@ -61,11 +62,11 @@ namespace EventServer.Core.Domain
         }
         public string SpeakerName
         {
-            get { return User == null ? "" : User.Name; }
+            get { return User == null ? string.Empty : User.Name; }
         }
         public string SpeakerUrlName
         {
-            get { return User == null ? "" : User.UrlName; }
+            get { return User == null ? string.Empty : User.UrlName; }
         }
         public string TimeSlot
         {
@@ -83,7 +84,7 @@ namespace EventServer.Core.Domain
                 return;
 
             Status = SessionStatus.Accepted;
-            Raise(new PresentationAccepted {PresentationId = Id});
+            Raise(new SessionAccepted { SessionId = Id });
         }
 
         public void Reject()
@@ -92,7 +93,7 @@ namespace EventServer.Core.Domain
                 return;
 
             Status = SessionStatus.Rejected;
-            Raise(new PresentationRejected {PresentationId = Id});
+            Raise(new SessionRejected { SessionId = Id });
         }
 
         public void AddComment(Comment comment)
@@ -112,7 +113,7 @@ namespace EventServer.Core.Domain
             Slot = string.IsNullOrEmpty(timeSlot) ? "None" : timeSlot;
             Room = string.IsNullOrEmpty(room) ? "None" : room;
 
-            Raise(new PresentationChanged {PresentationId = Id});
+            Raise(new SessionChanged { SessionId = Id });
         }
 
         /******************************************/
@@ -120,15 +121,14 @@ namespace EventServer.Core.Domain
 
         public static readonly IDictionary<string, string> TimeSlots = new Dictionary<string, string>
             {
-                {"None", "None"},
-                {"1", "09:00 AM - 10:15 AM"},
-                {"2", "10:30 AM - 11:45 AM"},
-                {"3", "12:45 PM - 02:00 PM"},
-                {"4", "02:15 PM - 03:30 PM"},
-                {"5", "03:45 PM - 05:00 PM"},
-                {"6", "05:15 PM - 06:00 PM"},
+                { "None", "None" },
+                { "1", "09:00 AM - 10:15 AM" },
+                { "2", "10:30 AM - 11:45 AM" },
+                { "3", "12:45 PM - 02:00 PM" },
+                { "4", "02:15 PM - 03:30 PM" },
+                { "5", "03:45 PM - 05:00 PM" },
+                { "6", "05:15 PM - 06:00 PM" },
             };
-
     }
 
     public static class PresentationExtensions

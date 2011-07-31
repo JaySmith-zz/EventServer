@@ -1,0 +1,14 @@
+﻿@if (ViewBag.IsAdmin)
+{
+    <ul>
+        <li>
+            <h2>
+                Administration</h2>
+            <ul>
+                <li>@Html.ActionLink("Settings", "Index", "Settings")</li>
+                <li>@Html.ActionLink("Users", "Users", "Admin")</li>
+                <li>@Html.ActionLink("Sessions", "Sessions", "Admin")</li>
+            </ul>
+        </li>
+    </ul>
+}

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 
 namespace EventServer.Core.Domain
 {
+    using EventServer.Models;
+
     public class Page : Entity
     {
         public Page()

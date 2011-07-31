@@ -88,7 +88,9 @@
   <ItemGroup>
     <Compile Include="App_Start\StructuremapMvc.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\SettingsController.cs" />
     <Compile Include="Core\Domain\AppSettings.cs" />
     <Compile Include="Core\Domain\Category.cs" />
     <Compile Include="Core\Domain\Comment.cs" />
@@ -98,12 +100,10 @@
     <Compile Include="Core\Domain\Entity.cs" />
     <Compile Include="Core\Domain\Page.cs" />
     <Compile Include="Core\Domain\Post.cs" />
-    <Compile Include="Core\Domain\PresentationAccepted.cs" />
-    <Compile Include="Core\Domain\PresentationChanged.cs" />
-    <Compile Include="Core\Domain\PresentationRejected.cs" />
     <Compile Include="Core\Domain\Session.cs" />
     <Compile Include="Core\Domain\SessionCategory.cs" />
     <Compile Include="Core\Domain\SessionCreated.cs" />
+    <Compile Include="Core\Domain\SessionDomainEvents.cs" />
     <Compile Include="Core\Domain\SessionLevel.cs" />
     <Compile Include="Core\Domain\SessionStatus.cs" />
     <Compile Include="Core\Domain\SpeakerAccolade.cs" />
@@ -115,8 +115,6 @@
     <Compile Include="Core\Domain\Tweet.cs" />
     <Compile Include="Core\Domain\UserProfile.cs" />
     <Compile Include="Core\Domain\UserRegistered.cs" />
-    <Compile Include="Core\ExtensionMethods.cs" />
-    <Compile Include="Core\HtmlHelperExtensions.cs" />
     <Compile Include="Core\HttpHandlers\FileHandler.cs" />
     <Compile Include="Core\HttpHandlers\ImageHandler.cs" />
     <Compile Include="Core\HttpHandlers\MetaWeblogHandler.cs" />
@@ -127,28 +125,13 @@
     <Compile Include="Core\IdGenerator.cs" />
     <Compile Include="Core\IMailGateway.cs" />
     <Compile Include="Core\IRepository.cs" />
-    <Compile Include="Core\Log.cs" />
-    <Compile Include="Core\ModelBinders.cs" />
     <Compile Include="Core\Services\ICurrentUserService.cs" />
     <Compile Include="Core\Services\IFormsAuthenticationService.cs" />
     <Compile Include="Core\Services\IMembershipService.cs" />
     <Compile Include="Core\Services\ISyndicationService.cs" />
     <Compile Include="Core\Services\ITwitterService.cs" />
     <Compile Include="Core\Settings.cs" />
-    <Compile Include="Core\SystemPath.cs" />
-    <Compile Include="Core\ValidationUtil.cs" />
     <Compile Include="Core\ValueObject.cs" />
-    <Compile Include="Core\ViewModels\AccountModels.cs" />
-    <Compile Include="Core\ViewModels\AdminModels.cs" />
-    <Compile Include="Core\ViewModels\CustomValidatorAttribute.cs" />
-    <Compile Include="Core\ViewModels\HomeModels.cs" />
-    <Compile Include="Core\ViewModels\PropertiesMustMatchAttribute.cs" />
-    <Compile Include="Core\ViewModels\SessionsModels.cs" />
-    <Compile Include="Core\ViewModels\SettingsViewModels.cs" />
-    <Compile Include="Core\ViewModels\SpeakersModels.cs" />
-    <Compile Include="Core\ViewModels\SponsorModels.cs" />
-    <Compile Include="Core\ViewModels\ValidatePasswordLengthAttribute.cs" />
-    <Compile Include="Core\ViewModels\ValidateUrlAttribute.cs" />
     <Compile Include="DependencyResolution\IoC.cs" />
     <Compile Include="DependencyResolution\SmControllerFactory .cs" />
     <Compile Include="DependencyResolution\SmDependencyResolver.cs" />
@@ -163,9 +146,22 @@
     <Compile Include="Infrastructure\Services\SyndicationService.cs" />
     <Compile Include="Infrastructure\Services\TweetSharpTwitterService.cs" />
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\AdminModels.cs" />
+    <Compile Include="Models\ExtensionMethods.cs" />
+    <Compile Include="Models\HomeModels.cs" />
+    <Compile Include="Models\HtmlHelperExtensions.cs" />
+    <Compile Include="Models\Log.cs" />
+    <Compile Include="Models\ModelBinders.cs" />
+    <Compile Include="Models\SettingsViewModels.cs" />
+    <Compile Include="Models\SystemPath.cs" />
+    <Compile Include="Models\ValidationUtil.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\Page\1.xml" />
+    <Content Include="App_Data\Page\2.xml" />
+    <Content Include="App_Data\Page\3.xml" />
+    <Content Include="App_Data\Page\4.xml" />
     <Content Include="Content\Images\error.gif" />
     <Content Include="Content\Images\img01.jpg" />
     <Content Include="Content\Images\img02.gif" />
@@ -294,10 +290,19 @@
     <Content Include="Views\Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
+    <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="packages.config" />
+    <Content Include="Views\Shared\Posts.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Admin\Users.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Admin\AdminMenuWidget.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\Tweets.cshtml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

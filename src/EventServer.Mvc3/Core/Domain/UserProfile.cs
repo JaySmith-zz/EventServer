@@ -5,6 +5,7 @@ namespace EventServer.Core.Domain
     using System.Web.Mvc;
 
     using EventServer.Core.Services;
+    using EventServer.Models;
 
     public class UserProfile : Entity
     {

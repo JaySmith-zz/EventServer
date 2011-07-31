@@ -3,6 +3,8 @@ namespace EventServer.Core.Domain
     using System;
     using System.Web.Mvc;
 
+    using EventServer.Models;
+
     [Serializable]
     public abstract class Entity
     {

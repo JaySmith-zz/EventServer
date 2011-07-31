@@ -7,6 +7,8 @@ using System.Web.Security;
 
 namespace EventServer.Infrastructure.Providers
 {
+    using EventServer.Models;
+
     public class AppRoleProvider : RoleProvider
     {
         private string _rolesPath;

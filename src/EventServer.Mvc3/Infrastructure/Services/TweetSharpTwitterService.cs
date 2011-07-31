@@ -6,6 +6,7 @@ namespace EventServer.Infrastructure.Services
 
     using EventServer.Core;
     using EventServer.Core.Domain;
+    using EventServer.Models;
 
     using TweetSharp;
 
