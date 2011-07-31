@@ -102,7 +102,7 @@ namespace EventServer.Core.Domain
             Raise(new CommentAdded {PresentationId = Id});
         }
 
-        public void Update(string title, string description, SessionLevel level, SessionCategory category, string track, string timeSlot, string room)
+        public void Update(string title, string description, SessionLevel level, SessionCategory category, string track, string timeSlot, string room, int day)
         {
             Title = title;
             Description = description;
@@ -111,6 +111,7 @@ namespace EventServer.Core.Domain
             Track = string.IsNullOrEmpty(track) ? "None" : track;
             Slot = string.IsNullOrEmpty(timeSlot) ? "None" : timeSlot;
             Room = string.IsNullOrEmpty(room) ? "None" : room;
+            Day = day == 0 ? 1 : day;
 
             Raise(new PresentationChanged {PresentationId = Id});
         }
