@@ -47,17 +47,17 @@ namespace EventServer.UI.Controllers
 
         public ActionResult GetByTrack()
         {
-            IEnumerable<Session> presentations = _repository
+            IEnumerable<Session> sessions = _repository
                 .FindAcceptedPresentations()
                 .OrderBy(x => x.Track)
                 .ThenBy(x => x.Slot);
 
             if (!_currentUser.IsAdmin)
-                presentations = presentations
+                sessions = sessions
                     .Where(x => !string.IsNullOrEmpty(x.Track))
                     .Where(x => x.Track != "None");
 
-            return View(new SessionsGetByTrackModel(presentations, _currentUser.IsAdmin));
+            return View(new SessionsGetByTrackModel(sessions, _currentUser.IsAdmin));
         }
 
         public ActionResult GetByTime()
@@ -72,11 +72,11 @@ namespace EventServer.UI.Controllers
 
         public ActionResult Show(int id, string title)
         {
-            var presentation = GetSession(id, false);
+            var session = GetSession(id, false);
 
-            presentation.User = _repository.Get<UserProfile>(presentation.UserId);
+            session.User = _repository.Get<UserProfile>(session.UserId);
 
-            return View(presentation);
+            return View(session);
         }
 
         [Authorize]
@@ -93,11 +93,11 @@ namespace EventServer.UI.Controllers
 
             var user = _repository.Find<UserProfile>().GetBy(_currentUser.Email);
 
-            var presentation = new Session(user, model.Title, model.Description, model.Level, model.Category);
+            var session = new Session(user, model.Title, model.Description, model.Level, model.Category);
 
-            _repository.Save(presentation);
+            _repository.Save(session);
 
-            return RedirectTo<SessionsController>(c => c.Show(presentation.Id, presentation.Title.MakeUrlFriendly()));
+            return RedirectTo<SessionsController>(c => c.Show(session.Id, session.Title.MakeUrlFriendly()));
         }
 
         [Authorize]
@@ -136,32 +136,32 @@ namespace EventServer.UI.Controllers
                 return View(model);
             }
 
-            var presentation = GetSession(model.Id, true);
-            if (presentation.IsClosedForEdit())
+            var session = GetSession(model.Id, true);
+            if (session.IsClosedForEdit())
             {
                 _currentUser.AddRedirectMessage("Session {0} closed to editing".F(model.Id));
-                return RedirectTo<SessionsController>(c => c.Show(presentation.Id, presentation.Title.MakeUrlFriendly()));
+                return RedirectTo<SessionsController>(c => c.Show(session.Id, session.Title.MakeUrlFriendly()));
             }
 
-            presentation.Update(model.Title, model.Description, model.Level, model.Category, model.Track, model.TimeSlot, model.Room);
-            _repository.Save(presentation);
+            session.Update(model.Title, model.Description, model.Level, model.Category, model.Track, model.TimeSlot, model.Room, model.Day);
+            _repository.Save(session);
 
-            return RedirectTo<SessionsController>(c => c.Show(presentation.Id, presentation.Title.MakeUrlFriendly()));
+            return RedirectTo<SessionsController>(c => c.Show(session.Id, session.Title.MakeUrlFriendly()));
         }
 
         [Authorize]
         public ActionResult Delete(int id)
         {
-            var presentation = GetSession(id, true);
-            if (presentation.IsClosedForEdit())
+            var session = GetSession(id, true);
+            if (session.IsClosedForEdit())
             {
                 _currentUser.AddRedirectMessage("Session {0} closed to editing".F(id));
-                return RedirectTo<SessionsController>(c => c.Show(presentation.Id, presentation.Title.MakeUrlFriendly()));
+                return RedirectTo<SessionsController>(c => c.Show(session.Id, session.Title.MakeUrlFriendly()));
             }
 
-            _repository.Delete(presentation);
+            _repository.Delete(session);
 
-            var user = _repository.Get<UserProfile>(presentation.UserId);
+            var user = _repository.Get<UserProfile>(session.UserId);
 
             return RedirectTo<SpeakersController>(c => c.Show(user.Id, user.UrlName));
         }
@@ -169,10 +169,10 @@ namespace EventServer.UI.Controllers
         [ValidateInput(false)]
         public ActionResult PostComment(int id, Comment comment)
         {
-            var presentation = GetSession(id, true);
+            var session = GetSession(id, true);
 
-            presentation.AddComment(comment);
-            _repository.Save(presentation);
+            session.AddComment(comment);
+            _repository.Save(session);
 
             return View("DisplayTemplates/Comment", comment);
         }
@@ -180,23 +180,23 @@ namespace EventServer.UI.Controllers
         [Authorize(Roles = "Admin")]
         public ActionResult Accept(int id)
         {
-            var presentation = GetSession(id, true);
+            var session = GetSession(id, true);
 
-            presentation.Accept();
-            _repository.Save(presentation);
+            session.Accept();
+            _repository.Save(session);
 
-            return RedirectTo<SessionsController>(c => c.Show(presentation.Id, presentation.Title.MakeUrlFriendly()));
+            return RedirectTo<SessionsController>(c => c.Show(session.Id, session.Title.MakeUrlFriendly()));
         }
 
         [Authorize(Roles = "Admin")]
         public ActionResult Reject(int id)
         {
-            var presentation = GetSession(id, true);
+            var session = GetSession(id, true);
 
-            presentation.Reject();
-            _repository.Save(presentation);
+            session.Reject();
+            _repository.Save(session);
 
-            return RedirectTo<SessionsController>(c => c.Show(presentation.Id, presentation.Title.MakeUrlFriendly()));
+            return RedirectTo<SessionsController>(c => c.Show(session.Id, session.Title.MakeUrlFriendly()));
         }
 
         public ActionResult AdminBox(int id)
@@ -204,22 +204,22 @@ namespace EventServer.UI.Controllers
             if (!Request.IsAuthenticated)
                 return new EmptyResult();
 
-            var presentation = _repository.Get<Session>(id);
-            if (presentation == null)
+            var session = _repository.Get<Session>(id);
+            if (session == null)
                 return new EmptyResult();
 
             var isAdmin = _currentUser.IsAdmin;
 
-            if (!_currentUser.Owns(presentation) && !isAdmin)
+            if (!_currentUser.Owns(session) && !isAdmin)
                 return new EmptyResult();
 
             var model = new SessionsAdminBoxModel
             {
-                SessionId = presentation.Id,
-                CanEdit = !presentation.IsClosedForEdit(),
+                SessionId = session.Id,
+                CanEdit = !session.IsClosedForEdit(),
                 CanAcceptReject = isAdmin,
                 User = _repository.Find<UserProfile>().GetBy(_currentUser.Email),
-                Comments = presentation.Comments.ToArray()
+                Comments = session.Comments.ToArray()
             };
 
             return View(model);
