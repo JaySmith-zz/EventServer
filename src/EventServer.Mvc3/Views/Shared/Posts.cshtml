@@ -1,15 +1,19 @@
 ﻿@model IEnumerable<EventServer.Core.Domain.Post>
-<h2>
-    Recent Announcements <a href="syndication.axd" title="Subscribe to announcements">
-        <img src="@Url.Content("~/Content/Images/rss16.png")" alt="RSS" border="0" /></a></h2>
-@foreach (var item in Model) {
-<div class="post">
-    <h1 class="title">
-        @Html.DisplayFor(modelItem => item.Title)
-        <p class="byline">
-            <small>@Html.DisplayFor(modelItem => item.DateCreated.ToLongDateString())</small></p>
-        <div class="entry">
-            @Html.DisplayFor(modelItem => item.Content)
-        </div>
-</div>
-} 
+@if (Model.Count() != 0)
+{
+    <h2>
+        Recent Announcements <a href="syndication.axd" title="Subscribe to announcements">
+            <img src="@Url.Content("~/Content/Images/rss16.png")" alt="RSS" border="0" /></a></h2>
+    foreach (var item in Model)
+    {
+    <div class="post">
+        <h1 class="title">
+            @Html.DisplayFor(modelItem => item.Title)
+            <p class="byline">
+                <small>@Html.DisplayFor(modelItem => item.DateCreated.ToLongDateString())</small></p>
+            <div class="entry">
+                @Html.DisplayFor(modelItem => item.Content)
+            </div>
+    </div>
+    }
+}

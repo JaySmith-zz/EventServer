@@ -16,7 +16,7 @@
   <VenueState>AR</VenueState>
   <VenueZip>12345</VenueZip>
   <ContactName>Event Contact</ContactName>
-  <TwitterId>EventServer</TwitterId>
+  <TwitterId>JaySmith</TwitterId>
   <TwitterFilterDate>2011-06-30T11:53:46.7693699-05:00</TwitterFilterDate>
   <TwitterDisplayCount>5</TwitterDisplayCount>
   <SiteLogoUri>http://eventserver.codeplex.com/images/logo.png</SiteLogoUri>
