@@ -4,12 +4,12 @@
   <UserId>31</UserId>
   <Title>A Session</Title>
   <Description>A cool session</Description>
-  <Track>None</Track>
-  <Slot>None</Slot>
-  <Room>None</Room>
+  <Track>Developer</Track>
+  <Slot>1</Slot>
+  <Room>Big Room</Room>
   <Level>Beginner</Level>
-  <Status>Pending</Status>
+  <Status>Accepted</Status>
   <Category>Developers</Category>
-  <Day>2</Day>
+  <Day>1</Day>
   <Comments />
 </Session>

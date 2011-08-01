@@ -49,7 +49,9 @@
                 <% } %>
                 <th>Speaker</th>
                 <th>Title</th>
+                <th>Track</th>
                 <th>Time</th>
+                <th>Room</th>
             </tr>
         </thead>
         <tbody>
@@ -61,8 +63,10 @@
                 </td>
                 <% } %>
                 <td><%= Html.ActionLink<SpeakersController>(c => c.Show(session.UserId, session.SpeakerUrlName), session.SpeakerName) %></td>
-                <td><%= Html.ActionLink<SessionsController>(c => c.Show(session.Id, session.Title.MakeUrlFriendly()), session.Title) %></td>
-                <td><%= session.TimeSlot %></td>
+                <td width="100%"><%= Html.ActionLink<SessionsController>(c => c.Show(session.Id, session.Title.MakeUrlFriendly()), session.Title) %></td>
+                <td><%= session.Track %></td>
+                <td><nobr><%= session.TimeSlot %></nobr></td>
+                <td><nobr><%= session.Room %></nobr></td>
             </tr>
             <% } %>
         </tbody>
