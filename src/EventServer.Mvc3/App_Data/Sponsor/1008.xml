@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<Sponsor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Id>1008</Id>
+  <IsActive>true</IsActive>
+  <Name>O'Reilly Media</Name>
+  <Description>O'Reilly Media spreads the knowledge of innovators through its books, online services, magazine, and conferences. Since 1978, O'Reilly has been a chronicler and catalyst of leading-edge development, homing in on the technology trends that really matter and spurring their adoption by amplifying "faint signals" from the alpha geeks who are creating the future. An active participant in the technology community, the company has a long history of advocacy, meme-making, and evangelism.</Description>
+  <Url>http://oreilly.com</Url>
+  <ContactName>Marsee Henon</ContactName>
+  <ContactEmail>marsee@oreilly.com</ContactEmail>
+  <Level>Gold</Level>
+  <LogoUri>http://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/O_Reilly_Media_logo.svg/230px-O_Reilly_Media_logo.svg.png</LogoUri>
+</Sponsor>

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<Sponsor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Id>1171</Id>
+  <IsActive>true</IsActive>
+  <Name>CODE Magazine</Name>
+  <Description>&lt;p&gt;CODE Magazine is the leading independent .NET developer print and online publication providing in-depth articles for professional .NET developers. CODE now offers CODE Training from experts in Software Development today.  Instructors among the most respected names in the software industry are available to teach you the in-depth and practical knowledge you need to write professional applications.  For upcoming courses and dates visit www.code-training.com.  CODE Magazine is a strong supporter of the developer community and recently launched the USER GROUP &amp;lsquo;Cash Back&amp;rsquo; program that extends discount subscriptions to members and gives cash back to the group to help support group events.  &lt;a href="http://www.codemag.com"&gt;www.codemag.com&lt;/a&gt;&lt;/p&gt;</Description>
+  <Url>http://www.codemag.com/</Url>
+  <ContactName>Tammy Ferguson</ContactName>
+  <ContactEmail>tammy@eps-software.com</ContactEmail>
+  <Level>Gold</Level>
+  <LogoUri>http://tysondevcon.com/2010/Content/SponsorLogos/CODEMagazine_Small.png</LogoUri>
+</Sponsor>

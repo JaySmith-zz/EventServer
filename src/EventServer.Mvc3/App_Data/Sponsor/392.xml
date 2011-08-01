@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<Sponsor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Id>392</Id>
+  <IsActive>true</IsActive>
+  <Name>Tyson Foods, Inc.</Name>
+  <Description>&lt;p&gt;Tyson Foods, Inc. (NYSE: TSN) is an American multinational corporation based in Springdale, Arkansas, that operates in the food industry. The company is the world's second largest processor and marketer of chicken, beef, and pork only behind Brazillian JBS S.A., and annually exports the largest percentage of beef out of the United States. With 2005 sales of US$26 billion, Tyson Foods is the second-largest food production company in the Fortune 500, the largest meat producer in the world, and according to Forbes one of the 100 largest companies in the United States.&lt;/p&gt;</Description>
+  <Url>http://www.tyson.com</Url>
+  <ContactName>Devlin Liles</ContactName>
+  <ContactEmail>devlin.liles@tyson.com</ContactEmail>
+  <Level>Platinum</Level>
+  <LogoUri>http://upload.wikimedia.org/wikipedia/en/thumb/8/8c/Tyson_Foods_logo.svg/200px-Tyson_Foods_logo.svg.png</LogoUri>
+</Sponsor>

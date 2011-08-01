@@ -1,13 +1,8 @@
 <?xml version="1.0"?>
 <UserProfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Id>46</Id>
-  <Email>devlin@devlinliles.com</Email>
-  <Password>9hEIOSup1MVlJU+3fdLIWbHg0pCYnswjZXgXfW5WSyY=</Password>
-  <Name>Devlin</Name>
-  <SpeakerProfile>
-    <Biography>Test</Biography>
-    <IsMvp>false</IsMvp>
-    <TravelAssistance>false</TravelAssistance>
-  </SpeakerProfile>
-  <CreationDate>2011-03-27T14:14:19.1502179-05:00</CreationDate>
+  <Email>robert.tennyson@tyson.com</Email>
+  <Password>Fg2ZOPemKkqwH3mzReK6QZqJXRoIlCjz7A1L2KBvw2k=</Password>
+  <Name>Rob Tennyson</Name>
+  <CreationDate>2010-03-09T06:24:51.4798994-08:00</CreationDate>
 </UserProfile>

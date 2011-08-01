@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<Sponsor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Id>1366</Id>
+  <IsActive>true</IsActive>
+  <Name>CodeSmith</Name>
+  <Description>&lt;p&gt;CodeSmith Tools is a privately-held software company&amp;nbsp;specializing in  the creation of software tools that help developers be more productive.&lt;/p&gt;
+&lt;p&gt;Our flagship product CodeSmith Generator, started out as a small side  project by our founder Eric J. Smith.&amp;nbsp; CodeSmith Generator quickly  gained tremendous popularity and grew into a hugely successful product.&lt;/p&gt;</Description>
+  <Url>http://www.codesmithtools.com</Url>
+  <ContactName>Blake Niemyjski</ContactName>
+  <ContactEmail>sales@codesmith.com</ContactEmail>
+  <Level>Gold</Level>
+  <LogoUri>http://www.codesmithtools.com/images/codesmith.png</LogoUri>
+</Sponsor>

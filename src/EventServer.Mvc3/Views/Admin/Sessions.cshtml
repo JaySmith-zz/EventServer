@@ -1,0 +1,104 @@
+﻿@model EventServer.Models.AdminSessionsModel
+@{
+    ViewBag.Title = "Sessions";
+}
+<h2>
+    Sessions</h2>
+<p>
+    Show:
+    <input type="checkbox" id="cbPending" checked="checked" />
+    Pending
+    <input type="checkbox" id="cbAccepted" checked="checked" />
+    Accepted
+    <input type="checkbox" id="cbRejected" checked="checked" />
+    Rejected
+</p>
+@foreach (var group in Model.Sessions.GroupBy(x => x.Category)) 
+{
+    <div style="padding: 15px 0;">
+        <h3 class="totals_panel">
+            @group.Count(x => x.Status == EventServer.Core.Domain.SessionStatus.Accepted) accepted, 
+            @group.Count(x => x.Status == EventServer.Core.Domain.SessionStatus.Rejected) rejected, 
+            @group.Count(x => x.Status == EventServer.Core.Domain.SessionStatus.Pending) pending, 
+            @group.Count() total
+        </h3>
+        <h3>
+            @group.Key
+        </h3>
+        <table class="sessions" border="0" cellpadding="0" cellspacing="0">
+            <col style="width: 65px;" />
+            <col style="width: 150px;" />
+            <col />
+            <col style="width: 90px;" />
+            <col style="width: 50px;" />
+            <col style="width: 50px;" />
+            <thead>
+                <tr>
+                    <th>
+                        Status
+                    </th>
+                    <th>
+                        Speaker
+                    </th>
+                    <th>
+                        Title
+                    </th>
+                    <th>
+                        Level
+                    </th>
+                    <th>
+                        Track
+                    </th>
+                    <th>
+                        Slot
+                    </th>
+                    <th>
+                        Day
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in group) {
+                    var status = "status_" + item.Status;
+                    <tr class="@status">
+                        <td>
+                            @Html.DisplayFor(m => item.Status)
+                        </td>
+                        <td>
+                            @*TODO: Fix me *@
+                            @Html.ActionLink(item.SpeakerName, "Show", "Speakers", new { id = item.Id })
+                        </td>
+                        <td>
+                            @Html.ActionLink(item.Title, "Sessions", new { id = item.Id })
+                        </td>
+                        <td>
+                            @Html.DisplayFor(m => item.Level)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(m => item.Track)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(m => item.Slot)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(m => item.Day)
+                        </td>
+                    </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+}
+<script type="text/javascript">
+
+    $(function () {
+        $('#cbPending').click(function () {
+            $('table.sessions tr').toggleClass('hide_pending');
+        }).attr('checked', 'checked');
+
+        $('#cbAccepted').click(function () { $('table.sessions tr').toggleClass('hide_accepted'); }).attr('checked', 'checked');
+        $('#cbRejected').click(function () { $('table.sessions tr').toggleClass('hide_rejected'); }).attr('checked', 'checked');
+
+    });
+
+</script>

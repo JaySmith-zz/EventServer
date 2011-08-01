@@ -23,9 +23,11 @@ namespace EventServer.Core.Services
 
     public class CurrentUserService : ICurrentUserService
     {
+        private readonly IRepository repository;
+
         public CurrentUserService(IRepository repository)
         {
-            _repository = repository;
+            this.repository = repository;
 
             var context = HttpContext.Current;
 
@@ -33,8 +35,6 @@ namespace EventServer.Core.Services
             IsAdmin = context.User.IsInRole("Admin");
             Email = !IsSignedIn ? "Guest" : context.User.Identity.Name;
         }
-
-        private readonly IRepository _repository;
 
         public bool IsSignedIn { get; private set; }
         public bool IsAdmin { get; private set; }
@@ -53,9 +53,11 @@ namespace EventServer.Core.Services
         public bool Owns(Session session)
         {
             if (session == null)
+            {
                 return false;
+            }
 
-            var user = _repository.Find<UserProfile>().GetBy(Email);
+            var user = this.repository.Find<UserProfile>().GetBy(Email);
 
             return user != null && user.Id == session.UserId;
         }
@@ -74,10 +76,12 @@ namespace EventServer.Core.Services
             return messages;
         }
 
-        private IList<string> GetRedirectMessages()
+        private static IList<string> GetRedirectMessages()
         {
             if (HttpContext.Current.Session["redirectMessages"] == null)
+            {
                 HttpContext.Current.Session["redirectMessages"] = new List<string>();
+            }
 
             return HttpContext.Current.Session["redirectMessages"].As<IList<string>>();
         }

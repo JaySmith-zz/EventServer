@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<UserProfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Id>61</Id>
+  <Email>jay.w.smith@tyson.com</Email>
+  <Password>NewVfpk+qiDGA8ISHfyj7eaY9fQPX9suDmV41sycbiU=</Password>
+  <Name>Jay Smith</Name>
+  <SpeakerProfile>
+    <Biography>Jay Smith is a PMO Architect and Evangelist for Tyson Foods, Inc. and a Microsoft ASP .NET MVP. He is one of the founding members of the Northwest Arkansas .Net User’s Group, organizer for the Northwest Arkansas Code Camp, Northwest Arkansas Give Camp, creator of Community Camp, host of User Group Radio and a blogger at http://jaysmith.us. 
+
+When Jay is not working to improve his coding skills or building the developer community in Northwest Arkansas he is an avid motorcycle enthusiast and homebrewer.</Biography>
+    <ImageUrl>http://tysondevcon.com/2010/Content/Images/PhotoNotAvailable.gif</ImageUrl>
+    <BlogUrl>http://jaysmith.us/</BlogUrl>
+    <IsMvp>false</IsMvp>
+    <TravelAssistance>false</TravelAssistance>
+    <Accolades />
+  </SpeakerProfile>
+  <CreationDate>2010-03-10T06:42:24.8446243-08:00</CreationDate>
+</UserProfile>

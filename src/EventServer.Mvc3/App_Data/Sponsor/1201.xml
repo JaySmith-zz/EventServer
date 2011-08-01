@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<Sponsor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Id>1201</Id>
+  <IsActive>true</IsActive>
+  <Name>telerik</Name>
+  <Description>&lt;p&gt;&lt;a href="http://www.telerik.com/company/about.aspx"&gt;Telerik&lt;/a&gt; is a leading vendor of &lt;a href="http://www.telerik.com/products/aspnet-ajax.aspx"&gt;ASP.NET AJAX&lt;/a&gt;, &lt;a href="http://www.telerik.com/products/aspnet-mvc.aspx"&gt;ASP.NET MVC&lt;/a&gt;, &lt;a href="http://www.telerik.com/products/silverlight.aspx"&gt;Silverlight&lt;/a&gt;, &lt;a href="http://www.telerik.com/products/winforms.aspx"&gt;WinForms&lt;/a&gt; and &lt;a href="http://www.telerik.com/products/wpf.aspx"&gt;WPF controls&lt;/a&gt; and components, as well as &lt;a href="http://www.telerik.com/products/reporting.aspx"&gt;.NET Reporting&lt;/a&gt;, &lt;a href="http://www.telerik.com/products/orm.aspx"&gt;.NET ORM &lt;/a&gt;, &lt;a href="http://www.sitefinity.com/"&gt;.NET CMS&lt;/a&gt;, &lt;a href="http://www.telerik.com/products/justcode.aspx"&gt;Code Analysis&lt;/a&gt;, &lt;a href="http://www.telerik.com/products/mocking.aspx"&gt;Mocking&lt;/a&gt;, &lt;a href="http://www.telerik.com/team-productivity-tools.aspx"&gt;Agile Project Management&lt;/a&gt; and &lt;a href="http://www.telerik.com/automated-testing-tools.aspx"&gt;Automated Testing Tools&lt;/a&gt;.  Building on its expertise in interface development and Microsoft  technologies, Telerik helps customers build applications with  unparalleled richness, responsiveness and interactivity. Telerik  products help thousands of companies to be more productive and deliver  reliable applications under budget and on time.&lt;/p&gt;</Description>
+  <Url>http://www.telerik.com/</Url>
+  <ContactName>Emily Parker</ContactName>
+  <ContactEmail>Emily.Parker@telerik.com</ContactEmail>
+  <Level>Gold</Level>
+  <LogoUri>Content/SponsorLogos/telerikLogo-web-122x48px.jpg</LogoUri>
+</Sponsor>

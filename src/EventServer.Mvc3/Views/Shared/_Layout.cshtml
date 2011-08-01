@@ -5,6 +5,7 @@
     <link href="@Url.Content("~/rsd.axd")" rel="edituri" type="application/rsd+xml" title="RSD" />
     <link href="@Url.Content("~/Themes/" + EventServer.Core.Settings.Instance.SiteTheme + "/theme.css")" rel="stylesheet" type="text/css" />
     <link href="@Url.Content("~/Content/jqueryui/smoothness/jquery-ui-1.8.2.css")" rel="Stylesheet" type="text/css" />
+    
     <script type="text/javascript">
         var webRoot = '<%= ResolveUrl("~/") %>';
     </script>
@@ -34,6 +35,7 @@
         <div id="menu">
             <ul>
                 <li id="navHome">@Html.ActionLink("Home", "Index", "Home")</li>
+                <li id="navHome">@Html.ActionLink("Speakers", "Index", "Speakers")</li>
                 <li id="navAbout">@Html.ActionLink("About", "About", "Home")</li>
             </ul>
         </div>
@@ -53,7 +55,7 @@
     </div>
     <script type="text/javascript">
         $(function() {
-
+            //TODO: Fix This too
             var messages = <% Html.RenderAction<HomeController>(c => c.GetRedirectMessages()); %>;
             $.each(messages, function() { $.growl('Alert', this); });
 

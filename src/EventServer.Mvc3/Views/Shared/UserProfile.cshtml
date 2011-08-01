@@ -1,0 +1,43 @@
+﻿@model IEnumerable<EventServer.Core.Domain.UserProfile>
+@foreach (var item in Model)
+{
+    <div class="post">
+        <h2 class="title">
+            @Html.ActionLink(item.Name, "Show", new { id = item.Id })</h2>
+        <div class="entry">
+            <table border="0" cellpadding="3" cellspacing="0" width="100%">
+                <tr>
+                    <td valign="top" width="100">
+                        @{ string imageUrl = item.SpeakerProfile.HasImageUrl ? item.SpeakerProfile.ImageUrl : "/Content/Images/PhotoNotAvailable.gif"; }
+                        <p>
+                            @if (item.SpeakerProfile.HasBlogUrl)
+                            { 
+                                <a href="@item.SpeakerProfile.BlogUrl">
+                                    <img src="@imageUrl" alt="@item.Name" width = 100, border = 0 /></a>
+                            }
+                            else
+                            {
+                                <img src="@imageUrl" alt="@item.Name" width = 100, border = 0 />
+                            }
+                        </p>
+                        @if (item.SpeakerProfile.IsMvp)
+                        {
+                            <p>
+                                <a href="@item.SpeakerProfile.MvpProfileUrl">Microsoft MVP</a></p>
+                        }
+                        @if (!string.IsNullOrEmpty(item.SpeakerProfile.BlogUrl))
+                        {
+                            <p>
+                                <a href="@item.SpeakerProfile.BlogUrl">Blog</a></p>
+                        }
+                    </td>
+                    <td valign="top" align="left">
+                        <p>
+                            @item.SpeakerProfile.Biography
+                        </p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+}

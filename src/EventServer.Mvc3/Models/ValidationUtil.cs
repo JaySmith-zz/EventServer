@@ -4,12 +4,14 @@
 
     public static class ValidationUtil
     {
-        private const string _stringRequiredErrorMessage = "Value cannot be null or empty.";
+        private const string StringRequiredErrorMessage = "Value cannot be null or empty.";
 
         public static void ValidateRequiredStringValue(string value, string parameterName)
         {
             if (string.IsNullOrEmpty(value))
-                throw new ArgumentException(_stringRequiredErrorMessage, parameterName);
+            {
+                throw new ArgumentException(StringRequiredErrorMessage, parameterName);
+            }
         }
     }
 }

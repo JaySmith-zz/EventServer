@@ -672,3 +672,44 @@ fieldset.grid p
     font-weight: bold;
     color: #f00;
 }
+
+/* Session Admin */
+table.sessions
+{
+    width: 100%;
+}
+
+table.sessions th
+{
+    font-weight: bold;
+}
+
+table.sessions th, table.sessions td
+{
+    padding: 1px 5px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+tr.status_Pending td
+{
+    font-weight: bold;
+}
+
+tr.hide_pending.status_Pending
+{
+    display: none;
+}
+tr.hide_accepted.status_Accepted
+{
+    display: none;
+}
+tr.hide_rejected.status_Rejected
+{
+    display: none;
+}
+
+h3.totals_panel
+{
+    float: right;
+}

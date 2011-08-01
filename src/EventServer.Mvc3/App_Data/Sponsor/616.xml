@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<Sponsor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Id>616</Id>
+  <IsActive>true</IsActive>
+  <Name>TEK Systems</Name>
+  <Description>IT staffing and services from TEKsystems provide the right solutions supported by the best technical professionals.</Description>
+  <Url>http://www.teksystems.com</Url>
+  <ContactName>Megan Cogur</ContactName>
+  <ContactEmail>megan@tecksystems.com</ContactEmail>
+  <Level>Platinum</Level>
+  <LogoUri>http://www.prolango.com/images/blog/wp-content/uploads/2009/06/TEKsystems%20Logo.jpg</LogoUri>
+</Sponsor>

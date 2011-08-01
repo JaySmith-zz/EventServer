@@ -1,0 +1,12 @@
+﻿@model EventServer.Models.SpeakersIndexModel
+@{
+    ViewBag.Title = "Speakers";
+}
+
+@Html.Partial("UserProfile", Model.Speakers)
+
+<script language="javascript" type="text/javascript">
+    $(document).ready(function () {
+        $("#navSpeakers").addClass("active");
+    });
+</script>

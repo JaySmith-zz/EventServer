@@ -15,7 +15,6 @@
         private readonly ICurrentUserService currentUser;
         private readonly IMembershipService membershipService;
         
-
         public AdminController(IRepository repository, ICurrentUserService userService, IMembershipService membershipService)
         {
             this.repository = repository;
@@ -42,10 +41,10 @@
                     user.CompleteRegistration(model.NewUser.UserName, true);
                     this.repository.Save(user);
 
-                    //return RedirectTo<AdminController>(c => c.Users());
+                    return RedirectToAction("Users", "Admin");
                 }
 
-                ModelState.AddModelError("", errorMessage);
+                ModelState.AddModelError(string.Empty, errorMessage);
             }
 
             model.Users = GetUserModels();

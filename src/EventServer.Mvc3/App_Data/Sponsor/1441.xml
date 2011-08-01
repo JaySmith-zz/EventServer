@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<Sponsor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Id>1441</Id>
+  <IsActive>true</IsActive>
+  <Name>GrapeCity</Name>
+  <Description>&lt;p&gt;&lt;strong&gt;Complete Spreadsheet, Reporting, Analysis and Business Intelligence Tools for .NET.&lt;/strong&gt; Founded in 1980, GrapeCity is a Microsoft Gold Certified Partner, a Premier Visual Studio Industry Partner, an international award-winning software firm, and the world&amp;rsquo;s largest provider of developer components and tools that includes the DataDynamics ActiveReports and FarPoint Spread product lines. Our products are deep in functionality, unleash real business value, and are driven by an unwavering commitment to the highest quality standards. We are a strong organization with over two decades of consistent growth. We have more than 850 employees and tens of thousands of global customers.&lt;/p&gt;</Description>
+  <Url>https://netserv.fpoint.com/redir/redirect.asp?rdtl=913</Url>
+  <ContactName>Ronnie Dempsey</ContactName>
+  <ContactEmail>ronnie.dempsey@grapecity.com</ContactEmail>
+  <Level>Gold</Level>
+  <LogoUri>http://tysondevcon.com/2010/content/sponsorlogos/grapecity.png</LogoUri>
+</Sponsor>

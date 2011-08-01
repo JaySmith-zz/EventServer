@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<Sponsor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Id>1006</Id>
+  <IsActive>true</IsActive>
+  <Name>Nevron Software</Name>
+  <Description>&lt;p class="MsoNormal" style="margin: 0in 0in 0pt;"&gt;Nevron Software is a global leader in component based data visualization technology for a diverse range of Microsoft centric platforms. Built with perfection, usability and enterprise level features in mind, our components deliver advanced digital dashboards and diagrams that are not to be matched. Today Nevron components are used by many Fortune 500 companies and thousands of developers and IT professionals worldwide.&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0in 0in 0pt;"&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0in 0in 0pt;"&gt;Designed by professionals for professionals, Nevron Data Visualization technology delivers rich functionality with exceptional features to your Presentation, Scientific, Financial and Business Intelligence applications.&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0in 0in 0pt;"&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0in 0in 0pt;"&gt;For more detailed information take a look at:&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0in 0in 0pt;"&gt;Nevron .NET Vision: &lt;a href="http://www.nevron.com/Products.Nevron.NETVision.Overview.aspx"&gt;http://www.nevron.com/Products.Nevron.NETVision.Overview.aspx&lt;/a&gt;&lt;br /&gt;Nevron SSRS Vision: &lt;a href="http://www.nevron.com/Products.SQLServerReportingServices.Overview.aspx"&gt;http://www.nevron.com/Products.SQLServerReportingServices.Overview.aspx&lt;/a&gt;&lt;br /&gt;Nevron SharePoint Vision: &lt;a href="http://www.nevron.com/Products.SharePointDataVisualization.Overview.aspx"&gt;http://www.nevron.com/Products.SharePointDataVisualization.Overview.aspx&lt;/a&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0in 0in 0pt;"&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin: 0in 0in 0pt;"&gt;Download a fully-functional evaluation versions shipped with great number of examples at: &lt;a href="http://www.nevron.com"&gt;http://www.nevron.com&lt;/a&gt;&amp;nbsp;&lt;/p&gt;</Description>
+  <Url>http://www.nevron.com</Url>
+  <ContactName>Christo Bahchevanov</ContactName>
+  <ContactEmail>christo@nevron.com</ContactEmail>
+  <Level>Platinum</Level>
+  <LogoUri>http://tysondevcon.com/2010/Content/SponsorLogos/nevron_logo.png</LogoUri>
+</Sponsor>

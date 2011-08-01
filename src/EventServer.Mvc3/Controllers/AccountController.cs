@@ -68,10 +68,7 @@
                     FormsAuthentication.SetAuthCookie(model.UserName, false /* createPersistentCookie */);
                     return RedirectToAction("Index", "Home");
                 }
-                else
-                {
-                    ModelState.AddModelError("", ErrorCodeToString(createStatus));
-                }
+                this.ModelState.AddModelError(string.Empty, ErrorCodeToString(createStatus));
             }
 
             // If we got this far, something failed, redisplay form
