@@ -19,8 +19,8 @@
   <VenueZip>12345</VenueZip>
   <ContactName>Event Contact</ContactName>
   <ContactEmail>contact@email.com</ContactEmail>
-  <TwitterId>EventServer</TwitterId>
-  <TwitterFilterDate>2011-04-05T15:49:38.0715503-05:00</TwitterFilterDate>
+  <TwitterId>JaySmith</TwitterId>
+  <TwitterFilterDate>2011-04-05T15:49:38</TwitterFilterDate>
   <TwitterDisplayCount>5</TwitterDisplayCount>
   <SiteLogoUri>http://eventserver.codeplex.com/images/logo.png</SiteLogoUri>
   <DataStorePath>~/App_Data</DataStorePath>
