@@ -1,15 +1,15 @@
 <?xml version="1.0"?>
 <Session xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Id>76</Id>
+  <Id>78</Id>
   <UserId>31</UserId>
-  <Title>Session 2</Title>
+  <Title>Session 1</Title>
   <Description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pharetra nunc at nulla commodo consectetur. Praesent dictum, nulla sagittis tristique varius, magna sapien fermentum dui, quis consequat orci sapien nec ante. Cras vitae risus magna, ac aliquam ipsum. Cras sed condimentum quam. Suspendisse potenti. Nulla pretium orci et justo commodo fermentum. Sed at turpis vel risus interdum fermentum sit amet ut leo. Etiam in lectus magna. Phasellus ac nunc eget lectus facilisis egestas. Duis consectetur dapibus nunc a volutpat. Maecenas enim erat, viverra ut commodo vel, scelerisque quis massa. Vestibulum eu enim vel arcu sollicitudin congue. Cras ligula enim, aliquet in dignissim non, porta viverra mi. Suspendisse nibh turpis, venenatis id rutrum eu, tempus non enim. Suspendisse potenti. Mauris eu augue tellus, ut suscipit quam. </Description>
-  <Track>None</Track>
-  <Slot>1</Slot>
-  <Room>None</Room>
+  <Track>IT Pro</Track>
+  <Slot>2</Slot>
+  <Room>Big Room</Room>
   <Level>Beginner</Level>
   <Status>Accepted</Status>
   <Category>Developers</Category>
-  <Day>2</Day>
+  <Day>1</Day>
   <Comments />
 </Session>

@@ -1,16 +1,16 @@
 <?xml version="1.0"?>
 <AppSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Id>1</Id>
-  <SiteName>Tyson Development Conference 2011</SiteName>
+  <SiteName>Event Server</SiteName>
   <SiteSlogan>Making Events Easy!</SiteSlogan>
-  <SiteTheme>TysonDevCon</SiteTheme>
+  <SiteTheme>Solution</SiteTheme>
   <Description>The Tyson Development Conference is an annual conference of 250-300 developers internal to Tyson Foods. Each year time is taken to dedicate our Information Systems Department to Software Craftsmanship. The conference is .NET focused but has SAP, Business Analyst, Project Management and Technology/Support Tracks as well. The goal is to put excellence in the everyday so that we reduce our support cost, and deliver not only well written solutions, but the right solutions.
 
 </Description>
   <StartDateTime>2011-05-17T11:12:24</StartDateTime>
-  <EndDateTime>0001-01-01T00:00:00</EndDateTime>
-  <RegistrationEndDateTime>2011-06-15T11:12:24</RegistrationEndDateTime>
-  <SessionSubmissionEndDateTime>2011-05-07T11:12:24</SessionSubmissionEndDateTime>
+  <EndDateTime>2011-08-31T00:00:00</EndDateTime>
+  <RegistrationEndDateTime>2011-08-31T00:00:00</RegistrationEndDateTime>
+  <SessionSubmissionEndDateTime>2011-08-31T00:00:00</SessionSubmissionEndDateTime>
   <VenueName>Event Venue</VenueName>
   <VenuePhone>555 555-5555</VenuePhone>
   <VenueStreet>Anywhere St.</VenueStreet>
@@ -19,8 +19,8 @@
   <VenueZip>12345</VenueZip>
   <ContactName>Event Contact</ContactName>
   <ContactEmail>contact@email.com</ContactEmail>
-  <TwitterId>JaySmith</TwitterId>
-  <TwitterFilterDate>2011-04-05T15:49:38</TwitterFilterDate>
+  <TwitterId>EventServer</TwitterId>
+  <TwitterFilterDate>2011-07-04T21:36:29.4124198-05:00</TwitterFilterDate>
   <TwitterDisplayCount>5</TwitterDisplayCount>
   <SiteLogoUri>http://eventserver.codeplex.com/images/logo.png</SiteLogoUri>
   <DataStorePath>~/App_Data</DataStorePath>

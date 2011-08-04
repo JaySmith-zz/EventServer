@@ -45,17 +45,17 @@
 
 <asp:Content ContentPlaceHolderID="MainContent" runat="server">
 
-    <div class="tab-group">
+<%--    <div class="tab-group">
         <div class="tabs">
             <%= Html.ActionLink<SessionsController>(c => c.Index("list"), "list", new { @class = Model.ListLinkCssClass }) %>
             <%= Html.ActionLink<SessionsController>(c => c.Index("tracks"), "tracks", new { @class = Model.TracksLinkCssClass }) %>
             <%= Html.ActionLink<SessionsController>(c => c.Index("times"), "times", new { @class = Model.TimesLinkCssClass }) %>
         </div>
-    </div>
+    </div>--%>
 
     <div id="sessions-container">
 
-        <% Html.RenderAction(Model.ContentAction); %>
+        <% Html.RenderAction("GetByTime"); %>
 
     </div>
 
