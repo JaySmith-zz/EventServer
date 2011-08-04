@@ -22,7 +22,7 @@
     <p>Admin view</p>
 <% } %>
 
-  <% foreach (var dayGroup in Model.Sessions.OrderBy(x => x.Slot).GroupBy(x => x.Day)) { %>
+  <% foreach (var dayGroup in Model.Sessions.OrderBy(x => x.Day).GroupBy(x => x.Day)) { %>
 
     <h3> Sessions for Day <%= dayGroup.Key %></h3>
 
