@@ -22,11 +22,15 @@
     <p>Admin view</p>
 <% } %>
 
-<% foreach (var group in Model.Sessions.GroupBy(x => x.TimeSlot)) { %>
+  <% foreach (var dayGroup in Model.Sessions.OrderBy(x => x.Day).GroupBy(x => x.Day)) { %>
 
-    <h3><%= group.Key %></h3>
+    <h3> Sessions for Day <%= dayGroup.Key %></h3>
 
-    <table class="sessions" border="0" cellpadding="0" cellspacing="0">
+    <% foreach (var sessionGroup in Model.Sessions.Where(x => x.Day == dayGroup.Key).OrderBy(x => x.Slot).GroupBy(x => x.TimeSlot)){ %>
+  
+        <h4> <%= sessionGroup.Key %> </h4>
+
+        <table class="sessions" border="0" cellpadding="0" cellspacing="0">
         <% if (Model.IsAdmin) { %>
         <col style="width: 20px;" />
         <% } %>
@@ -43,10 +47,12 @@
                 <th>Track</th>
                 <th>Time</th>
                 <th>Room</th>
+                <th>Day</th>
             </tr>
         </thead>
         <tbody>
-            <% foreach (var session in group) { %>
+            <% foreach (var session in sessionGroup)
+               { %>
             <tr class="status_<%= session.Status %>">
                 <% if (Model.IsAdmin) { %>
                 <td>
@@ -58,9 +64,14 @@
                 <td><%= session.Track %></td>
                 <td><nobr><%= session.TimeSlot %></nobr></td>
                 <td><nobr><%= session.Room %></nobr></td>
+                <td><nobr><%= session.Day %></nobr></td>
             </tr>
             <% } %>
         </tbody>
     </table>
+
+    <% } %>
+
+    
 
 <% } %>

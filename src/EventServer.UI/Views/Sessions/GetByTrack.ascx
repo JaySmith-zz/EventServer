@@ -52,6 +52,7 @@
                 <th>Track</th>
                 <th>Time</th>
                 <th>Room</th>
+                <th>Day</th>
             </tr>
         </thead>
         <tbody>
@@ -67,6 +68,7 @@
                 <td><%= session.Track %></td>
                 <td><nobr><%= session.TimeSlot %></nobr></td>
                 <td><nobr><%= session.Room %></nobr></td>
+                <td><nobr><%= session.Day %></nobr></td>
             </tr>
             <% } %>
         </tbody>

@@ -50,8 +50,9 @@ namespace EventServer.UI.Controllers
             IEnumerable<Session> sessions = _repository
                 .FindAcceptedPresentations()
                 .OrderBy(x => x.Track)
+                .ThenBy(x => x.Day)
                 .ThenBy(x => x.Slot);
-
+            
             if (!_currentUser.IsAdmin)
                 sessions = sessions
                     .Where(x => !string.IsNullOrEmpty(x.Track))
@@ -64,7 +65,8 @@ namespace EventServer.UI.Controllers
         {
             IEnumerable<Session> presentations = _repository
                 .FindAcceptedPresentations()
-                .OrderBy(x => x.Slot)
+                .OrderBy(x => x.Day)
+                .ThenBy(x => x.Slot)
                 .ThenBy(x => x.Track);
 
             return View(new SessionsGetByTrackModel(presentations, _currentUser.IsAdmin));

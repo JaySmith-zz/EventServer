@@ -32,6 +32,9 @@
                 Time:
                 <%= Model.TimeSlot %></div>
             <div>
+                Day:
+                <%= Model.Day %></div>
+            <div>
                 Room:
                 <%= Model.Room %></div>
             <% } %>
