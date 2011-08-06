@@ -433,11 +433,12 @@
     <Content Include="Views\Admin\Users.aspx" />
     <Content Include="Views\Sessions\Add.aspx" />
     <Content Include="Views\Sessions\AdminBox.ascx" />
+    <Content Include="Views\Sessions\Copy of GetByTime.ascx" />
+    <Content Include="Views\Sessions\Index.aspx" />
     <Content Include="Views\Sessions\Edit.aspx" />
     <Content Include="Views\Sessions\GetByTime.ascx" />
     <Content Include="Views\Sessions\GetByTrack.ascx" />
     <Content Include="Views\Sessions\GetRawList.ascx" />
-    <Content Include="Views\Sessions\Index.aspx" />
     <Content Include="Views\Sessions\Show.aspx" />
     <Content Include="Views\Settings\Email.aspx" />
     <Content Include="Views\Settings\Twitter.aspx" />
