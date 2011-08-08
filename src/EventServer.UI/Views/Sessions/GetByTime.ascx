@@ -22,7 +22,7 @@
   
 <table border="0" cellpadding="5">
     <% foreach (var day in Model.Sessions.OrderBy(x => x.Day).GroupBy(x => x.Day)) { %>
-    <% foreach (var time in day.OrderBy(x => x.TimeSlot).GroupBy(x => x.TimeSlot)) {%>
+    <% foreach (var time in day.OrderBy(x => x.Slot).GroupBy(x => x.Slot)) {%>
     <tr>
         <td class="ScheduleDay" colspan="5">Day <%= day.Key %> - <%= time.Key %></td>
     </tr>
